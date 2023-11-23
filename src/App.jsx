@@ -12,7 +12,7 @@ export function App() {
   return (
     <Router basename="/fenix-studio">
       <Routes>
-        <Route path="/fenix-studio" exact element={<HomePage />} />
+        <Route path="/" exact element={<HomePage />} />
         <Route path="/about" exact element={<AboutPage />} />
         <Route path="/contact" exact element={<ContactPage />} />
         <Route path="/reel" exact element={<ReelPage />} />
