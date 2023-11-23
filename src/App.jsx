@@ -10,9 +10,9 @@ import { HomePage } from "./pages/Home/HomePage.jsx";
 
 export function App() {
   return (
-    <Router basename="/fenix-studio">
+    <Router>
       <Routes>
-        <Route path="/" exact element={<HomePage />} />
+        <Route path="/fenix-studio" exact element={<HomePage />} />
         <Route path="/about" exact element={<AboutPage />} />
         <Route path="/contact" exact element={<ContactPage />} />
         <Route path="/reel" exact element={<ReelPage />} />
