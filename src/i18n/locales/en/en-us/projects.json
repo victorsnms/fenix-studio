@@ -1,0 +1,19 @@
+{
+    "projects": {
+        "projectsPage": {
+            "title": "Our projects"
+        },
+        "projects": {},
+        "projectsSection": {
+            "title": "Our projects",
+            "buttonLabel": "See all projects"
+        },
+        "otherProjectsSection": {
+            "title": "Our other projects",
+            "buttonLabel": "See all projects"
+        },
+        "projectCard": {
+            "ariaLabel": "Go to project page: "
+        }
+    }
+}

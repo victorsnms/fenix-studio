@@ -1,0 +1,262 @@
+{
+  "images": {
+    "tabs": [
+      {
+        "image": "tabs-component/salesforce_sitegenesis.jpeg",
+        "title": "SiteGenesis",
+        "text": "Experience on SiteGenesis Pipelines and SiteGenesis Controllers"
+      },
+      {
+        "image": "tabs-component/salesforce-sfra.webp",
+        "title": "SFRA",
+        "text": "Expertise implementating and customizing Storefront Reference Base"
+      },
+      {
+        "image": "tabs-component/salesforce-pwa-kit.png",
+        "title": "PWA Kit",
+        "text": "Want to migrate to PWA Kit? We have experience with that challenge"
+      },
+      {
+        "image": "tabs-component/salesforce-cartridges.webp",
+        "title": "Cartridges",
+        "text": "Need to build your Cartridge Solution? We can help you."
+      }
+    ],
+    "team": [
+      {
+        "img": "team-component/generic.png",
+        "name": "Cássio Lacerda",
+        "role": "Director | Salesforce B2C Architect"
+      },
+      {
+        "img": "team-component/generic.png",
+        "name": "Fernando Ruch",
+        "role": "Director | Salesforce B2C Architect"
+      }
+    ],
+    "marqueeImages": [
+      {
+        "path": "marquee/marquee_1.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_2.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_3.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_4.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_5.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_6.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_1.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_2.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_3.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_4.png",
+        "alt": "carousel"
+      }
+    ],
+    "marqueeImages2": [
+      {
+        "path": "marquee/marquee_6.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_3.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_1.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_4.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_5.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_6.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_1.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_3.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_2.png",
+        "alt": "carousel"
+      },
+      {
+        "path": "marquee/marquee_4.png",
+        "alt": "carousel"
+      }
+    ],
+    "filmImages": [
+      {
+        "path": "film/AmericanHorrorStory.png",
+        "alt": "AmericanHorrorStory"
+      },
+      {
+        "path": "film/APaixaoSegundoGH.png",
+        "alt": "APaixaoSegundoGH"
+      },
+      {
+        "path": "film/ArmyoftheDead.png",
+        "alt": "ArmyoftheDead"
+      },
+      {
+        "path": "film/Armyofthieves.png",
+        "alt": "Armyofthieves"
+      },
+      {
+        "path": "film/BadBoysForLife.png",
+        "alt": "BadBoysForLife"
+      },
+      {
+        "path": "film/BlackWidow.png",
+        "alt": "BlackWidow"
+      },
+      {
+        "path": "film/DarkWinds.png",
+        "alt": "DarkWinds"
+      },
+      {
+        "path": "film/Evil.png",
+        "alt": "Evil"
+      },
+      {
+        "path": "film/FreeGuy.png",
+        "alt": "FreeGuy"
+      },
+      {
+        "path": "film/hunters.png",
+        "alt": "hunters"
+      },
+      {
+        "path": "film/MeuNomeEGal.png",
+        "alt": "MeuNomeEGal"
+      },
+      {
+        "path": "film/MissMarvel.png",
+        "alt": "MissMarvel"
+      },
+      {
+        "path": "film/RittenhouseSquare.png",
+        "alt": "RittenhouseSquare"
+      },
+      {
+        "path": "film/SheHulk.png",
+        "alt": "SheHulk"
+      },
+      {
+        "path": "film/ShinningVale.png",
+        "alt": "ShinningVale"
+      },
+      {
+        "path": "film/TaEscrito.png",
+        "alt": "TaEscrito"
+      },
+      {
+        "path": "film/TerminatorDarkFate.png",
+        "alt": "TerminatorDarkFate"
+      },
+      {
+        "path": "film/TheRookie.png",
+        "alt": "TheRookie"
+      },
+      {
+        "path": "film/UmDiaCincoEstrelas.png",
+        "alt": "UmDiaCincoEstrelas"
+      },
+      {
+        "path": "film/Veep.png",
+        "alt": "Veep"
+      },
+      {
+        "path": "film/WinningTimeLakers.png",
+        "alt": "WinningTimeLakers"
+      },
+      {
+        "path": "film/Yellowstone.png",
+        "alt": "Yellowstone"
+      }
+    ],
+    "portfolioImages": [
+      {
+        "path": "portfolio/elf-cosmetics_portfolio.png",
+        "alt": "elf cosmetics"
+      },
+      {
+        "path": "portfolio/loccitane_portfolio.png",
+        "alt": "loccitane en provence"
+      },
+      {
+        "path": "portfolio/keyssoulcare_portfolio.png",
+        "alt": "keys soul care"
+      },
+      {
+        "path": "portfolio/loccitane_au_bresil_portfolio.png",
+        "alt": "loccitane au bresil"
+      },
+      {
+        "path": "portfolio/wellpeople_portfolio.png",
+        "alt": "wellpeople"
+      },
+      {
+        "path": "portfolio/elf-cosmetics_portfolio.png",
+        "alt": "elf cosmetics"
+      },
+      {
+        "path": "portfolio/loccitane_portfolio.png",
+        "alt": "loccitane en provence"
+      },
+      {
+        "path": "portfolio/keyssoulcare_portfolio.png",
+        "alt": "keys soul care"
+      },
+      {
+        "path": "portfolio/loccitane_au_bresil_portfolio.png",
+        "alt": "loccitane au bresil"
+      },
+      {
+        "path": "portfolio/wellpeople_portfolio.png",
+        "alt": "wellpeople"
+      },
+      {
+        "path": "portfolio/elf-cosmetics_portfolio.png",
+        "alt": "elf cosmetics"
+      },
+      {
+        "path": "portfolio/loccitane_portfolio.png",
+        "alt": "loccitane en provence"
+      }
+    ]
+  }
+}

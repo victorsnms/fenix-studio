@@ -1,0 +1,157 @@
+{
+    "posts": {
+        "posts": {
+            "how-to-use-salesforce-shoppercontext-api": {
+                "title": "ShopperContext API",
+                "headline": "Unleashing Personalization Potential: Salesforce ShopperContext API Transforms Customer Experiences",
+                "description": "Discover how the Salesforce ShopperContext API empowers businesses to unlock the full potential of personalization. Overcome limitations of previous APIs and harness customer group data to deliver tailored experiences, targeted promotions, and personalized content. Enhance customer engagement, boost conversions, and elevate your e-commerce strategy with the power of the ShopperContext API.",
+                "shortDescription": "Unlock personalized experiences and targeted promotions with the Salesforce ShopperContext API. Harness customer group data and overcome limitations of previous APIs to enhance engagement and boost conversions. Elevate your e-commerce strategy today.",
+                "author": "Fernando Ruch",
+                "authorImage": "/fernando.jpeg",
+                "authorImageAlt": "Fernando Ruch",
+                "postCardImage": "/posts/how-to-use-salesforce-shoppercontext-api.png",
+                "postCardImageAlt": "How to use Salesforce ShopperContext API",
+                "postDate": "Jun 16",
+                "keywords": "Salesforce, ShopperContext, API, OCAPI, SCAPI, Commerce Cloud, B2C Commerce, B2C Commerce API",
+                "ariaLabel": "Go to the post ShopperContext API written by Fernando Ruch on Jun 16th",
+                "content": [
+                    {
+                        "type": "youtube",
+                        "videoId": "aB9ZONBI3So",
+                        "title": "How to use Salesforce ShopperContext API"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Delivering personalized experiences has become a paramount strategy for e-commerce success. Salesforce understands this need and offers the powerful ShopperContext API to enable businesses to create tailored interactions with their customers. In this step-by-step guide, we will explore how to set up the Salesforce ShopperContext API to unlock the full potential of personalized experiences. By following these instructions, you'll be well on your way to providing highly targeted promotions, customized recommendations, and exceptional customer satisfaction."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Step 1: Enable ShopperContext in Your Business Manager"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Start by accessing your Business Manager and navigate to Administration > Global Preferences > Feature Switches. Locate the 'Enable ShopperContext' option and enable it to activate the ShopperContext API within your environment. This step ensures that the API functionality is available for utilization."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Step 2: Obtain a SLAS Token"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "To interact with the ShopperContext API, you need a valid SLAS token. Ensure that your API ID has the necessary scope sfcc.shopper-context.rw added. This scope enables read and write access to shopper context data, allowing you to utilize the API's capabilities effectively."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Step 3: Create Session-Based Customer Groups"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Leveraging session-based customer groups is a powerful way to personalize experiences. Utilize the ShopperContext API to create session-based customer groups using session.custom. Define customer groups based on attributes such as device type, demographics, or any other relevant criteria specific to your business. This step allows for targeted personalization efforts."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Step 4: Create Promotions and Campaigns for Customer Groups"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Once you have established your customer groups, create promotions and campaigns tailored to these segments. Utilize the ShopperContext API to deliver targeted promotions, discounts, and special offers that resonate with each customer group's preferences and behaviors. This level of personalization enhances customer engagement and increases the likelihood of conversions."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Step 5: Testing the ShopperContext API Endpoints"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "To ensure the proper functionality of the ShopperContext API, use the provided endpoints within the Postman Collection. Postman is a powerful API development and testing tool. Execute requests against the API endpoints, verifying that the desired shopper context data is being retrieved and utilized as expected. Thorough testing ensures a seamless integration and confirms that personalized experiences are being delivered accurately."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "By following this step-by-step guide, you can successfully set up the Salesforce ShopperContext API and unlock the power of personalized experiences. Enabling ShopperContext in your Business Manager, obtaining an SLAS token, creating session-based customer groups, and tailoring promotions and campaigns are key steps in leveraging the API's capabilities. Finally, utilize the provided endpoints in the Postman Collection to test and validate the functionality. With the ShopperContext API, you can provide highly targeted promotions, customized recommendations, and exceptional personalized experiences, leading to increased customer satisfaction and improved business outcomes."
+                    },
+                    {
+                        "type": "cta",
+                        "url": "https://github.com/team-develoci/shopper-context-api-postman-collection",
+                        "label": "Download Postman Collection in our Github"
+                    }
+                ]
+            },
+            "update-salesforce-commerce-cloud-token": {
+                "title": "UUID token deprecation",
+                "headline": "Important Update: Salesforce to Deprecate UUID Token Formats in Commerce Cloud Account Manager",
+                "description": "Salesforce announces the deprecation of UUID token formats for API Clients in Commerce Cloud Account Manager. Learn about the changes and the steps required to switch to JWT access tokens before the June 15, 2023 deadline to avoid authentication failures.",
+                "shortDescription": "Salesforce announces the deprecation of UUID token formats for API Clients in Commerce Cloud Account Manager.",
+                "author": "Cassio Lacerda",
+                "authorImage": "/cassio.jpeg",
+                "authorImageAlt": "Cassio Lacerda",
+                "postCardImage": "/posts/update-salesforce-commerce-cloud-token.jpg",
+                "postCardImageAlt": "Post cover",
+                "postDate": "May 05",
+                "keywords": "Salesforce, Deprecation, UUID token formats, API Clients, Commerce Cloud Account Manager, Changes, Switch to JWT access tokens, June 15, 2023 deadline, Authentication failures",
+                "ariaLabel": "Go to the post UUID token deprecation written by Cassio Lacerda on May 5th",
+                "content": [
+                    {
+                        "type": "youtube",
+                        "videoId": "dTcip5-__kM",
+                        "title": "Salesforce to Deprecate UUID Token Formats in Commerce Cloud Account Manager"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Salesforce is dedicated to ensuring the security and success of its customers. In line with this commitment, Salesforce has announced that, effective June 15, 2023, it will no longer support the use of UUID token formats for API Clients in Commerce Cloud Account Manager. Customers who continue to use UUID token formats may experience authentication failures. To avoid such issues, it is recommended that customers switch to JWT token format before the deadline."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "How Does This Change Affect Customers?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "This change impacts Commerce Cloud customers who have API client applications configured to use UUID access token formats. To ensure a smooth transition, customers must update their Access Token Format settings for existing API clients from UUID tokens to JWT tokens."
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Timeline for Change"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            "Effective June 15, 2023, Salesforce will no longer support the use of UUID token formats for API Clients in Commerce Cloud Account Manager.",
+                            "Starting June 15, 2023, all API Clients that use the UUID access token format will be switched to JWT token format."
+                        ]
+                    },
+                    {
+                        "type": "heading",
+                        "text": "How to Switch to JWT Access Tokens"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "To change the Access Token Format setting for an API Client using a UUID setting, follow these steps:"
+                    },
+                    {
+                        "type": "ordered_list",
+                        "items": [
+                            "Log into Account Manager.",
+                            "Click API Client. The API Clients page shows a list of API clients.",
+                            "Filter by token format option, select UUID, and list all API Clients using UUID. If you don’t have any API Clients using UUID, no further action is required.",
+                            "Click an API Client using UUID to go to its configuration page.",
+                            "Scroll down to the bottom of the page and set the Access Token Format to JWT.",
+                            "Click Save, and repeat this process for all API Clients using UUID."
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "By making this switch to JWT tokens, most API client code will not be impacted. However, customers checking UUID token length as part of their API client code will experience failures if they haven’t removed this check before the UUID Deprecation Date."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "It's important to stay informed and act on this change to ensure the security and success of your Salesforce Commerce Cloud Account Manager experience."
+                    },
+                    {
+                        "type": "cta",
+                        "url": "https://github.com/team-develoci/SFB2C-UUID-vs-JWT-Postman-Collection",
+                        "label": "Download Postman Collection in our Github"
+                    }
+                ]
+            }
+        },
+        "pageTitle": "Post List"
+    }
+}
