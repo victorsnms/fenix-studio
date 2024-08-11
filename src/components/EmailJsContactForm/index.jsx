@@ -8,19 +8,10 @@ export const EmailJsContactForm = () => {
   const [contactSubject, setContactSubject] = useState("Orçamento");
   const [t] = useTranslation();
 
-  //fenixtest28@gmail.com
-  //Test123
   const form = useRef();
-  // const serviceID = "service_wh0dauc";
-  // const serviceID = "service_33ge5fl"; // new
-  // const templateID = "template_d7sa946";
-  // const templateID = "template_urpe3uv"; // new
-  // const publicKey = "jKdWbQLwgqGXgUiRq";
-  // const publicKey = "OJPgf945P3i3-AC6P"; // new
-  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-  console.log("serviceID"), serviceID;
+  const serviceID = `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`;
+  const templateID = `${import.meta.env.VITE_EMAILJS_TEMPLATE_ID}`;
+  const publicKey = `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`;
 
   const sendEmail = (e) => {
     e.preventDefault();
