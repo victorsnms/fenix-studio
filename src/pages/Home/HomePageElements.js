@@ -6,6 +6,7 @@ export const HomePageContainer = styled.div`
   width: 100%;
   background: #151515;
   background-size: 400% 400%;
+  position: relative;
 
   @keyframes gradient {
     0% {
@@ -17,6 +18,22 @@ export const HomePageContainer = styled.div`
     100% {
       background-position: 0% 50%;
     }
+  }
+`;
+
+export const SectionTitle = styled.div`
+  width: 80%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: start;
+  font-size: 28px;
+  color: white;
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    width: 90%;
   }
 `;
 
@@ -33,8 +50,10 @@ export const VideoContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: center;
-  padding: 50px 25px;
+  align-items: center;
+  padding: 50px 32px;
+  flex-direction: column;
+  row-gap: 20px;
 `;
 
 export const PlatformsSectionWrapper = styled.div`
@@ -46,14 +65,14 @@ export const PlatformsSectionWrapper = styled.div`
 export const PlatformSection = styled(FadeInAnimation)`
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 24px;
+  padding: 50px 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   grid-column-gap: 50px;
   grid-row-gap: 75px;
   @media screen and (max-width: 767px) {
-    padding: 40px 24px;
+    padding: 40px 50px;
   }
 `;
 

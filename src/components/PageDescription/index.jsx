@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading1, SubTitle } from "./PageDescriptionElements";
+import { SubTitle } from "./PageDescriptionElements";
 
 const PageDescription = ({ text = "" }) => {
   return (

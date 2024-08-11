@@ -1,37 +1,69 @@
 {
   "images": {
-    "tabs": [
+    "ServicesGalleryImages": [
       {
-        "image": "tabs-component/salesforce_sitegenesis.jpeg",
-        "title": "SiteGenesis",
-        "text": "Experience on SiteGenesis Pipelines and SiteGenesis Controllers"
+        "path": "services/Comp_EN.png",
+        "alt": "Compositing",
+        "title": "Compositing",
+        "text": "Merging two or more images/video/elements into a single product. Within our compositing process we offer solutions in Keying (Greenscreen & Bluescreen), Rotoscope, Color Correction, Clean-up of Elements in 2D & 3D, Integration of Effects or diverse footages, 3D Projection, Beauty/Digital Make-up and Set Extensions."
       },
       {
-        "image": "tabs-component/salesforce-sfra.webp",
-        "title": "SFRA",
-        "text": "Expertise implementating and customizing Storefront Reference Base"
+        "path": "services/MattePainting_PTEN.png",
+        "alt": "Matte Painting",
+        "title": "Matte Painting",
+        "text": "Digital creation of set extensions to be integrated into shots. Solutions in 2D & 3D Matte Painting depending on the project's necessity. We utilize multiple layers in our work for flexible adaptation and changes in the art. Creation based on the Concept Art & Visualization of the shot."
       },
       {
-        "image": "tabs-component/salesforce-pwa-kit.png",
-        "title": "PWA Kit",
-        "text": "Want to migrate to PWA Kit? We have experience with that challenge"
+        "path": "services/Visu_EN.png",
+        "alt": "Visualization",
+        "title": "Visualization",
+        "text": "Planning of the Visual Effects to be created and implemented based on the directions of the script/client. Solutions in Look Development with Post Visualization offering a Pre-Comp for a better understanding on the planning of the effects to be finalized/created."
       },
       {
-        "image": "tabs-component/salesforce-cartridges.webp",
-        "title": "Cartridges",
-        "text": "Need to build your Cartridge Solution? We can help you."
+        "path": "services/Sup_EN.png",
+        "alt": "Visual Effects Supervision & On-Set",
+        "title": "Visual Effects Supervision & On-Set",
+        "text": "Guiding technically and artistically the execution of the demands from start to finish. Support on-set on scenes that require visual effects. Optimizing the shoot, capture of elements, measures & necessary information for the execution of the effects."
+      },
+      {
+        "path": "services/3D_PTEN.png",
+        "alt": "3D",
+        "title": "3D",
+        "text": "Creation of objects and characters in 3D. Complete process from Modeling, Texturing, Lighting, Animation & Rendering. Solutions in 3D for shots that need visual effects. Renders with multiple passes to facilitate 3D integration with Compositing workflow."
+      },
+      {
+        "path": "services/Motion_PTEN.png",
+        "alt": "Motion Graphics",
+        "title": "Motion Graphics",
+        "text": "Lettering creation for texts with distinct animations. Creation of artistic elements, visual effects & animation of 2D characters to be used on shots based on the necessities of each individual project."
+      },
+      {
+        "path": "services/Match_PTEN.png",
+        "alt": "MatchMove",
+        "title": "MatchMove",
+        "text": "Movement tracking of camera and/or objects in a scene. With the help of matchmove we can integrate 3D characters and objects into a shot with movement taking into account alterations in parallax and perspective."
       }
     ],
-    "team": [
+    "OurArtistsImages": [
       {
-        "img": "team-component/generic.png",
-        "name": "Cássio Lacerda",
-        "role": "Director | Salesforce B2C Architect"
+        "path": "marquee/marquee_1.png",
+        "alt": "carousel",
+        "text": "This is a text on mouse hover (Artists)"
       },
       {
-        "img": "team-component/generic.png",
-        "name": "Fernando Ruch",
-        "role": "Director | Salesforce B2C Architect"
+        "path": "marquee/marquee_2.png",
+        "alt": "carousel",
+        "text": "This is a text on mouse hover (Artists)"
+      },
+      {
+        "path": "marquee/marquee_3.png",
+        "alt": "carousel",
+        "text": "This is a text on mouse hover (Artists)"
+      },
+      {
+        "path": "marquee/marquee_4.png",
+        "alt": "carousel",
+        "text": "This is a text on mouse hover (Artists)"
       }
     ],
     "marqueeImages": [
@@ -120,142 +152,227 @@
     ],
     "filmImages": [
       {
-        "path": "film/AmericanHorrorStory.png",
-        "alt": "AmericanHorrorStory"
+        "path": "film/AmericanHorrorStory.jpg",
+        "alt": "AmericanHorrorStory",
+        "pathSmall": "film-small/AmericanHorrorStory.jpg"
       },
       {
-        "path": "film/APaixaoSegundoGH.png",
-        "alt": "APaixaoSegundoGH"
+        "path": "film/APaixaoSegundoGH.jpg",
+        "alt": "APaixaoSegundoGH",
+        "pathSmall": "film-small/APaixaoSegundoGH.jpg"
       },
       {
-        "path": "film/ArmyoftheDead.png",
-        "alt": "ArmyoftheDead"
+        "path": "film/ArmyoftheDead.jpg",
+        "alt": "ArmyoftheDead",
+        "pathSmall": "film-small/ArmyoftheDead.jpg"
       },
       {
-        "path": "film/Armyofthieves.png",
-        "alt": "Armyofthieves"
+        "path": "film/Armyofthieves.jpg",
+        "alt": "Armyofthieves",
+        "pathSmall": "film-small/Armyofthieves.jpg"
       },
       {
-        "path": "film/BadBoysForLife.png",
-        "alt": "BadBoysForLife"
+        "path": "film/BadBoysForLife.jpg",
+        "alt": "BadBoysForLife",
+        "pathSmall": "film-small/BadBoysForLife.jpg"
       },
       {
-        "path": "film/BlackWidow.png",
-        "alt": "BlackWidow"
+        "path": "film/BlackWidow.jpg",
+        "alt": "BlackWidow",
+        "pathSmall": "film-small/BlackWidow.jpg"
       },
       {
-        "path": "film/DarkWinds.png",
-        "alt": "DarkWinds"
+        "path": "film/DarkWinds.jpg",
+        "alt": "DarkWinds",
+        "pathSmall": "film-small/DarkWinds.jpg"
       },
       {
-        "path": "film/Evil.png",
-        "alt": "Evil"
+        "path": "film/Evil.jpg",
+        "alt": "Evil",
+        "pathSmall": "film-small/Evil.jpg"
       },
       {
-        "path": "film/FreeGuy.png",
-        "alt": "FreeGuy"
+        "path": "film/FreeGuy.jpg",
+        "alt": "FreeGuy",
+        "pathSmall": "film-small/FreeGuy.jpg"
       },
       {
-        "path": "film/hunters.png",
-        "alt": "hunters"
+        "path": "film/hunters.jpg",
+        "alt": "hunters",
+        "pathSmall": "film-small/hunters.jpg"
       },
       {
-        "path": "film/MeuNomeEGal.png",
-        "alt": "MeuNomeEGal"
+        "path": "film/MeuNomeEGal.jpg",
+        "alt": "MeuNomeEGal",
+        "pathSmall": "film-small/MeuNomeEGal.jpg"
       },
       {
-        "path": "film/MissMarvel.png",
-        "alt": "MissMarvel"
+        "path": "film/MissMarvel.jpg",
+        "alt": "MissMarvel",
+        "pathSmall": "film-small/MissMarvel.jpg"
       },
       {
-        "path": "film/RittenhouseSquare.png",
-        "alt": "RittenhouseSquare"
+        "path": "film/RittenhouseSquare.jpg",
+        "alt": "RittenhouseSquare",
+        "pathSmall": "film-small/RittenhouseSquare.jpg"
       },
       {
-        "path": "film/SheHulk.png",
-        "alt": "SheHulk"
+        "path": "film/SheHulk.jpg",
+        "alt": "SheHulk",
+        "pathSmall": "film-small/SheHulk.jpg"
       },
       {
-        "path": "film/ShinningVale.png",
-        "alt": "ShinningVale"
+        "path": "film/ShinningVale.jpg",
+        "alt": "ShinningVale",
+        "pathSmall": "film-small/ShinningVale.jpg"
       },
       {
-        "path": "film/TaEscrito.png",
-        "alt": "TaEscrito"
+        "path": "film/TaEscrito.jpg",
+        "alt": "TaEscrito",
+        "pathSmall": "film-small/TaEscrito.jpg"
       },
       {
-        "path": "film/TerminatorDarkFate.png",
-        "alt": "TerminatorDarkFate"
+        "path": "film/TerminatorDarkFate.jpg",
+        "alt": "TerminatorDarkFate",
+        "pathSmall": "film-small/TerminatorDarkFate.jpg"
       },
       {
-        "path": "film/TheRookie.png",
-        "alt": "TheRookie"
+        "path": "film/TheRookie.jpg",
+        "alt": "TheRookie",
+        "pathSmall": "film-small/TheRookie.jpg"
       },
       {
-        "path": "film/UmDiaCincoEstrelas.png",
-        "alt": "UmDiaCincoEstrelas"
+        "path": "film/UmDiaCincoEstrelas.jpg",
+        "alt": "UmDiaCincoEstrelas",
+        "pathSmall": "film-small/UmDiaCincoEstrelas.jpg"
       },
       {
-        "path": "film/Veep.png",
-        "alt": "Veep"
+        "path": "film/Veep.jpg",
+        "alt": "Veep",
+        "pathSmall": "film-small/Veep.jpg"
       },
       {
-        "path": "film/WinningTimeLakers.png",
-        "alt": "WinningTimeLakers"
+        "path": "film/WinningTimeLakers.jpg",
+        "alt": "WinningTimeLakers",
+        "pathSmall": "film-small/WinningTimeLakers.jpg"
       },
       {
-        "path": "film/Yellowstone.png",
-        "alt": "Yellowstone"
+        "path": "film/Yellowstone.jpg",
+        "alt": "Yellowstone",
+        "pathSmall": "film-small/Yellowstone.jpg"
       }
     ],
-    "portfolioImages": [
+    "reelsMediaGallery": [
       {
-        "path": "portfolio/elf-cosmetics_portfolio.png",
-        "alt": "elf cosmetics"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/loccitane_portfolio.png",
-        "alt": "loccitane en provence"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/keyssoulcare_portfolio.png",
-        "alt": "keys soul care"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/loccitane_au_bresil_portfolio.png",
-        "alt": "loccitane au bresil"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/wellpeople_portfolio.png",
-        "alt": "wellpeople"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/elf-cosmetics_portfolio.png",
-        "alt": "elf cosmetics"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/loccitane_portfolio.png",
-        "alt": "loccitane en provence"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/keyssoulcare_portfolio.png",
-        "alt": "keys soul care"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/loccitane_au_bresil_portfolio.png",
-        "alt": "loccitane au bresil"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/wellpeople_portfolio.png",
-        "alt": "wellpeople"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/elf-cosmetics_portfolio.png",
-        "alt": "elf cosmetics"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
       },
       {
-        "path": "portfolio/loccitane_portfolio.png",
-        "alt": "loccitane en provence"
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
+      },
+      {
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
+      },
+      {
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
+      },
+      {
+        "type": "video",
+        "url": "videos/main_video.mp4",
+        "thumbnail": "thumbnails/test_thumb.jpg",
+        "title": "test title",
+        "text": "test text"
+      }
+    ],
+    "servicesGif": [
+      {
+        "path": "gifs/Gif_EN.png",
+        "alt": "Services GIF"
       }
     ]
   }

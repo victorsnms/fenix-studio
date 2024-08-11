@@ -4,10 +4,10 @@ import { CommonContext } from "../../providers/CommonContext";
 import fenixLogo from "../../images/logo.png";
 import isMobileOrTablet from "../../utils/isMobile";
 import ReactCountryFlag from "react-country-flag";
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavBtnLink, Logo, Flag, NavLinksR } from "./NavBarElements";
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, Logo, Flag, NavLinksR } from "./NavBarElements";
 
 export const Navbar = ({ toggle, darkMode = false }) => {
-  const { t, language, changeLanguage, toggleHome, scrollNav } = useContext(CommonContext);
+  const { t, language, changeLanguage, toggleHome } = useContext(CommonContext);
   const [isMT, setIsMT] = useState(false);
 
   useEffect(() => {
@@ -25,13 +25,16 @@ export const Navbar = ({ toggle, darkMode = false }) => {
           </MobileIcon>
           <NavMenu aria-hidden={isMT ? true : false}>
             <NavItem>
+              <NavLinksR to="/">{t("menu.home")}</NavLinksR>
+            </NavItem>
+            <NavItem>
               <NavLinksR to="/about">{t("menu.about")}</NavLinksR>
             </NavItem>
             <NavItem>
               <NavLinksR to="/contact">{t("menu.contact")}</NavLinksR>
             </NavItem>
             <NavItem>
-              <NavLinksR to="/reel">{t("menu.reel")}</NavLinksR>
+              <NavLinksR to="/reels">{t("menu.reel")}</NavLinksR>
             </NavItem>
             <NavItem>
               <NavLinksR to="/services">{t("menu.services")}</NavLinksR>

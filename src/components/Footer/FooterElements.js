@@ -16,13 +16,21 @@ export const FooterWrap = styled.div`
   margin: 0 auto;
 
   @media (min-width: 768px) {
-    grid-template-columns: 60% 20% 20%;
+    grid-template-columns: 50% 25% 25%;
     text-align: left;
   }
 `;
 
 export const FooterBrand = styled.div`
   color: #f6f7f8;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 `;
 
 export const SocialLogo = styled(Link)`
@@ -41,6 +49,7 @@ export const Logo = styled.img`
 export const FooterBrandText = styled.p`
   max-width: 400px;
   margin: 0 auto;
+  font-size: 18px;
 
   @media (min-width: 768px) {
     margin: 0;
@@ -48,11 +57,8 @@ export const FooterBrandText = styled.p`
 `;
 
 export const FooterLinksContainer = styled.nav`
-  margin: 2em 0;
-
   @media (min-width: 768px) {
     margin-top: 0;
-    justify-self: end;
   }
 `;
 
@@ -64,8 +70,13 @@ export const FooterLinksList = styled.ul`
   row-gap: 10px;
 
   @media (min-width: 768px) {
+    border-right: 3px solid #f6f7f8cc;
     display: block;
     margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
   }
 `;
 
@@ -80,7 +91,10 @@ export const FooterLinkItem = styled.li`
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    text-align: center;
 
     &:not(:last-child)::after {
       content: none;
@@ -100,10 +114,10 @@ export const FooterLink = styled(Link)`
 `;
 
 export const SocialMedia = styled.div`
-  justify-self: center;
-
   @media (min-width: 768px) {
-    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -130,7 +144,7 @@ export const SocialIconLink = styled.a`
   }
 
   @media (min-width: 768px) {
-    justify-content: left;
+    justify-content: center;
   }
 `;
 
@@ -147,10 +161,17 @@ export const WebSiteRights = styled.div`
   margin: 0 auto;
   padding-bottom: 2em;
   text-align: center;
-
   @media (min-width: 768px) {
-    text-align: left;
+    text-align: start;
   }
 `;
 
-export const WebSiteRightsText = styled.small``;
+export const WebSiteRightsText = styled.small`
+  display: flex;
+  flex-direction: column;
+  color: white;
+  a {
+    color: white;
+    text-underline-offset: 3px;
+  }
+`;

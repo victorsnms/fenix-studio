@@ -34,9 +34,11 @@ const ClientList = ({ noTrusted = false, noBackground = false }) => {
   const { t } = useContext(CommonContext);
 
   return (
-    <LogoList imgPathArray={imgPathArray} noBackground={noBackground}>
-      {!noTrusted && <TrustedContainer>{t("clients.trustedMessage")}</TrustedContainer>}
-    </LogoList>
+    <>
+      <LogoList imgPathArray={imgPathArray} noBackground={noBackground}>
+        {!noTrusted && <TrustedContainer>{t("clients.trustedMessage")}</TrustedContainer>}
+      </LogoList>
+    </>
   );
 };
 export default ClientList;

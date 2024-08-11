@@ -1,25 +1,7 @@
 import React, { useContext } from "react";
-import {
-  FooterContainer,
-  FooterWrap,
-  FooterBrand,
-  FooterBrandText,
-  SocialLogo,
-  Logo,
-  SocialMedia,
-  SocialMediaList,
-  SocialMediaItem,
-  SocialIconLink,
-  SocialIcon,
-  FooterLinksContainer,
-  FooterLinksList,
-  FooterLinkItem,
-  FooterLink,
-  WebSiteRights,
-  WebSiteRightsText,
-} from "./FooterElements";
+import { FooterContainer, FooterWrap, FooterBrand, FooterBrandText, SocialLogo, Logo, SocialMedia, SocialMediaList, SocialMediaItem, SocialIconLink, SocialIcon, FooterLinksContainer, FooterLinksList, FooterLinkItem, FooterLink, WebSiteRights, WebSiteRightsText } from "./FooterElements";
 import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
-import fenixLogo from "../../images/logoTextRedWhite.png";
+import fenixLogo from "../../images/logo.png";
 import { CommonContext } from "../../providers/CommonContext";
 
 const socialIcon = {
@@ -38,7 +20,7 @@ export const Footer = () => {
       <FooterWrap>
         <FooterBrand>
           <SocialLogo to="/" onClick={toggleHome}>
-            <Logo src={fenixLogo} alt={footerContent.accessibility.altLogo} />
+            <Logo src={fenixLogo} alt={footerContent.accessibility.altLogo} style={{ maxHeight: "100px" }} />
           </SocialLogo>
           <FooterBrandText>{footerContent.shortText}</FooterBrandText>
         </FooterBrand>
@@ -69,6 +51,9 @@ export const Footer = () => {
       <WebSiteRights>
         <WebSiteRightsText>
           ©{new Date().getFullYear()} {t("footer.rights")}
+          <a href="https://www.linkedin.com/in/victor--martins/" target="_blank" rel="noreferrer">
+            {t("footer.developed")} Victor Martins
+          </a>
         </WebSiteRightsText>
       </WebSiteRights>
     </FooterContainer>

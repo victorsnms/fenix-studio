@@ -8,7 +8,7 @@ import { Footer } from "../../components/Footer";
 import PageTitle from "../../components/PageTitle";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import { ContactInfoWrapper, ContactPageContainer } from "./contactPageElements";
-import ContactInfo from "../../components/ContactInfo";
+import { EmailJsContactForm } from "../../components/EmailJsContactForm";
 
 export const ContactPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -25,7 +25,8 @@ export const ContactPage = () => {
           <PageTitle title={t("contactPage.title")} lightText={true} />
         </FadeInAnimation>
         <ContactInfoWrapper>
-          <ContactInfo info={t("contactPage.info", { returnObjects: true })}></ContactInfo>
+          <EmailJsContactForm />
+          {/* <ContactInfo info={t("contactPage.info", { returnObjects: true })}></ContactInfo> */}
         </ContactInfoWrapper>
       </ContactPageContainer>
       {/* FOOTER */}

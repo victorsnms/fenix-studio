@@ -1,25 +1,27 @@
-import { MarqueeContainer, MarqueeGroup, MarqueeImage, MarqueeImageContainer, MarqueeWrapper } from "./MarqueeInfiniteElements";
+import useEmblaCarousel from "embla-carousel-react";
+import { EmblaFilmContainer, EmblaFilmSlide, MarqueeContainer, MarqueeWrapper } from "./MarqueeInfiniteElements";
 import { useTranslation } from "react-i18next";
+import { EmblaCarousel } from "../LogoList/LogoListElements";
+import emblaCarouselAutoScroll from "embla-carousel-auto-scroll";
+import BlurredImage from "../BlurredImage";
 
-const MarqueeInfinite = ({ noBackground, direction = "normal", imageSection = "marqueeImages" }) => {
+const MarqueeInfinite = ({ imageSection = "marqueeImages" }) => {
   const [t] = useTranslation(["images"]);
   const images = t(`${imageSection}`, { returnObjects: true });
+  const [emblaRef] = useEmblaCarousel({ loop: true, breakpoints: { "(max-width: 768px)": { loop: true, align: "start" } } }, [emblaCarouselAutoScroll({ stopOnInteraction: false, stopOnMouseEnter: true, speed: 1 })]);
 
   return (
     <MarqueeWrapper>
-      <MarqueeContainer>
-        <MarqueeGroup>
-          {images.map((image, i) => (
-            <MarqueeImageContainer key={i} threshold={0.1} transitionDelay={i < 12 ? (1 + i) * 0.2 : (23 - i) * 0.2}>
-              <MarqueeImage src={image.path} alt={image.alt} />
-            </MarqueeImageContainer>
-          ))}
-          {images.map((image, i) => (
-            <MarqueeImageContainer key={i} threshold={0.1} transitionDelay={(1 + i) * 0.2}>
-              <MarqueeImage src={image.path} alt={image.alt} />
-            </MarqueeImageContainer>
-          ))}
-        </MarqueeGroup>
+      <MarqueeContainer threshold={1} transitionDelay={0.5}>
+        <EmblaCarousel qty={images.length} ref={emblaRef}>
+          <EmblaFilmContainer>
+            {images.map((image, index) => (
+              <EmblaFilmSlide key={index}>
+                <BlurredImage src={image.path} alt={image.alt} pathSmall={image.pathSmall} />
+              </EmblaFilmSlide>
+            ))}
+          </EmblaFilmContainer>
+        </EmblaCarousel>
       </MarqueeContainer>
     </MarqueeWrapper>
   );

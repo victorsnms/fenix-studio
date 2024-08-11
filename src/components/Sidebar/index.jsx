@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SideBtnWrap, SidebarRoute, Flag, SidebarItem, SidebarLinkR } from "./SidebarElements";
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, Flag, SidebarItem, SidebarLinkR } from "./SidebarElements";
 import ReactCountryFlag from "react-country-flag";
 import isMobileOrTablet from "../../utils/isMobile";
 import { CommonContext } from "../../providers/CommonContext";
@@ -30,7 +30,7 @@ export const Sidebar = ({ isOpen, toggle }) => {
             </SidebarLinkR>
           </SidebarItem>
           <SidebarItem>
-            <SidebarLinkR to="/reel" onClick={toggle} tabIndex={isOpen ? 0 : -1}>
+            <SidebarLinkR to="/reels" onClick={toggle} tabIndex={isOpen ? 0 : -1}>
               {t("menu.reel")}
             </SidebarLinkR>
           </SidebarItem>

@@ -19,16 +19,52 @@ export const MarqueeWrapper = styled.div`
   }
 `;
 
-export const MarqueeContainer = styled.div`
+export const MarqueeContainer = styled(FadeInAnimation)`
   display: flex;
   column-gap: 24px;
   mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 10%, hsl(0 0% 0% / 1) 90%, hsl(0 0% 0% / 0));
   user-select: none;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const EmblaFilmContainer = styled.div`
+  display: flex;
+`;
+export const EmblaFilmSlide = styled.div`
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+
+  @media screen and (max-width: 1024px) {
+    flex: 0 0 33%;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex: 0 0 50%;
+  }
 `;
 
 export const MarqueeImageContainer = styled(FadeInAnimation)`
   display: flex;
   align-items: center;
+`;
+
+export const MarqueeFilmImage = styled.img`
+  border-radius: 8px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  transition: transform 0.5s ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media screen and (max-width: 767px) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export const MarqueeImage = styled.img`
@@ -65,7 +101,7 @@ const common = css`
   column-gap: 30px;
   white-space: nowrap;
   width: 100%;
-  animation: ${scrollX} 30s linear infinite;
+  /* animation: ${scrollX} 30s linear infinite; */
 `;
 
 export const MarqueeGroup = styled.div`

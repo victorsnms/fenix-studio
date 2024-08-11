@@ -5,6 +5,7 @@ export const LogoSection = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,6 +13,9 @@ export const LogoWrapper = styled.div`
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: 90%;
+  }
 `;
 
 export const ImageLogo = styled.img`

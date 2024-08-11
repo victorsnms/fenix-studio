@@ -22,7 +22,7 @@ export const StudyPage = () => {
       {/* BODY */}
       <StudyPageContainer>
         <FadeInAnimation threshold={0.5}>
-          <PageTitle title={t("studyPage.title")} subtitle={t("studyPage.subtitle")} lightText={true} />
+          <PageTitle title={t("studyPage.title")} subtitle={t("studyPage.subtitle1")} subtitle2={t("studyPage.subtitle2")} lightText={true} />
         </FadeInAnimation>
         <StudyCourses categoriesList={t("studyPage.categories", { returnObjects: true })} />
       </StudyPageContainer>

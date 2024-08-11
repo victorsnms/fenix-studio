@@ -7,6 +7,7 @@ import { ReelPage } from "./pages/Reel/ReelPage";
 import { ServicesPage } from "./pages/Services/ServicesPage";
 import { StudyPage } from "./pages/Study/StudyPage";
 import { HomePage } from "./pages/Home/HomePage.jsx";
+import { PageNotFound } from "./pages/PageNotFound/PageNotFound.jsx";
 
 export function App() {
   return (
@@ -15,9 +16,10 @@ export function App() {
         <Route path="/" exact element={<HomePage />} />
         <Route path="/about" exact element={<AboutPage />} />
         <Route path="/contact" exact element={<ContactPage />} />
-        <Route path="/reel" exact element={<ReelPage />} />
+        <Route path="/reels" exact element={<ReelPage />} />
         <Route path="/services" exact element={<ServicesPage />} />
         <Route path="/study" exact element={<StudyPage />} />
+        <Route path="*" exact element={<PageNotFound />} />
       </Routes>
     </Router>
   );

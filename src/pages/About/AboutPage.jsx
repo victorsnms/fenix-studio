@@ -9,8 +9,8 @@ import PageTitle from "../../components/PageTitle";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import { AboutPageContainer } from "./aboutPageElements";
 import PageDescription from "../../components/PageDescription";
-import SkillsList from "../../components/SkillsList";
 import TestimonyColumns from "../../components/TestimonyColumns";
+import { ServicesGif } from "../../components/ServicesGif";
 
 export const AboutPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -26,11 +26,15 @@ export const AboutPage = () => {
         <FadeInAnimation threshold={0.5}>
           <PageTitle title={t("aboutPage.title")} lightText={true} />
         </FadeInAnimation>
-        <FadeInAnimation threshold={0.75}>
-          <PageDescription text={t("aboutPage.pageDescription")} />
-          <SkillsList skillList={skillsList} skillList2={skillsList2}></SkillsList>
+        <FadeInAnimation threshold={0.2}>
+          <PageDescription text={t("aboutPage.pageDescription1")} />
+          <PageDescription text={t("aboutPage.pageDescription2")} />
+          <PageDescription text={t("aboutPage.pageDescription3")} />
+          {/* <SkillsList skillList={skillsList} skillList2={skillsList2}></SkillsList> */}
+          <ServicesGif />
         </FadeInAnimation>
-        <TestimonyColumns testimonyList={t("testimonyList", { returnObjects: true })} />
+        <TestimonyColumns testimonyList={t("testimonyList", { returnObjects: true })} main />
+        <TestimonyColumns testimonyList={t("testimonyListArtists", { returnObjects: true })} />
       </AboutPageContainer>
       {/* FOOTER */}
       <Footer />
@@ -38,11 +42,5 @@ export const AboutPage = () => {
   );
 };
 
-const skillsList = [
-  "On Set Supervision and Practical Element Photography",
-  "Concept, Look-Development and Pre-Visualization",
-  "CG Environments / Set Extensions",
-  "Modeling, Texturing, Lighting",
-  "Animation",
-];
-const skillsList2 = ["Effects", "Matte Painting ", "Motion Graphics", "Compositing", " Digital Make-Up/Beauty Work"];
+// const skillsList = ["On Set Supervision and Practical Element Photography", "Concept, Look-Development and Pre-Visualization", "CG Environments / Set Extensions", "Modeling, Texturing, Lighting", "Animation"];
+// const skillsList2 = ["Effects", "Matte Painting ", "Motion Graphics", "Compositing", " Digital Make-Up/Beauty Work"];

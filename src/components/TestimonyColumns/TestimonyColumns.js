@@ -10,6 +10,7 @@ export const TestimonyColumnsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  row-gap: 40px;
   padding: 20px 0;
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -21,12 +22,42 @@ export const TestimonyColumn = styled(FadeInAnimation)`
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  column-gap: 35px;
   @media (min-width: 768px) {
     align-items: center;
+    flex-direction: row;
   }
   @media (min-width: 1024px) {
-    width: 33%;
+    width: 50%;
     align-items: start;
+  }
+
+  // used on only 1 testemony
+  &.main {
+    @media (min-width: 1024px) {
+      width: 60%;
+    }
+
+    @media (min-width: 1250px) {
+      width: 50%;
+    }
+  }
+
+  .image-container {
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 479px) {
+      width: auto;
+      justify-content: start;
+    }
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 999px;
   }
 `;
 
@@ -49,4 +80,21 @@ export const TestimonyAuthorOccupation = styled.span`
 export const TestimonyText = styled.span`
   text-align: start;
   color: #f7f8fa;
+`;
+
+export const TestimonyTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+`;
+
+export const TestimonyTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  .join {
+    display: flex;
+    flex-direction: column;
+  }
 `;

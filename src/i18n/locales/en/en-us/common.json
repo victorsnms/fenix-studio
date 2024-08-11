@@ -1,53 +1,50 @@
 {
   "common": {
     "menu": {
+      "home": "Home",
       "about": "About",
       "platforms": "Platforms",
       "services": "Services",
       "careers": "Careers",
       "contact": "Contact Us",
-      "reel": "Reel",
+      "reel": "Reels",
       "study": "Study",
       "articles": "Blog",
       "projects": "Projects",
+      "studioreels": "Studio Reel",
+      "breakdowns": "Breakdowns",
+      "clients": "Clients",
+      "filmography": "Filmography",
       "accessibility": {
         "navLogoAlt": "Go homepage",
         "flagBtnAriaLabel": "Change language to Portuguese",
         "menuBurguerAriaLabel": "Close sidebar"
       }
     },
-    "hero": {
-      "headline1": "develoci",
-      "headline2": "pment commerce intelligence",
-      "headline3": "We empower ",
-      "paragraph": "We are develoci",
-      "paragraph2": "We transform ideas into digital solutions.",
-      "buttonLabel": "Get Started",
-      "institutionalVideo": "https://www.youtube.com/embed/nZRR0QqxoVo"
+    "contactForm": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send",
+      "phone": "Phone",
+      "phone_optional": "Phone (Optional)",
+      "contact_preference": "Contact Preference",
+      "contact_subject": "Reason for Contact",
+      "others": "Others",
+      "budget": "Budget",
+      "vfx_academy": "VFX Academy",
+      "work_with_us": "Work with us"
     },
-    "typewriter": {
-      "fixed": "We're all about ",
-      "headline1": "solutions.",
-      "headline2": "innovation.",
-      "headline3": "you."
-    },
-    "homeText": {
-      "paragraph": "Your e-commerce ambitions fuel our mission at Develoci. We specialize in transforming 'what ifs' into 'wows' and challenges into breakthroughs. With Develoci as your partner, your digital transition becomes a rewarding journey marked by success."
-    },
-    "platformsText": {
-      "headline": "it's more than just a platform - it's your roadmap to success.",
-      "paragraph": "Develoci is proud to partner with eCommerce powerhouses - Salesforce, Shopify, and VTEX. Our expertise spans across these platforms, equipping us to find the perfect fit for your business. Whether you need Salesforce's customer-centric approach, Shopify's user-friendly interface, or VTEX's scalable solution, we've got you covered."
-    },
-    "about": {
-      "topLine": "We're develoci",
-      "headline": "We will do whatever it takes to delivery beyond your expectations.",
-      "description": "We are ecommerce certified specialists working for a long time as ecommerce development focused on ecommerce platforms such as: Salesforce, Vtex, Magento, among others. We have more than 10 years of ecommerce experience developing solution for ecommerce based on achievable deadlines, budged control, advanced solutions, scalable, and the best user experience.",
-      "buttonLabel": "Get Started",
-      "alt": "develoci"
+    "pagenotfound": {
+      "title": "Página não encontrada",
+      "description": "Desculpe, mas a página que você está procurando não pode ser encontrada."
     },
     "aboutPage": {
       "title": "About Us",
-      "pageDescription": "Founded in 2013, Fenix Studios was created in response to the quickly changing landscape of visual effects while maintaining a local presence.  With a compact and powerful team, Fenix Studios set out to create visual effects on a scale that was previously out of reach for a boutique facility, utilizing a modern pipeline that can quickly adapt to changing project needs."
+      "pageDescription1": "With the purpose of elevating, revitalizing and inspiring future generations in the Visual Effects market, Fenix Studios was born in 2022, acting in the post production market. ",
+      "pageDescription2": "We are defined by our team. We prioritize the collaboration of our members. Our success comes from a united team in a sustainable environment for the creative process. This is culture.",
+      "pageDescription3": "We challenge ourselves to create visual effects on an international scale with a compact and specialized team using a modern pipeline workflow that enables us to adapt to the constant changes of a project and client demands."
     },
     "contactPage": {
       "title": "Contact Us",
@@ -69,12 +66,12 @@
     "homePage": {
       "title": "Home",
       "studyTitle": "THE FENIX STUDIO ACADEMY",
-      "studyText": "Fenix Studio invites recent grads to apply for an exciting paid opportunity to work with top artists, creative supervisors and production team in a real-live production opportunity during our upcoming Apprenticeship.",
+      "studyText": "Explore the extraordinary world of visual effects with the courses made by Fenix Studios. Our academy is a meeting spot for creative minds that wish to master the most advanced VFX techniques. Involve yourself in the magic of digital creation through a practical and in-depth course. Our course will capacitate you to give life to your most ambitious creations. Join us and embark on a thrilling journey to become a specialist in visual effects.",
       "studyCTALabel": "More",
       "studyCTAUrl": "/study"
     },
     "reelPage": {
-      "title": "Reel"
+      "title": "Studio Reels"
     },
     "servicesPage": {
       "title": "Services",
@@ -84,8 +81,9 @@
       "text2content": "Our Artists will help you design and create your world no matter how large or small."
     },
     "studyPage": {
-      "title": "Soluções Premium",
-      "subtitle": "Os treinamentos mais bem avaliados pelos nossos alunos para fazer você obter segurança, acelerar o seu aprendizado e aumentar os seus lucros estão aqui.",
+      "title": "Premium Solutions",
+      "subtitle1": "Our courses contain a diverse selection of content with different levels and focus. With each completed course you get closer to your objectives.",
+      "subtitle2": "With our hands-on approach, you learn by doing and asking questions, and with each module you finish you add a new piece to your portfolio. See below all our offered courses and expand your knowledge!",
       "categories": [
         {
           "categorTitle": "Tecnologia",
@@ -153,96 +151,40 @@
         }
       ]
     },
-    "platforms": {
-      "topLine": "E-Commerce Platforms",
-      "headline": "Specialists in the main platforms",
-      "description": "We take care of all E-commerce development services, while you focus on the most important task - serving your customers better.",
-      "buttonLabel": "Get Started",
-      "alt": "develoci",
-      "platforms": {
-        "vtex": {
-          "title": "VTEX",
-          "description": "Elevate your VTEX e-commerce platform with our certified developers and architects. They specialize in VTEX, delivering customized solutions that drive growth and enhance the customer experience. Choose our certified professionals to stay ahead in the digital landscape with a robust and scalable VTEX-powered online store."
-        },
-        "shopify": {
-          "title": "Shopify Partner",
-          "description": "Enhance your Shopify e-commerce platform with our certified developers and architects. They possess in-depth knowledge and expertise in Shopify, creating tailored solutions to align with your business objectives. Elevate your online store's performance and scalability with our team of certified professionals."
-        },
-        "salesforce": {
-          "title": "Salesforce Commere Cloud Partner",
-          "description": "Enhance your Salesforce Commerce Cloud implementation with our certified developers and architects. Their expertise and deep knowledge of the platform ensure customized solutions that integrate seamlessly, optimize performance, and drive growth. Elevate your e-commerce operations with our team of certified professionals."
-        }
-      }
-    },
-    "careers": {
-      "topLine": "Join the team!",
-      "headline": "Be a develoci",
-      "description": "We are building a friendly, autonomous and remote culture and we are always looking for the best professionals.",
-      "buttonLabel": "Opportunities",
-      "alt": "develoci"
-    },
-    "services": {
-      "headline": "Our Services",
-      "1": {
-        "title": "Consultant",
-        "description": "We're here to effectively scale your team up and take care of any technology challenges throught knowledge and experience from our consultants."
-      },
-      "2": {
-        "title": "Squad",
-        "description": "Whether you start a project from scratch or thinking about extending your existing squad — we help you build teams allocating a develoci team to your project."
-      },
-      "3": {
-        "title": "Outsourcing",
-        "description": "We have specialized developers for each e-commerce platform that can be allocated to your development team to help you full-time to achieve your project goals."
-      }
-    },
     "socialPosts": {
       "headlineLinkedIn": "Follow us on LinkedIn",
       "headlineInstagram": "Follow us on Instagram",
       "ariaLabelInstagram": "Instagram post list"
     },
-    "textGradient": {
-      "content": "Combining cutting-edge tech with a deep understanding of human needs, we thrive on solving problems. Our mission: to build eCommerce solutions that deliver lasting, impactful results."
-    },
-    "contact": {
-      "heroTitle": "Worldwide Coverage",
-      "title": "Let's talk",
-      "text": "Drop us a line, and we will come up with some well-fit options for your project.",
-      "name": "Name",
-      "surname": "Surname",
-      "email": "Email",
-      "phoneNumber": "Phone Number",
-      "platform": "Platform",
-      "platformOptions": ["Platform", "Salesforce", "VTEX", "Shopify", "others..."],
-      "service": "Service",
-      "serviceOptions": ["Service", "Consulting", "Outsourcing", "Squad", "others..."],
-      "message": "Tell us about your project",
-      "buttonLabel": "Send",
-      "teamMessageTitle": "Meet the team",
-      "teamMessage": "“As your dedicated project manager I am ready to guide your through development process.”",
-      "emailError": "Please enter a valid e-mail",
-      "sendingRequest": "Sending your message",
-      "sucessRequest": "Your message was sent !",
-      "failedRequest": "Failed on sending your message",
-      "homeComponentTitle": "Why don't you start today?",
-      "homeComponentParagraph": "Take the first step towards unlocking your e-commerce potential and achieving remarkable success. Contact us now to explore how our services can transform your business and propel you ahead of the competition.",
-      "homeComponentSpan": "Trusted by great companies"
-    },
     "testimonyList": [
       {
-        "author": "GREGORY LIEGEY",
-        "occupation": "VISUAL EFFECTS SUPERVISOR",
-        "text": "Gregory Oehler is a Visual Effects Supervisor and 28-year veteran of the industry with over 90 feature film, television and special venue projects under his belt. A Flame artist since 1997, Greg has designed and executed custom effects for an array of films, ranging from Oceans Twelve  to Watchmen,  Contact  to Titanic, The Illusionist  to The Bourne Ultimatum, and Fantastic Four  to G.I. Joe. Along the way, Greg has had the privilege to work hand in hand with some of the industries top directors, producers and visual effects supervisors. Greg’s recent supervisor contributions include The Green Hornet, Pirates Of The Caribbean: On Stranger Tides, The Odd Life Of Timothy Green, Men In Black 3 and The Amazing Spider-Man."
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+      }
+    ],
+    "testimonyListArtists": [
+      {
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
       },
       {
-        "author": "GREGORY LIEGEY",
-        "occupation": "VISUAL EFFECTS SUPERVISOR",
-        "text": "Beginning his career as a composite artist specializing in look development and shot design, Greg worked for some of the visual effects industry’s top houses (ILM, Sony Imageworks and Cinesite among them).  Graduating to the position of Visual Effects Supervisor in 2004, he has served in that capacity on over twenty films during the past decade. In that time, Greg presided over the production of, quite literally, thousands of shots. Flightplan, Evan Almighty, Inglourious Basterds, Tower Heist, and Fury represent just some of his credits.  Overseeing work both on set and off, his range of experience covers everything from miniatures to full CG environments.  Greg has had the opportunity to work with many top directors, producers, vfx supervisors, as well as some of the industry’s leading technicians - each experience helping to fine-tune the balance between art and technology, essential to the creation of high-end visual effects."
-      },
-      {
-        "author": "MICHELE VALLILLO",
-        "occupation": "EXECUTIVE PRODUCER",
-        "text": "With over 25 years' experience on over 50 feature films, Michele began her career as an intern with New York Women in Film and Television. Shortly after arriving in Los Angeles, she joined Cinesite Hollywood during its inception and soon relocated to London to launch its sister office in Soho. Returning to LA, she continued to produce for various studios including Universal Pictures, Rhythm & Hues, CIS Hollywood, Method Studios, and Pacific Title & Art. Michele's credits include Army of the Dead, Black Widow, Bird Box, and Scooby Doo, and was nominated for a VES award for Outstanding Supporting Visual Effects in a Feature Motion Picture for her work on Argo."
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
       }
     ],
     "footer": {
@@ -252,6 +194,7 @@
       "careers": "Careers",
       "rights": "All rights reserved",
       "shortText": "Transforming visions into cinematic masterpieces",
+      "developed": "Developed by ",
       "pageLinks": [
         {
           "title": "Home",
@@ -284,16 +227,8 @@
           "link": "https://www.linkedin.com/company/fenix/"
         },
         {
-          "media": "Facebook",
-          "link": "https://web.facebook.com/fenix/"
-        },
-        {
           "media": "Instagram",
           "link": "https://www.instagram.com/fenix/"
-        },
-        {
-          "media": "Twitter",
-          "link": "https://twitter.com/fenix"
         },
         {
           "media": "Youtube",
@@ -307,85 +242,6 @@
     },
     "clients": {
       "trustedMessage": "Trusted by great companies"
-    },
-    "blog": {
-      "blogListTitle": "Have a look at our blog",
-      "blogListBtnLabel": "see all posts"
-    },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "content": [
-        {
-          "question": "What is Develoci?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante"
-        },
-        {
-          "question": "How is Develoci?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante"
-        },
-        {
-          "question": "Who is Develoci?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante"
-        },
-        {
-          "question": "When is Develoci?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante"
-        },
-        {
-          "question": "Is Develoci?",
-          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae posuere nisl. In dictum luctus arcu, eget feugiat quam varius at. Fusce magna ante"
-        }
-      ]
-    },
-    "testimonials": [
-      {
-        "client": "Keys",
-        "logo": "/clientLogos/keys-logo.svg",
-        "logoAlt": "Company logo",
-        "image": "/testimonial-1.jpg",
-        "imageAlt": "Author",
-        "text": "Working with Tech Tribe was a dream come true. They full helped us with our digital transormation",
-        "author": "Jessica | Strategist in Keys"
-      },
-      {
-        "client": "Loccitane Au Bresil",
-        "logo": "/clientLogos/loccitane-au-bresil-logo.svg",
-        "logoAlt": "Company logo",
-        "image": "/testimonial-2.jpg",
-        "imageAlt": "Author",
-        "text": "Working with Tech Tribe was a dream come true. They full helped us with our digital transormation",
-        "author": "Jessica | Strategist in Loccitane"
-      }
-    ],
-    "stickyServices": {
-      "headline": "Supercharge Your E-commerce Success",
-      "description": "Fuel your e-commerce business with our comprehensive services. Our expert consultants provide tailored guidance to optimize your online presence and overcome challenges. Whether you need a dedicated squad or want to augment your team with specialized developers, we have the solution.",
-      "content": [
-        {
-          "icon": "/services-1.svg",
-          "title": "Consultant",
-          "text": "We'll work closely with you to analyze your processes, identify areas for improvement, and develop effective strategies. From selecting the right technology platforms to streamlining operations, our consultants will guide you every step of the way. Don't let obstacles hinder your growth. Partner with us and let our e-commerce consultants empower your business for success."
-        },
-        {
-          "icon": "/services-5.svg",
-          "title": "Squad",
-          "text": "Whether you're starting a project from scratch or looking to extend your existing squad, we're here to help you build the perfect team. Our expert consultants specialize in allocating dedicated development teams tailored to your specific project needs. We'll work closely with you to understand your requirements, skill sets, and project goals. With our extensive network of highly skilled professionals, we'll assemble a squad that is equipped to tackle any challenge. Don't settle for anything less than the best. Let us help you build your dream team and achieve remarkable results."
-        },
-        {
-          "icon": "/services-4.svg",
-          "title": "Outsourcing",
-          "text": "Looking to accelerate your project goals and empower your development team? We offer outsourcing solutions that allow you to hire our specialized developers for each e-commerce platform, seamlessly integrating them into your existing team full-time. With their expertise in Salesforce, Shopify, VTEX, and more, our developers bring valuable skills to drive your project forward. By outsourcing with us, you can tap into our talent pool without the recruitment and management hassles. Experience increased efficiency, productivity, and successful project outcomes as our dedicated developers collaborate with your team. Don't let resource limitations hinder your progress. Contact us today and let our outsourcing solutions empower your team to achieve remarkable results."
-        }
-      ]
-    },
-    "qualityCards": {
-      "quality1": "Diversified",
-      "quality1Description": "Our team is made up of 13 people from different states and cultures. We are united in diversity.",
-      "quality2": "Accessible",
-      "quality2Description": "We made enterprise level UX and human centered design our mission."
-    },
-    "portfolio": {
-      "ariaLabel": "Section with animated images of Develoci projects"
     },
     "cookieConsent": {
       "text": "This website uses cookies to improve your experience. By continuing to browse, you consent to our use of cookies.",

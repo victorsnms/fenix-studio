@@ -8,8 +8,8 @@ import { Footer } from "../../components/Footer";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import PageTitle from "../../components/PageTitle";
 import { ServicesPageContainer } from "./servicesPageElements";
-import MarqueeSection from "../../components/MarqueeSection";
 import Text from "../../components/Text";
+import ImageGallery from "../../components/ImageGallery";
 
 export const ServicesPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -29,10 +29,12 @@ export const ServicesPage = () => {
 
         <Text {...servicesTitle}>{t("servicesPage.text1title")}</Text>
         <Text {...servicesText}>{t("servicesPage.text1content")}</Text>
-        <MarqueeSection noBackground imageSection="marqueeImages" />
-        <Text {...servicesTitle}>{t("servicesPage.text2title")}</Text>
-        <Text {...servicesText}>{t("servicesPage.text2content")}</Text>
-        <MarqueeSection noBackground imageSection="marqueeImages2" direction="reverse" />
+        {/* <MarqueeSection noBackground imageSection="marqueeImages" /> */}
+        <ImageGallery imageSection="ServicesGalleryImages" />
+        {/* DO NOT DELETE May use latter */}
+        {/* <Text {...servicesTitle}>{t("servicesPage.text2title")}</Text> */}
+        {/* <Text {...servicesText}>{t("servicesPage.text2content")}</Text> */}
+        {/* <ImageGallery imageSection="OurArtistsImages" /> */}
       </ServicesPageContainer>
       {/* FOOTER */}
       <Footer />
