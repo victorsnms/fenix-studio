@@ -233,6 +233,14 @@
         {
           "media": "Youtube",
           "link": "https://www.youtube.com/fenix"
+        },
+        {
+          "media": "Whatsapp",
+          "link": "https://www.whatsapp.com/catalog/558100000000/?app_absent=0"
+        },
+        {
+          "media": "TikTok",
+          "link": "www.google.com"
         }
       ],
       "accessibility": {

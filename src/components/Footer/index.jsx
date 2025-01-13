@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FooterContainer, FooterWrap, FooterBrand, FooterBrandText, SocialLogo, Logo, SocialMedia, SocialMediaList, SocialMediaItem, SocialIconLink, SocialIcon, FooterLinksContainer, FooterLinksList, FooterLinkItem, FooterLink, WebSiteRights, WebSiteRightsText } from "./FooterElements";
-import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import fenixLogo from "../../images/logo.png";
 import { CommonContext } from "../../providers/CommonContext";
 
@@ -10,6 +10,8 @@ const socialIcon = {
   Instagram: <FaInstagram />,
   Twitter: <FaTwitter />,
   Youtube: <FaYoutube />,
+  Whatsapp: <FaWhatsapp />,
+  TikTok: <FaTiktok />,
 };
 
 export const Footer = () => {

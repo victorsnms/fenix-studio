@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const ServicesGifContainer = styled.div`
+export const ServicesGifContainer = styled(Link)`
   width: 100%;
   max-width: 1000px;
   margin-left: auto;

@@ -6,7 +6,7 @@ export const ServicesGif = ({ imageSection = "servicesGif" }) => {
   const images = t(`${imageSection}`, { returnObjects: true });
 
   return (
-    <ServicesGifContainer>
+    <ServicesGifContainer to={"/services"}>
       {images.map((image, index) => (
         <ServicesGifImage key={index} src={image.path} alt={image.alt} />
       ))}

@@ -42,6 +42,18 @@
         "alt": "MatchMove",
         "title": "MatchMove",
         "text": "Tracking do movimento de câmera e/ou objetos na cena. Com o auxílio de matchmove conseguimos integrar objetos e personagens 3D em shots com movimento levando em consideração as alterações em perspectiva e parallax."
+      },
+      {
+        "path": "services/MattePainting_PTEN.png",
+        "alt": "Virtual Production",
+        "title": "Virtual Production",
+        "text": "Utilizando tecnologias em tempo real para criar experiências cinematográficas imersivas e interativas. Nossos serviços de Produção Virtual abrangem tecnologias como volumes de LED, engines em tempo real e VFX in-camera para aprimorar a criatividade e otimizar os fluxos de trabalho de produção."
+      },
+      {
+        "path": "services/MattePainting_PTEN.png",
+        "alt": "FOOH",
+        "title": "FOOH",
+        "text": "Crie simulações realistas de campanhas de publicidade Out-of-Home (OOH). Utilizamos técnicas avançadas de renderização 3D e composição para inserir painéis digitais, cartazes e outros elementos OOH perfeitamente em ambientes do mundo real. O FOOH permite que os clientes testem e refinem campanhas OOH antes da implementação real, otimizando seu impacto e ROI."
       }
     ],
     "OurArtistsImages": [
