@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContactPageContainer = styled.div`
   width: 100%;
-  background: #151515;
+  background: var(--color-background);
   background-size: 400% 400%;
 
   @keyframes gradient {

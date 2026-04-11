@@ -7,7 +7,7 @@ export const ContactInfoSection = styled(FadeInAnimation)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f7f8fa;
+  color: var(--color-text);
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;

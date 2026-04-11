@@ -6,7 +6,7 @@ export const MarqueeWrapper = styled.div`
     overflow: hidden;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: ${({noBackground}) => noBackground ? 'transparent' : '#222633'};
+    background: ${({noBackground}) => noBackground ? 'transparent' : 'var(--color-surface)'};
     display: flex;
     flex-direction: column;
     grid-row-gap: 25px;
@@ -44,5 +44,5 @@ export const MarqueeImage = styled.img`
     max-width: none;
     min-width: 200px;
     border-radius: 8px;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 30px var(--color-overlay-30);
 `

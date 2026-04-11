@@ -22,7 +22,7 @@ export const LogoAndTextContainer = styled.div`
 `;
 
 export const MainTextContainer = styled.div`
-  color: #f6f7f8;
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ export const PageNotFoundMessageText = styled.div`
 export const PageNotFoundDescriptionText = styled.div`
   text-align: center;
   font-size: 18px;
-  color: #f6f7f8;
+  color: var(--color-text);
   padding-left: 25px;
   padding-right: 25px;
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TrustedContainer = styled.span`
-    color: #f7f8fa;
+    color: var(--color-text);
     display: flex;
     justify-content: center;
     padding-bottom: 10px;

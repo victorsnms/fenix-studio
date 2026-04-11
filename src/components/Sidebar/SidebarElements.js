@@ -1,129 +1,108 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
 
+// ─── Overlay / Shell ──────────────────────────────────────────────────────────
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #0d0d0d;
-  display: grid;
-  align-items: center;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  inset: 0;
+  background: var(--color-bg-darker);
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
+  pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
 `;
 
-export const CloseIcon = styled(FaTimes)`
-  color: white;
-`;
-
+// ─── Close button ─────────────────────────────────────────────────────────────
 export const Icon = styled.button`
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 20px;
+  right: 20px;
   background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 24px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
 `;
 
+// ─── Content ──────────────────────────────────────────────────────────────────
 export const SidebarWrapper = styled.div`
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 `;
 
 export const SidebarMenu = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
-  text-align: center;
-
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
-  }
-`;
-
-export const SidebarLink = styled(LinkS)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
   list-style: none;
-  transition: 0.2s ease-in-out;
-  color: white;
-  cursor: pointer;
-
-  &:hover {
-    color: ##ed1c24;
-    transition: 0.2s ease-in-out;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const SidebarItem = styled.li`
-  display: inherit;
+  display: flex;
 `;
 
 export const SidebarLinkR = styled(LinkR)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 28px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-white);
   text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: white;
-  cursor: pointer;
+  padding: 12px 24px;
+  transition: color 0.2s ease;
 
-  &:hover {
-    color: #ed1c24;
-    transition: 0.2s ease-in-out;
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
   }
 `;
 
-export const SideBtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #ed1c24;
-  white-space: nowrap;
-  padding: 16px 64px;
-  color: #222633;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: white;
-    color: #222633;
-  }
-`;
-
+// ─── Language toggle (bottom of sidebar) ─────────────────────────────────────
 export const Flag = styled.button`
-  color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  gap: 10px;
+  background: transparent;
   border: none;
-  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-white);
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  margin-top: 16px;
+  transition: color 0.2s ease;
 
-  span {
-    margin-left: 10px;
-    font-size: 0.8rem;
-  }
-
-  span:hover {
-    transition: all 0.2s ease-in-out;
-    color: #ed1c24;
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
   }
 `;

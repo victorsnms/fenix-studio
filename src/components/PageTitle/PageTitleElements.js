@@ -13,7 +13,7 @@ export const Heading1 = styled.h1`
   text-align: center;
   font-size: 13vw;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#222633")};
+  color: ${({ lightText }) => (lightText ? "var(--color-text)" : "var(--color-surface)")};
 
   @media (min-width: 768px) {
     font-size: 80px;
@@ -32,7 +32,7 @@ export const SubTitle = styled.h2`
   font-size: 5vw;
   line-height: 135%;
   font-weight: 400;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#222633")};
+  color: ${({ lightText }) => (lightText ? "var(--color-text)" : "var(--color-surface)")};
   padding: 15px 30px;
 
   @media (min-width: 479px) {

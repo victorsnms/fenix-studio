@@ -8,19 +8,19 @@ export const ContactForm = styled.form`
   margin: auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--color-overlay-30);
 `;
 
 export const Label = styled.label`
   margin-bottom: 8px;
   font-weight: bold;
-  color: #f7f8fa;
+  color: var(--color-text);
 `;
 
 export const Input = styled.input`
   margin-bottom: 16px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-size: 16px;
 `;
@@ -28,7 +28,7 @@ export const Input = styled.input`
 export const Select = styled.select`
   margin-bottom: 16px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-size: 16px;
 `;
@@ -36,7 +36,7 @@ export const Select = styled.select`
 export const Textarea = styled.textarea`
   margin-bottom: 16px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-size: 16px;
   resize: vertical;
@@ -48,10 +48,10 @@ export const SubmitButton = styled.button`
   display: flex;
   align-items: center;
   border-radius: 5px;
-  background: #ed1c24;
+  background: var(--color-primary);
   white-space: nowrap;
   padding: 10px 20px;
-  color: #f6f7f8;
+  color: var(--color-text);
   font-weight: 700;
   font-size: 16px;
   border: none;
@@ -63,8 +63,8 @@ export const SubmitButton = styled.button`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #f7f8fa;
-    color: #151515;
+    background: var(--color-text);
+    color: var(--color-background);
   }
 `;
 

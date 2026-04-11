@@ -243,8 +243,26 @@
           "link": "www.google.com"
         }
       ],
+      "institucionalTitle": "Institucional",
+      "servicosTitle": "Serviços",
+      "socialMediaTitle": "Social Media",
+      "madeBy": "feito por",
+      "termsPath": "/terms",
+      "institucionalLinks": [
+        { "title": "Sobre", "path": "/about" },
+        { "title": "Reels", "path": "/reel" },
+        { "title": "Aprenda", "path": "/study" },
+        { "title": "Contato", "path": "/contact" }
+      ],
+      "serviceLinks": [
+        { "title": "Pós Produção", "path": "/services" },
+        { "title": "Efeitos Visuais", "path": "/services" },
+        { "title": "Color Grading", "path": "/services" },
+        { "title": "Motion Graphics", "path": "/services" }
+      ],
       "accessibility": {
-        "altLogo": "Ir para a página inicial"
+        "altLogo": "Ir para a página inicial",
+        "socialMediaSectionLabel": "Links de redes sociais"
       }
     },
     "clients": {

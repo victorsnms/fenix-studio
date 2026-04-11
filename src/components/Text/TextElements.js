@@ -4,8 +4,9 @@ export const TextContainer = styled.div`
   width: 100%;
   padding: ${({ containerPadding }) => containerPadding};
   font-size: 12px;
-  color: ${({ color }) => (color ? color : "#f7f8fa")};
-  background-color: ${({ lightBg, noBackground }) => (noBackground ? "transparent" : lightBg ? "#f9f9f9" : "#151515")};
+  color: ${({ color }) => (color ? color : "var(--color-text)")};
+  background-color: ${({ lightBg, noBackground }) =>
+    noBackground ? "transparent" : lightBg ? "var(--color-bg-light)" : "var(--color-background)"};
 
   @media (min-width: 768px) {
     font-size: 14px;

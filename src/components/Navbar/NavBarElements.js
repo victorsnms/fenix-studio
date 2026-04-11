@@ -1,160 +1,165 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
 
+// ─── Shell ────────────────────────────────────────────────────────────────────
+// Heights from Figma: desktop ~120px (py-35 + 50px logo), tablet 90px, mobile 68px
 export const Nav = styled.nav`
-  background: #151515;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
+  width: 100%;
+  height: 120px;
+  background: var(--color-bg-darker);
 
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
+  @media (max-width: 1024px) {
+    height: 90px;
+  }
+
+  @media (max-width: 480px) {
+    height: 68px;
   }
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 90%;
-  max-width: 1300px;
-`;
-
-export const NavLogo = styled(LinkR)`
-  color: white;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
   align-items: center;
-  font-weight: 500;
-  text-decoration: none;
-`;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
 
-export const Logo = styled.img`
-  max-width: 200px;
-  max-height: 80px;
-`;
-
-export const MobileIcon = styled.button`
-  display: none;
-
-  @media screen and (max-width: 945px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: white;
-    border: none;
-    background-color: transparent;
+  @media (max-width: 480px) {
+    padding: 0 15px;
   }
 `;
 
+// ─── Logo ─────────────────────────────────────────────────────────────────────
+// Figma: 193×50px on desktop/tablet (node 2191:9892), 150×38.86px on mobile (node 2191:9840)
+export const NavLogo = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+`;
+
+export const Logo = styled.img`
+  display: block;
+  width: 193px;
+  height: 50px;
+  object-fit: contain;
+  object-position: left center;
+
+  @media (max-width: 480px) {
+    width: 150px;
+    height: 38.86px;
+  }
+`;
+
+// ─── Desktop Nav Menu ─────────────────────────────────────────────────────────
+// Figma: links container gap-[32px], each link p-[10px], font 18px Bold Peridot uppercase
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
-  text-align: center;
-  margin-right: -22px;
+  margin: 0;
+  padding: 0;
+  gap: 0;
 
-  @media screen and (max-width: 945px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
 
 export const NavItem = styled.li`
-  height: 80px;
-`;
-
-export const NavLinks = styled(LinkS)`
-  color: white;
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-
-  &.active {
-    border-color: #ed1c24;
-  }
 `;
 
 export const NavLinksR = styled(LinkR)`
-  color: white;
-  display: flex;
-  align-items: center;
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--color-white);
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-
-  &.active {
-    border-color: #ed1c24;
-  }
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    color: #ed1c24;
-  }
-`;
-
-export const Flag = styled.button`
-  color: white;
+  padding: 10px;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-
-  span {
-    margin-left: 10px;
-    font-size: 0.5rem;
-  }
-
-  span:hover {
-    transition: all 0.2s ease-in-out;
-    color: #ed1c24;
-  }
-`;
-
-export const NavBtnLink = styled(LinkR)`
-  height: 50%;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  background: #ed1c24;
+  gap: 8px;
+  transition: color 0.2s ease;
   white-space: nowrap;
-  padding: 10px 20px;
-  color: #f6f7f8;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: white;
-    color: #ed1c24;
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
   }
 
-  @media screen and (max-width: 945px) {
-    display: none;
+  &:focus-visible {
+    text-decoration: underline;
+  }
+`;
+
+// ─── Right-side controls (lang toggle + hamburger) ────────────────────────────
+export const NavRight = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+`;
+
+// Figma: flag + "EN" text, Bold 18px Peridot, gap-[8px]
+export const LangToggle = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--color-white);
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    gap: 5px;
+    padding: 6px;
+  }
+`;
+
+// Hamburger — hidden on desktop, shown on tablet/mobile
+export const MobileIcon = styled.button`
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  font-size: 24px;
+  padding: 8px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
   }
 `;

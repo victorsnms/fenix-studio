@@ -12,7 +12,7 @@ export const MediaGalleryContainer = styled.div`
 export const Media = styled(FadeInAnimation)`
   height: 220px;
   width: 100%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 15px var(--color-overlay-70);
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -31,7 +31,7 @@ export const PopupMedia = styled.div`
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--color-overlay-80);
   width: 100%;
   height: 100%;
 
@@ -45,7 +45,7 @@ export const PopupMedia = styled.div`
     max-width: 95%;
     max-height: 95%;
     object-fit: contain;
-    border: 3px solid #fff;
+    border: 3px solid var(--color-white);
   }
   span {
     position: absolute;
@@ -55,7 +55,7 @@ export const PopupMedia = styled.div`
     font-weight: bolder;
     z-index: 100;
     cursor: pointer;
-    color: #fff;
+    color: var(--color-white);
     user-select: none;
   }
 `;
@@ -70,8 +70,8 @@ export const TextOnHover = styled.div`
   row-gap: 15px;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--color-overlay-50);
+  color: var(--color-white);
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 15px;
@@ -89,10 +89,10 @@ export const LoadMoreCTA = styled(FadeInAnimation)`
   display: flex;
   align-items: center;
   border-radius: 5px;
-  background: #ed1c24;
+  background: var(--color-primary);
   white-space: nowrap;
   padding: 10px 20px;
-  color: #f6f7f8;
+  color: var(--color-text);
   font-weight: 700;
   font-size: 16px;
   border: none;
@@ -104,7 +104,7 @@ export const LoadMoreCTA = styled(FadeInAnimation)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #f7f8fa;
-    color: #151515;
+    background: var(--color-text);
+    color: var(--color-background);
   }
 `;

@@ -3,7 +3,7 @@ import FadeInAnimation from "../../components/FadeInAnimation";
 
 export const ServicesPageContainer = styled.div`
   width: 100%;
-  background: #151515;
+  background: var(--color-background);
   background-size: 400% 400%;
 
   @keyframes gradient {
@@ -39,7 +39,7 @@ export const PlatformSection = styled(FadeInAnimation)`
 
 export const PlatformTextContainer = styled.div`
   max-width: 700px;
-  color: #f7f8fa;
+  color: var(--color-text);
   @media screen and (min-width: 1343px) {
     order: ${({ inverted }) => (inverted ? 1 : 0)};
   }

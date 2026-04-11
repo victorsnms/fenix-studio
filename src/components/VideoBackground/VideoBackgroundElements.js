@@ -21,7 +21,7 @@ export const VideoContainer = styled.div`
   }
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: var(--color-overlay-55);
     position: absolute;
     inset: 0;
     width: 100%;

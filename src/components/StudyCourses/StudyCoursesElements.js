@@ -18,7 +18,7 @@ export const CategoryWrapper = styled(FadeInAnimation)`
   margin-bottom: 50px;
 `;
 export const CategoryTitle = styled.span`
-  color: #f7f8fa;
+  color: var(--color-text);
   font-size: 38px;
   margin-bottom: 20px;
 `;
@@ -52,13 +52,13 @@ export const CourseInfoWrapper = styled.div`
   align-items: center;
 `;
 export const CourseTitle = styled.span`
-  color: #f7f8fa;
+  color: var(--color-text);
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 10px;
 `;
 export const CourseDescription = styled.span`
-  color: #f7f8fa;
+  color: var(--color-text);
   margin-bottom: 20px;
 `;
 export const CourseCTA = styled.a`
@@ -66,10 +66,10 @@ export const CourseCTA = styled.a`
   display: flex;
   align-items: center;
   border-radius: 5px;
-  background: #ed1c24;
+  background: var(--color-primary);
   white-space: nowrap;
   padding: 10px 20px;
-  color: #f6f7f8;
+  color: var(--color-text);
   font-weight: 700;
   font-size: 16px;
   border: none;
@@ -79,7 +79,7 @@ export const CourseCTA = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #f7f8fa;
-    color: #151515;
+    background: var(--color-text);
+    color: var(--color-background);
   }
 `;

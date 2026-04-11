@@ -243,6 +243,23 @@
           "link": "www.google.com"
         }
       ],
+      "institucionalTitle": "Institutional",
+      "servicosTitle": "Services",
+      "socialMediaTitle": "Social Media",
+      "madeBy": "made by",
+      "termsPath": "/terms",
+      "institucionalLinks": [
+        { "title": "About", "path": "/about" },
+        { "title": "Reels", "path": "/reel" },
+        { "title": "Study", "path": "/study" },
+        { "title": "Contact", "path": "/contact" }
+      ],
+      "serviceLinks": [
+        { "title": "Post Production", "path": "/services" },
+        { "title": "Visual Effects", "path": "/services" },
+        { "title": "Color Grading", "path": "/services" },
+        { "title": "Motion Graphics", "path": "/services" }
+      ],
       "accessibility": {
         "altLogo": "Go homepage",
         "socialMediaSectionLabel": "Social media links"
