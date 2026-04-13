@@ -319,111 +319,21 @@
       }
     ],
     "reelsMediaGallery": [
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      },
-      {
-        "type": "video",
-        "url": "videos/main_video.mp4",
-        "thumbnail": "thumbnails/test_thumb.jpg",
-        "title": "test title",
-        "text": "test text"
-      }
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
+      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" }
     ],
     "servicesGif": [
       {

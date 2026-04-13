@@ -38,6 +38,22 @@ export const servicesSeo = {
   imageURL: "http://fenix-studios.com/src/images/logo.png",
 };
 
+export const postProductionSeo = {
+  title: "Fenix Studios - Pós Produção",
+  description: "Post Production Page",
+  keywords:
+    "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, post production, pos producao",
+  imageURL: "http://fenix-studios.com/src/images/logo.png",
+};
+
+export const vfxSeo = {
+  title: "Fenix Studios - VFX",
+  description: "VFX Page",
+  keywords:
+    "vfx, visual effects, motion graphics, cg, compositing, animation, rigging, concept art, Fenix Studios, efeitos visuais",
+  imageURL: "http://fenix-studios.com/src/images/logo.png",
+};
+
 export const studySeo = {
   title: "Fenix Studios - Study",
   description: "Study Page",

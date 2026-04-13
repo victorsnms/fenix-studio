@@ -1,16 +1,17 @@
-import React from "react";
-import { Heading1, SubTitle, TitleContainer } from "./PageTitleElements";
+import Breadcrumb from "../Breadcrumb";
+import { TitleSection, TitleInner, TitleHeading } from "./PageTitleElements";
 
-const PageTitle = ({ title = "", lightText = false, subtitle, subtitle2 }) => {
-  return (
-    <>
-      <TitleContainer>
-        <Heading1 lightText={lightText}>{title}</Heading1>
-        {subtitle && <SubTitle lightText={lightText}>{subtitle}</SubTitle>}
-        {subtitle2 && <SubTitle lightText={lightText}>{subtitle2}</SubTitle>}
-      </TitleContainer>
-    </>
-  );
-};
+const PageTitle = ({
+  title = "",
+  bgImage = "/images/pagetitlebg.png",
+  breadcrumbs = [],
+}) => (
+  <TitleSection bgImage={bgImage}>
+    <TitleInner>
+      <TitleHeading>{title}</TitleHeading>
+      {breadcrumbs.length > 0 && <Breadcrumb items={breadcrumbs} />}
+    </TitleInner>
+  </TitleSection>
+);
 
 export default PageTitle;

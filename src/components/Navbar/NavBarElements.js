@@ -74,6 +74,7 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 export const NavLinksR = styled(LinkR)`
@@ -99,6 +100,45 @@ export const NavLinksR = styled(LinkR)`
 
   &:focus-visible {
     text-decoration: underline;
+  }
+`;
+
+// ─── Services Dropdown ────────────────────────────────────────────────────────
+export const DropdownMenu = styled.ul`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  background: var(--color-bg-darker);
+  border-top: 3px solid var(--color-primary);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  z-index: 200;
+
+  ${NavItem}:hover & {
+    display: block;
+  }
+`;
+
+export const DropdownItem = styled(LinkR)`
+  display: block;
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 12px 24px;
+  white-space: nowrap;
+  transition: color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
   }
 `;
 

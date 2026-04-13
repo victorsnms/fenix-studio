@@ -40,17 +40,72 @@
       "work_with_us": "Work with us"
     },
     "pagenotfound": {
-      "title": "Página não encontrada",
-      "description": "Desculpe, mas a página que você está procurando não pode ser encontrada."
+      "title": "Page not found",
+      "description": "The page you are looking for is not available or does not exist.",
+      "cta": "Back to Home"
     },
     "aboutPage": {
       "title": "About Us",
-      "pageDescription1": "With the purpose of elevating, revitalizing and inspiring future generations in the Visual Effects market, Fenix Studios was born in 2022, acting in the post production market. ",
+      "sectionLabel": "About Fenix Studios",
+      "sectionTitle": "Elevating the Power of Visual Effects",
+      "teamCta": "Meet our team",
+      "teamSectionLabel": "Our Team",
+      "teamTitle": "Meet the creative minds behind the lens",
+      "teamBody": "Our team is made up of audiovisual professionals specialized in post-production who transform ideas into cinematic experiences.",
+      "teamContactCta": "Get in Touch",
+      "verBio": "View bio",
+      "bioImdb": "IMDB",
+      "bioLinkedin": "LinkedIn",
+      "servicesSectionLabel": "Our Services",
+      "servicesTitle": "Our Services",
+      "servicesExploreCta": "Explore Services",
+      "serviceCardCta": "Learn more",
+      "serviceCards": [
+        {
+          "title": "Compositing",
+          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
+          "imagePath": "/images/composition.png",
+          "ctaUrl": "/services"
+        },
+        {
+          "title": "Compositing",
+          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
+          "imagePath": "/images/composition.png",
+          "ctaUrl": "/services"
+        },
+        {
+          "title": "Compositing",
+          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
+          "imagePath": "/images/composition.png",
+          "ctaUrl": "/services"
+        },
+        {
+          "title": "Compositing",
+          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
+          "imagePath": "/images/composition.png",
+          "ctaUrl": "/services"
+        },
+        {
+          "title": "Compositing",
+          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
+          "imagePath": "/images/composition.png",
+          "ctaUrl": "/services"
+        }
+      ],
+      "pageDescription1": "With the purpose of elevating, revitalizing and inspiring future generations in the Visual Effects market, Fenix Studios was born in 2022, acting in the post production market.",
       "pageDescription2": "We are defined by our team. We prioritize the collaboration of our members. Our success comes from a united team in a sustainable environment for the creative process. This is culture.",
       "pageDescription3": "We challenge ourselves to create visual effects on an international scale with a compact and specialized team using a modern pipeline workflow that enables us to adapt to the constant changes of a project and client demands."
     },
     "contactPage": {
       "title": "Contact Us",
+      "formTitle": "We Are Here to Help!",
+      "formSubtitle": "Required fields are marked with *",
+      "needHelpTitle": "Need Help",
+      "needHelpSubtitle": "Talk to our team",
+      "phone": "+55 11 9 7701 9229 | +1 323.712.5229",
+      "contactEmail": "contato@fenixstudios.com",
+      "locationLabel": "Location",
+      "location": "São Paulo - SP, Brasil",
       "info": [
         {
           "label": "Fenix Studios",
@@ -119,17 +174,90 @@
       "studyCTAUrl": "/study"
     },
     "reelPage": {
-      "title": "Studio Reels"
+      "title": "Studio Reels",
+      "sectionLabel": "Our Art",
+      "sectionTitle": "Reels",
+      "filterAll": "All",
+      "filterBreakdowns": "Breakdowns",
+      "filterFilms": "Films",
+      "filterSeries": "Series"
+    },
+    "servicesPresentation": {
+      "ctaLabel": "Contact us",
+      "cards": [
+        { "title": "Composition",        "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
+        { "title": "Matte Painting",     "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
+        { "title": "Visualization",      "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
+        { "title": "Motion Graphics",    "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
+        { "title": "Virtual Production", "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." }
+      ]
+    },
+    "vfxPage": {
+      "title": "VFX",
+      "breadcrumb": "VFX",
+      "introBody1": "We develop visual effects that combine technical precision and artistic direction: Motion Graphics, CG, Compositing, Visualization, Animation, Rigging, Concept Art, VFX Supervision and Coordination. We work in an integrated way across all stages of the process, ensuring aesthetic consistency, technical efficiency and creative alignment.",
+      "introBody2": "Every frame is designed to amplify the narrative impact, delivering realism, emotion and cinematic quality to the work.",
+      "timelineTitle": "Complete Follow-through",
+      "steps": [
+        { "number": "01", "title": "Pre-production and Planning" },
+        { "number": "02", "title": "Data Capture and On-Set Supervision" },
+        { "number": "03", "title": "Visual Effects Creation and Integration" },
+        { "number": "04", "title": "Refinement and Creative Adjustments" },
+        { "number": "05", "title": "VFX Finalization and Delivery" }
+      ],
+      "formTitle": "Request a quote",
+      "formSubtitle": "REQUIRED FIELDS ARE MARKED WITH *"
+    },
+    "postProductionPage": {
+      "title": "Post Production",
+      "breadcrumb": "Post Production",
+      "introBody1": "We offer complete and refined solutions in audiovisual post-production. Lab, Data Management, Conform, Online Editing, Client Services, Post-Production Coordination, Color Grading, Mastering, QC & Delivery. With close and continuous oversight, we ensure an agile and efficient workflow, always aligned with your creative needs.",
+      "introBody2": "We create experiences, ensuring narrative cohesion, visual fluidity and technical excellence.",
+      "timelineTitle": "Complete Follow-through",
+      "steps": [
+        { "number": "01", "title": "Development & Post Preparation" },
+        { "number": "02", "title": "Concept and Narrative Construction" },
+        { "number": "03", "title": "VFX & Conform" },
+        { "number": "04", "title": "Image & Sound Finishing" },
+        { "number": "05", "title": "Mastering, QC & Delivery" }
+      ],
+      "formTitle": "Request a quote",
+      "formSubtitle": "REQUIRED FIELDS ARE MARKED WITH *"
     },
     "servicesPage": {
       "title": "Services",
       "text1title": "Fenix Art Department",
       "text1content": "The Fenix Art Department will intimately work with you on your vision – characters, creatures, environments, and more! We can help you build the world that you’ve dreamt up.",
       "text2title": "Our Artists",
-      "text2content": "Our Artists will help you design and create your world no matter how large or small."
+      "text2content": "Our Artists will help you design and create your world no matter how large or small.",
+      "postProductionLabel": "Post-Production",
+      "postProductionTitle": "Post-Production that Transforms",
+      "postProductionBody1": "We offer complete and refined solutions in audiovisual post-production. Lab, Data Management, Conform, Online Editing, Attendance, Post-Production Coordination, Color Grading, Mastering, QC & Delivery. With close and continuous supervision, we ensure an agile and efficient workflow, always aligned with your creative needs.",
+      "postProductionBody2": "We create experiences, ensuring narrative cohesion, visual fluidity and technical excellence.",
+      "postProductionCta": "Learn more",
+      "vfxLabel": "VFX",
+      "vfxTitle": "VFX that Expands Realities",
+      "vfxBody1": "We develop visual effects that combine technical precision and artistic direction: Motion Graphics, CG, Compositing, Visualization, Animation, Rigging, Concept Art, VFX Supervision and Coordination. We work in an integrated way at all stages of the process, ensuring aesthetic consistency, technical efficiency and creative alignment.",
+      "vfxBody2": "Each frame is designed to amplify the narrative’s impact, delivering realism, emotion and cinematic quality to the work.",
+      "vfxCta": "Learn more",
+      "bannerTitle": "Transform your vision into cinematic reality",
+      "bannerSubtitle": "We bring precise and creative solutions to boost the visual quality of your project.",
+      "bannerCta": "Get in touch"
     },
     "studyPage": {
-      "title": "Premium Solutions",
+      "title": "Learn",
+      "breadcrumb": "Learn",
+      "sectionLabel": "Coming soon",
+      "sectionTitle": "We are building a new learning experience",
+      "bodyText1": "Get ready for a complete platform with courses focused on Post-production and VFX. Developed with a practical methodology with industry professionals preparing you for the market.",
+      "bodyText2": "Secure your priority at launch, receive exclusive content and be notified before everyone else!",
+      "formTitle": "Secure early access",
+      "formText": "Fill in your details to receive updates, launch dates, special conditions and exclusive materials.",
+      "formSubtitle": "REQUIRED FIELDS ARE MARKED WITH *",
+      "formNameLabel": "Your Name",
+      "formPhoneLabel": "Phone",
+      "formEmailLabel": "E-mail",
+      "formCta": "Guarantee my spot",
       "subtitle1": "Our courses contain a diverse selection of content with different levels and focus. With each completed course you get closer to your objectives.",
       "subtitle2": "With our hands-on approach, you learn by doing and asking questions, and with each module you finish you add a new piece to your portfolio. See below all our offered courses and expand your knowledge!",
       "categories": [
@@ -212,7 +340,53 @@
         "imageAlt": "Author",
         "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
         "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
+      },
+      {
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
+      },
+      {
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
+      },
+      {
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
+      },
+      {
+        "author": "Bernardo Teixeira Pereira",
+        "occupation": "Founder | Visual Effects Supervisor",
+        "imagePath": "marquee/marquee_3.png",
+        "imageAlt": "Author",
+        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
+        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
       }
     ],
     "testimonyListArtists": [
@@ -223,7 +397,9 @@
         "imageAlt": "Author",
         "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
         "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
       },
       {
         "author": "Bernardo Teixeira Pereira",
@@ -232,7 +408,9 @@
         "imageAlt": "Author",
         "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
         "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
       }
     ],
     "footer": {
@@ -298,7 +476,7 @@
       "termsPath": "/terms",
       "institucionalLinks": [
         { "title": "About", "path": "/about" },
-        { "title": "Reels", "path": "/reel" },
+        { "title": "Reels", "path": "/reels" },
         { "title": "Study", "path": "/study" },
         { "title": "Contact", "path": "/contact" }
       ],

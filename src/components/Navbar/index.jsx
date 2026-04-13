@@ -14,6 +14,8 @@ import {
   NavRight,
   LangToggle,
   MobileIcon,
+  DropdownMenu,
+  DropdownItem,
 } from "./NavBarElements";
 
 export const Navbar = ({ toggle }) => {
@@ -39,13 +41,17 @@ export const Navbar = ({ toggle }) => {
             <NavLinksR to="/about">{t("menu.about")}</NavLinksR>
           </NavItem>
           <NavItem>
-            <NavLinksR to="/reel">{t("menu.reel")}</NavLinksR>
+            <NavLinksR to="/reels">{t("menu.reel")}</NavLinksR>
           </NavItem>
           <NavItem>
             <NavLinksR to="/services">
               {t("menu.services")}
               <IconArrowDown size={12} aria-hidden="true" />
             </NavLinksR>
+            <DropdownMenu>
+              <li><DropdownItem to="/services/post-production">Pós Produção</DropdownItem></li>
+              <li><DropdownItem to="/services/vfx">VFX</DropdownItem></li>
+            </DropdownMenu>
           </NavItem>
           <NavItem>
             <NavLinksR to="/study">{t("menu.study")}</NavLinksR>

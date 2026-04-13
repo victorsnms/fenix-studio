@@ -9,6 +9,8 @@ import { ReelPageContainer, ReelPageTitle } from "./reelPageElements";
 import { MediaGallery } from "../../components/MediaGallery";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import PageTitle from "../../components/PageTitle";
+import HomeReelSection from "../../components/HomeReelSection";
+import HomeNewsletterSection from "../../components/HomeNewsletterSection";
 
 export const ReelPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -21,8 +23,15 @@ export const ReelPage = () => {
       <Navbar toggle={toggle} />
       {/* BODY */}
       <ReelPageContainer>
-        <FadeInAnimation threshold={0.5}>
-          <PageTitle title={t("reelPage.title")} lightText={true} />
+        <PageTitle
+          title={t("reelPage.title")}
+          breadcrumbs={[
+            { label: t("menu.home"), to: "/" },
+            { label: t("reelPage.title") },
+          ]}
+        />
+        <FadeInAnimation threshold={0.2}>
+          <HomeReelSection />
         </FadeInAnimation>
         <MediaGallery />
         {/* <VideoContainer>
@@ -30,11 +39,14 @@ export const ReelPage = () => {
         </VideoContainer> */}
 
         {/* Breakdowns */}
-        <FadeInAnimation threshold={0.1}>
+        {/* <FadeInAnimation threshold={0.1}>
           <div style={{ maxWidth: "1300px", marginLeft: "auto", marginRight: "auto" }}>
             <ReelPageTitle>{t("menu.breakdowns")}</ReelPageTitle>
           </div>
           <MediaGallery />
+        </FadeInAnimation> */}
+        <FadeInAnimation threshold={0.2}>
+          <HomeNewsletterSection />
         </FadeInAnimation>
       </ReelPageContainer>
       {/* FOOTER */}

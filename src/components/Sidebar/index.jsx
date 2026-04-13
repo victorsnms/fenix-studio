@@ -95,7 +95,7 @@ export const Sidebar = ({ isOpen, toggle }) => {
           </SidebarItem>
 
           <SidebarItem>
-            <SidebarLinkR to="/reel" onClick={handleLinkClick} tabIndex={isOpen ? 0 : -1}>
+            <SidebarLinkR to="/reels" onClick={handleLinkClick} tabIndex={isOpen ? 0 : -1}>
               {t("menu.reel")}
             </SidebarLinkR>
           </SidebarItem>
@@ -114,12 +114,12 @@ export const Sidebar = ({ isOpen, toggle }) => {
 
             <SidebarSubMenu isOpen={servicesOpen} aria-hidden={!servicesOpen}>
               <SidebarSubItem>
-                <SidebarSubLinkR to="/services" onClick={handleLinkClick} tabIndex={isOpen && servicesOpen ? 0 : -1}>
+                <SidebarSubLinkR to="/services/post-production" onClick={handleLinkClick} tabIndex={isOpen && servicesOpen ? 0 : -1}>
                   {t("menu.servicesPostProduction")}
                 </SidebarSubLinkR>
               </SidebarSubItem>
               <SidebarSubItem>
-                <SidebarSubLinkR to="/services" onClick={handleLinkClick} tabIndex={isOpen && servicesOpen ? 0 : -1}>
+                <SidebarSubLinkR to="/services/vfx" onClick={handleLinkClick} tabIndex={isOpen && servicesOpen ? 0 : -1}>
                   {t("menu.servicesVfx")}
                 </SidebarSubLinkR>
               </SidebarSubItem>

@@ -1,80 +1,82 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ContactForm, FormItem, Input, Label, Select, SubmitButton, Textarea } from "./EmailJsContactFormElements";
 import { useTranslation } from "react-i18next";
+import {
+  FormTitle,
+  FormSubtitle,
+  ContactForm,
+  FormGrid,
+  FormField,
+  FormFieldFull,
+  Label,
+  Input,
+  Select,
+  Textarea,
+  SubmitButton,
+} from "./EmailJsContactFormElements";
 
 export const EmailJsContactForm = () => {
-  const [contactPreference, setContactPreference] = useState("Email");
   const [contactSubject, setContactSubject] = useState("Orçamento");
   const [t] = useTranslation();
-
   const form = useRef();
+
   const serviceID = `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`;
   const templateID = `${import.meta.env.VITE_EMAILJS_TEMPLATE_ID}`;
   const publicKey = `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`;
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
-      .sendForm(serviceID, templateID, form.current, {
-        publicKey: publicKey,
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      .sendForm(serviceID, templateID, form.current, { publicKey })
+      .then(() => console.log("SUCCESS!"), (error) => console.log("FAILED...", error.text));
   };
 
   return (
-    <ContactForm ref={form} onSubmit={sendEmail}>
-      <FormItem transitionDelay={0.2}>
-        <Label htmlFor="user_name">{t("contactForm.name")}</Label>
-        <Input type="text" name="user_name" id="user_name" required />
-      </FormItem>
+    <div>
+      <FormTitle>{t("contactPage.formTitle")}</FormTitle>
+      <FormSubtitle>{t("contactPage.formSubtitle")}</FormSubtitle>
 
-      <FormItem transitionDelay={0.4}>
-        <Label htmlFor="phone">{t("contactForm.phone_optional")}</Label>
-        <Input type="text" name="phone" id="phone" />
-      </FormItem>
+      <ContactForm ref={form} onSubmit={sendEmail}>
+        <FormGrid>
+          <FormField>
+            <Label htmlFor="user_name">{t("contactForm.name")} *</Label>
+            <Input type="text" name="user_name" id="user_name" placeholder={t("contactForm.name")} required />
+          </FormField>
+          <FormField>
+            <Label htmlFor="phone">{t("contactForm.phone")} *</Label>
+            <Input type="text" name="phone" id="phone" placeholder={t("contactForm.phone")} />
+          </FormField>
+        </FormGrid>
 
-      <FormItem transitionDelay={0.6}>
-        <Label htmlFor="contact_preference">{t("contactForm.contact_preference")}</Label>
-        <Select name="contact_preference" id="contact_preference" onChange={(e) => setContactPreference(e.target.value)}>
-          <option value="Email">{t("contactForm.email")}</option>
-          <option value="Phone">{t("contactForm.phone")}</option>
-        </Select>
-        <Input type="hidden" name="contact_preference_value" value={contactPreference} />
-      </FormItem>
+        <FormGrid>
+          <FormField>
+            <Label htmlFor="user_email">{t("contactForm.email")} *</Label>
+            <Input type="email" name="user_email" id="user_email" placeholder={t("contactForm.email")} required />
+          </FormField>
+          <FormField>
+            <Label htmlFor="contact_subject">{t("contactForm.contact_subject")} *</Label>
+            <Select
+              name="contact_subject"
+              id="contact_subject"
+              onChange={(e) => setContactSubject(e.target.value)}
+              required
+            >
+              <option value="Orçamento">{t("contactForm.budget")}</option>
+              <option value="VFX Academy">{t("contactForm.vfx_academy")}</option>
+              <option value="Trabalhe Conosco">{t("contactForm.work_with_us")}</option>
+              <option value="Outros">{t("contactForm.others")}</option>
+            </Select>
+            <Input type="hidden" name="contact_subject_value" value={contactSubject} />
+          </FormField>
+        </FormGrid>
 
-      <FormItem transitionDelay={0.8}>
-        <Label htmlFor="contact_subject">{t("contactForm.contact_subject")}</Label>
-        <Select name="contact_subject" id="contact_subject" onChange={(e) => setContactSubject(e.target.value)} required>
-          <option value="Orçamento">{t("contactForm.budget")}</option>
-          <option value="VFX Academy">{t("contactForm.vfx_academy")}</option>
-          <option value="Trabalhe Conosco">{t("contactForm.work_with_us")}</option>
-          <option value="Outros">{t("contactForm.others")}</option>
-        </Select>
-        <Input type="hidden" name="contact_subject_value" value={contactSubject} />
-      </FormItem>
+        <FormFieldFull>
+          <Label htmlFor="message">{t("contactForm.message")}</Label>
+          <Textarea name="message" id="message" placeholder={t("contactForm.message")} required />
+        </FormFieldFull>
 
-      <FormItem transitionDelay={1.0}>
-        <Label htmlFor="user_email">{t("contactForm.email")}</Label>
-        <Input type="email" name="user_email" id="user_email" required />
-      </FormItem>
-
-      <FormItem transitionDelay={1.2}>
-        <Label htmlFor="message">{t("contactForm.message")}</Label>
-        <Textarea name="message" id="message" required />
-      </FormItem>
-
-      <FormItem transitionDelay={1.4}>
         <SubmitButton type="submit">{t("contactForm.send")}</SubmitButton>
-      </FormItem>
-    </ContactForm>
+      </ContactForm>
+    </div>
   );
 };
