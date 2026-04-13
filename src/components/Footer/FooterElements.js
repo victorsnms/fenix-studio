@@ -127,7 +127,7 @@ export const FooterNavItem = styled.li``;
 
 export const FooterNavLink = styled(Link)`
   font-family: var(--ds-font-brand);
-  font-weight: var(--ds-font-weight-semibold);
+  font-weight: var(--ds-font-weight-regular);
   font-size: 16px;
   line-height: 28px;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ export const FooterBottom = styled.div`
   z-index: 1;
   max-width: 1380px;
   margin: 40px auto 0;
-  padding: 0 30px 24px;
+  padding: 20px 0px 24px;
   border-top: 1px solid var(--color-white);
   display: flex;
   align-items: center;

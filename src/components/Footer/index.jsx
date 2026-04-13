@@ -18,7 +18,6 @@ import {
   FooterSocialItem,
   FooterSocialLink,
   FooterBottom,
-  FooterCopyright,
   FooterCredits,
   FooterTermsLink,
 } from "./FooterElements";
@@ -113,27 +112,11 @@ export const Footer = () => {
 
       {/* ── Bottom bar ── */}
       <FooterBottom>
-        <FooterCopyright>
-          &copy;{new Date().getFullYear()} {footerContent.rights}
-        </FooterCopyright>
-
         <FooterCredits>
-          {footerContent.madeBy}{" "}
-          <a
-            href="https://www.raeldesign.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Rael Design
-          </a>
+          &copy;2025 {footerContent.rights} {footerContent.madeBy}{" "}
+          <FooterTermsLink to="/rael-design">Rael Design</FooterTermsLink>
           {" "}&amp;{" "}
-          <a
-            href="https://www.linkedin.com/in/victor--martins/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vitor Martins
-          </a>
+          <FooterTermsLink to="/victor-martins">Victor Martins</FooterTermsLink>
         </FooterCredits>
 
         <FooterTermsLink to={footerContent.termsPath}>

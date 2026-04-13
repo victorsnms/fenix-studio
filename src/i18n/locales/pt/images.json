@@ -166,112 +166,156 @@
       {
         "path": "film/AmericanHorrorStory.jpg",
         "alt": "AmericanHorrorStory",
-        "pathSmall": "film-small/AmericanHorrorStory.jpg"
+        "pathSmall": "film-small/AmericanHorrorStory.jpg",
+        "title": "American Horror Story",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/APaixaoSegundoGH.jpg",
         "alt": "APaixaoSegundoGH",
-        "pathSmall": "film-small/APaixaoSegundoGH.jpg"
+        "pathSmall": "film-small/APaixaoSegundoGH.jpg",
+        "title": "A Paixão Segundo G.H.",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/ArmyoftheDead.jpg",
         "alt": "ArmyoftheDead",
-        "pathSmall": "film-small/ArmyoftheDead.jpg"
+        "pathSmall": "film-small/ArmyoftheDead.jpg",
+        "title": "Army of the Dead",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/Armyofthieves.jpg",
         "alt": "Armyofthieves",
-        "pathSmall": "film-small/Armyofthieves.jpg"
+        "pathSmall": "film-small/Armyofthieves.jpg",
+        "title": "Army of Thieves",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/BadBoysForLife.jpg",
         "alt": "BadBoysForLife",
-        "pathSmall": "film-small/BadBoysForLife.jpg"
+        "pathSmall": "film-small/BadBoysForLife.jpg",
+        "title": "Bad Boys for Life",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/BlackWidow.jpg",
         "alt": "BlackWidow",
-        "pathSmall": "film-small/BlackWidow.jpg"
+        "pathSmall": "film-small/BlackWidow.jpg",
+        "title": "Black Widow",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/DarkWinds.jpg",
         "alt": "DarkWinds",
-        "pathSmall": "film-small/DarkWinds.jpg"
+        "pathSmall": "film-small/DarkWinds.jpg",
+        "title": "Dark Winds",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/Evil.jpg",
         "alt": "Evil",
-        "pathSmall": "film-small/Evil.jpg"
+        "pathSmall": "film-small/Evil.jpg",
+        "title": "Evil",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/FreeGuy.jpg",
         "alt": "FreeGuy",
-        "pathSmall": "film-small/FreeGuy.jpg"
+        "pathSmall": "film-small/FreeGuy.jpg",
+        "title": "Free Guy",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/hunters.jpg",
         "alt": "hunters",
-        "pathSmall": "film-small/hunters.jpg"
+        "pathSmall": "film-small/hunters.jpg",
+        "title": "Hunters",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/MeuNomeEGal.jpg",
         "alt": "MeuNomeEGal",
-        "pathSmall": "film-small/MeuNomeEGal.jpg"
+        "pathSmall": "film-small/MeuNomeEGal.jpg",
+        "title": "Meu Nome É Gal",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/MissMarvel.jpg",
         "alt": "MissMarvel",
-        "pathSmall": "film-small/MissMarvel.jpg"
+        "pathSmall": "film-small/MissMarvel.jpg",
+        "title": "Ms. Marvel",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/RittenhouseSquare.jpg",
         "alt": "RittenhouseSquare",
-        "pathSmall": "film-small/RittenhouseSquare.jpg"
+        "pathSmall": "film-small/RittenhouseSquare.jpg",
+        "title": "Rittenhouse Square",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/SheHulk.jpg",
         "alt": "SheHulk",
-        "pathSmall": "film-small/SheHulk.jpg"
+        "pathSmall": "film-small/SheHulk.jpg",
+        "title": "She-Hulk: Attorney at Law",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/ShinningVale.jpg",
         "alt": "ShinningVale",
-        "pathSmall": "film-small/ShinningVale.jpg"
+        "pathSmall": "film-small/ShinningVale.jpg",
+        "title": "Shining Vale",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/TaEscrito.jpg",
         "alt": "TaEscrito",
-        "pathSmall": "film-small/TaEscrito.jpg"
+        "pathSmall": "film-small/TaEscrito.jpg",
+        "title": "Tá Escrito",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/TerminatorDarkFate.jpg",
         "alt": "TerminatorDarkFate",
-        "pathSmall": "film-small/TerminatorDarkFate.jpg"
+        "pathSmall": "film-small/TerminatorDarkFate.jpg",
+        "title": "Terminator: Dark Fate",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/TheRookie.jpg",
         "alt": "TheRookie",
-        "pathSmall": "film-small/TheRookie.jpg"
+        "pathSmall": "film-small/TheRookie.jpg",
+        "title": "The Rookie",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/UmDiaCincoEstrelas.jpg",
         "alt": "UmDiaCincoEstrelas",
-        "pathSmall": "film-small/UmDiaCincoEstrelas.jpg"
+        "pathSmall": "film-small/UmDiaCincoEstrelas.jpg",
+        "title": "Um Dia Cinco Estrelas",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/Veep.jpg",
         "alt": "Veep",
-        "pathSmall": "film-small/Veep.jpg"
+        "pathSmall": "film-small/Veep.jpg",
+        "title": "Veep",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/WinningTimeLakers.jpg",
         "alt": "WinningTimeLakers",
-        "pathSmall": "film-small/WinningTimeLakers.jpg"
+        "pathSmall": "film-small/WinningTimeLakers.jpg",
+        "title": "Winning Time: The Rise of the Lakers Dynasty",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
         "path": "film/Yellowstone.jpg",
         "alt": "Yellowstone",
-        "pathSmall": "film-small/Yellowstone.jpg"
+        "pathSmall": "film-small/Yellowstone.jpg",
+        "title": "Yellowstone",
+        "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       }
     ],
     "reelsMediaGallery": [

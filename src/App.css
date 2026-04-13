@@ -110,6 +110,7 @@
   --color-primary:       #e20613;
   --color-primary-hover: #af0a14;   /* button hover / active */
   --color-primary-dark:  #a1343a;   /* back-to-top default bg */
+  --color-icon-muted:    #9d9d9d;   /* muted icon color (sidebar contact icons) */
 
   /* Text */
   --color-text: #f6f7f8;

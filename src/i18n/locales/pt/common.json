@@ -5,10 +5,13 @@
       "about": "Sobre",
       "platforms": "Plataformas",
       "services": "Serviços",
+      "servicesPostProduction": "Pós Produção",
+      "servicesVfx": "VFX",
       "careers": "Carreira",
       "reel": "Reels",
       "study": "Aprenda",
       "contact": "Fale Conosco",
+      "contactCta": "Entre em Contato",
       "articles": "Blog",
       "projects": "Projetos",
       "studioreels": "Studio Reel",
@@ -65,7 +68,52 @@
     },
     "homePage": {
       "title": "Home",
+      "heroLabel": "Audiovisual e Tecnologia",
+      "heroTitle": "Criando Narrativas com Propósito",
+      "heroSubtitle": "Especialistas em Pós-Produção e VFX, Transformamos imaginação em imagem e tecnologia em emoção.",
+      "heroCta": "Saiba mais",
+      "reelLabel": "Studio Reel",
+      "reelTitle": "O Poder do Cinema",
+      "reelModalTitle": "Studio Reel — Fenix Studios",
+      "aboutLabel": "Sobre a Fenix Studios",
+      "aboutTitle": "O Futuro dos Efeitos Visuais",
+      "aboutBodyPre": "Na Fenix Studios, unimos",
+      "aboutBodyBold": "arte, tecnologia e inovação",
+      "aboutBodyPost": "para criar narrativas visuais de excelência. Da concepção à entrega, buscamos o equilíbrio entre técnica e emoção. Acreditamos que cada detalhe é uma oportunidade de encantar.",
+      "aboutCard1Title": "Pós-Produção",
+      "aboutCard1Body1": "Cuidamos de cada etapa do processo: Edição, VFX, Color Grading, Finalização e Entrega com foco em traduzir a visão criativa do projeto em sua forma mais refinada. Nosso objetivo é unir storytelling e estética para alcançar o máximo impacto visual e emocional.",
+      "aboutCard1Body2": "Transformamos imagens em experiências, garantindo coesão narrativa, fluidez visual e excelência técnica.",
+      "aboutCard2Title": "Visual Effects – VFX",
+      "aboutCard2Body1": "Desenvolvemos efeitos visuais que equilibram arte e precisão técnica, seja integrando CG de alta complexidade, composições sutis ou simulações realistas.",
+      "aboutCard2Body2": "Damos vida ao impossível. Cada detalhe é pensado para ampliar o impacto visual da narrativa, unindo realismo, emoção e qualidade cinematográfica.",
+      "clientsLabel": "Clientes",
+      "clientsTitle": "Entre os gigantes, nossa arte encontra espaço",
+      "filmographyLabel": "Filmografia",
+      "filmographyTitle": "Produções Globais",
       "studyTitle": "THE FENIX STUDIO ACADEMY",
+      "studySectionTitle": "Domine as técnicas que moldam o futuro do cinema",
+      "studySectionCta": "Explorar Cursos",
+      "studyCardCta": "Saiba Mais",
+      "studyFeaturedCards": [
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance1.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance2.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance3.png",
+          "ctaUrl": "/study"
+        }
+      ],
       "studyText": "Explore o extraordinário mundo dos efeitos visuais com os cursos oferecidos pela Fenix Studios. Nossa academia é um ponto de encontro para mentes criativas que desejam dominar as técnicas mais avançadas em VFX. Deixe-se envolver pela magia da criação digital através de um currículo abrangente e prático. Nosso curso é projetado para capacitar você a dar vida às suas visões mais ambiciosas. Junte-se a nós e embarque em uma jornada emocionante para se tornar um especialista em efeitos visuais.",
       "studyCTALabel": "Mais",
       "studyCTAUrl": "/study"
@@ -190,10 +238,10 @@
     "footer": {
       "aboutUs": "Sobre nós",
       "howItWorks": "Como trabalhamos",
-      "terms": "Termos",
+      "terms": "Termos de uso",
       "careers": "Carreiras",
       "rights": "Todos os direitos reservados.",
-      "shortText": "Transformando visões em obras-primas cinematográficas.",
+      "shortText": "O Renascer da Imagem",
       "developed": "Desenvolvido por ",
       "pageLinks": [
         {
@@ -264,6 +312,11 @@
         "altLogo": "Ir para a página inicial",
         "socialMediaSectionLabel": "Links de redes sociais"
       }
+    },
+    "newsletter": {
+      "title": "Assine para receber inspirações e insights cinematográficos",
+      "placeholder": "Seu e-mail",
+      "cta": "Inscrever"
     },
     "clients": {
       "trustedMessage": "Confiança de grandes empresas"

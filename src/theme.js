@@ -135,6 +135,7 @@ export const semantic = {
   primary:      '#E20613',
   primaryHover: '#AF0A14',   // button hover / active state
   primaryDark:  '#A1343A',   // back-to-top default bg
+  iconMuted:    '#9D9D9D',   // muted icon color (sidebar contact icons)
   // Text
   text: '#F6F7F8',
   textMuted: 'rgba(246, 247, 248, 0.8)',

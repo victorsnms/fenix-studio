@@ -132,6 +132,17 @@ export const PlatformImageContainer = styled.div`
   }
 `;
 
+export const FilmographyTitle = styled.h2`
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-heavy);
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+  margin: 0 0 8px;
+`;
+
 export const CourseCTA = styled(LinkR)`
   height: 40px;
   display: flex;

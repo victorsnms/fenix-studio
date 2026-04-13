@@ -5,8 +5,11 @@
       "about": "About",
       "platforms": "Platforms",
       "services": "Services",
+      "servicesPostProduction": "Post Production",
+      "servicesVfx": "VFX",
       "careers": "Careers",
       "contact": "Contact Us",
+      "contactCta": "Get in Touch",
       "reel": "Reels",
       "study": "Study",
       "articles": "Blog",
@@ -65,7 +68,52 @@
     },
     "homePage": {
       "title": "Home",
+      "heroLabel": "Audiovisual & Technology",
+      "heroTitle": "Creating Narratives with Purpose",
+      "heroSubtitle": "Specialists in Post-Production and VFX, we transform imagination into image and technology into emotion.",
+      "heroCta": "Learn more",
+      "reelLabel": "Studio Reel",
+      "reelTitle": "The Power of Cinema",
+      "reelModalTitle": "Studio Reel — Fenix Studios",
+      "aboutLabel": "About Fenix Studios",
+      "aboutTitle": "The Future of Visual Effects",
+      "aboutBodyPre": "At Fenix Studios, we unite",
+      "aboutBodyBold": "art, technology and innovation",
+      "aboutBodyPost": "to create visually excellent narratives. From concept to delivery, we seek the balance between technique and emotion. We believe every detail is an opportunity to enchant.",
+      "aboutCard1Title": "Post-Production",
+      "aboutCard1Body1": "We handle every step of the process: Editing, VFX, Color Grading, Finishing and Delivery, focused on translating the creative vision of the project into its most refined form. Our goal is to unite storytelling and aesthetics to achieve maximum visual and emotional impact.",
+      "aboutCard1Body2": "We transform images into experiences, ensuring narrative cohesion, visual fluidity and technical excellence.",
+      "aboutCard2Title": "Visual Effects – VFX",
+      "aboutCard2Body1": "We develop visual effects that balance art and technical precision, whether integrating high-complexity CG, subtle compositions or realistic simulations.",
+      "aboutCard2Body2": "We bring the impossible to life. Every detail is designed to amplify the narrative's visual impact, combining realism, emotion and cinematic quality.",
+      "clientsLabel": "Clients",
+      "clientsTitle": "Among the giants, our art finds its space",
+      "filmographyLabel": "Filmography",
+      "filmographyTitle": "Global Productions",
       "studyTitle": "THE FENIX STUDIO ACADEMY",
+      "studySectionTitle": "Master the Techniques That Shape the Future of Cinema",
+      "studySectionCta": "Explore Courses",
+      "studyCardCta": "Learn More",
+      "studyFeaturedCards": [
+        {
+          "category": "Technology",
+          "title": "TechFinance - Financial Consultant",
+          "imagePath": "courseImages/techfinance1.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Technology",
+          "title": "TechFinance - Financial Consultant",
+          "imagePath": "courseImages/techfinance2.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Technology",
+          "title": "TechFinance - Financial Consultant",
+          "imagePath": "courseImages/techfinance3.png",
+          "ctaUrl": "/study"
+        }
+      ],
       "studyText": "Explore the extraordinary world of visual effects with the courses made by Fenix Studios. Our academy is a meeting spot for creative minds that wish to master the most advanced VFX techniques. Involve yourself in the magic of digital creation through a practical and in-depth course. Our course will capacitate you to give life to your most ambitious creations. Join us and embark on a thrilling journey to become a specialist in visual effects.",
       "studyCTALabel": "More",
       "studyCTAUrl": "/study"
@@ -190,10 +238,10 @@
     "footer": {
       "aboutUs": "About Us",
       "howItWorks": "How it works",
-      "terms": "Terms",
+      "terms": "Terms of use",
       "careers": "Careers",
       "rights": "All rights reserved",
-      "shortText": "Transforming visions into cinematic masterpieces",
+      "shortText": "The Rebirth of the Image",
       "developed": "Developed by ",
       "pageLinks": [
         {
@@ -264,6 +312,11 @@
         "altLogo": "Go homepage",
         "socialMediaSectionLabel": "Social media links"
       }
+    },
+    "newsletter": {
+      "title": "Subscribe to receive cinematographic inspirations and insights",
+      "placeholder": "Your e-mail",
+      "cta": "Subscribe"
     },
     "clients": {
       "trustedMessage": "Trusted by great companies"
