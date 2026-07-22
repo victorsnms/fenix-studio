@@ -546,7 +546,11 @@
     "newsletter": {
       "title": "Assine para receber inspirações e insights cinematográficos",
       "placeholder": "Seu e-mail",
-      "cta": "Inscrever"
+      "cta": "Inscrever",
+      "sending": "Enviando...",
+      "success": "Quase lá! Verifique seu e-mail para confirmar a inscrição.",
+      "error": "Não foi possível concluir a inscrição. Tente novamente.",
+      "invalid": "Insira um endereço de e-mail válido."
     },
     "clients": {
       "trustedMessage": "Confiança de grandes empresas"
