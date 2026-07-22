@@ -546,7 +546,11 @@
     "newsletter": {
       "title": "Subscribe to receive cinematographic inspirations and insights",
       "placeholder": "Your e-mail",
-      "cta": "Subscribe"
+      "cta": "Subscribe",
+      "sending": "Sending...",
+      "success": "Almost there! Check your inbox to confirm your subscription.",
+      "error": "We couldn't complete your subscription. Please try again.",
+      "invalid": "Please enter a valid email address."
     },
     "clients": {
       "trustedMessage": "Trusted by great companies"

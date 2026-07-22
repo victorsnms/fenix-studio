@@ -62,18 +62,13 @@ export const NewsletterTitle = styled.h2`
   }
 `;
 
-export const NewsletterFormWrap = styled.div`
+/* Column so a status message can sit directly under the input/button */
+export const NewsletterFormColumn = styled.div`
   flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
   width: 420px;
-  padding: 5px;
-  background: #ffffff;
-
-  @media (max-width: 480px) {
-    padding: 0px;
-    background: transparent;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   @media (max-width: 1024px) {
     width: 360px;
@@ -82,11 +77,29 @@ export const NewsletterFormWrap = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+`;
+
+export const NewsletterFormWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px;
+  background: #ffffff;
 
   @media (max-width: 480px) {
+    padding: 0px;
+    background: transparent;
     flex-direction: column;
     gap: 15px;
   }
+`;
+
+export const NewsletterMessage = styled.p`
+  margin: 0;
+  font-family: var(--ds-font-brand);
+  font-size: 13px;
+  line-height: 1.5;
+  color: ${({ $type }) => ($type === "error" ? "#ff6b6b" : "#7CFC9B")};
 `;
 
 export const NewsletterInput = styled.input`
