@@ -1,4 +1,4 @@
-import videoBg from "/videos/main_video.mp4";
+import videoBg from "/videosHQ/Video_Site.mp4";
 import SectionTopTitle from "../SectionTopTitle";
 import {
   VideoContainer,

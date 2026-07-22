@@ -35,7 +35,7 @@ export const ServicesPage = () => {
         <FadeInAnimation threshold={0.2}>
           <ServiceContentBlock
             imageLeft={true}
-            image="/images/servicos1.png"
+            video="/videosHQ/Futuro_VFX_v001.mp4"
             topLabel={t("servicesPage.postProductionLabel")}
             title={t("servicesPage.postProductionTitle")}
             paragraphs={[
@@ -43,7 +43,7 @@ export const ServicesPage = () => {
               t("servicesPage.postProductionBody2"),
             ]}
             ctaLabel={t("servicesPage.postProductionCta")}
-            ctaUrl="/services"
+            ctaUrl="/services/post-production"
           />
         </FadeInAnimation>
 
@@ -51,7 +51,7 @@ export const ServicesPage = () => {
         <FadeInAnimation threshold={0.2}>
           <ServiceContentBlock
             imageLeft={false}
-            image="/images/servicos2.png"
+            video="/videosHQ/Futuro_VFX_v001.mp4"
             topLabel={t("servicesPage.vfxLabel")}
             title={t("servicesPage.vfxTitle")}
             paragraphs={[
@@ -59,7 +59,7 @@ export const ServicesPage = () => {
               t("servicesPage.vfxBody2"),
             ]}
             ctaLabel={t("servicesPage.vfxCta")}
-            ctaUrl="/services"
+            ctaUrl="/services/vfx"
           />
         </FadeInAnimation>
 

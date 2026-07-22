@@ -5,7 +5,7 @@ import {
   AboutSection,
   AboutGrid,
   AboutImageCol,
-  AboutImage,
+  AboutVideo,
   AboutContentCol,
   AboutTitle,
   AboutBody,
@@ -48,11 +48,14 @@ const HomeAboutSection = () => {
   return (
     <AboutSection>
       <AboutGrid>
-        {/* Left — image */}
+        {/* Left — video */}
         <AboutImageCol>
-          <AboutImage
-            src="/images/about-hero.png "
-            alt={t("homePage.aboutTitle")}
+          <AboutVideo
+            src="/new-media/Futuro_VFX_v001_1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
         </AboutImageCol>
 
@@ -70,7 +73,7 @@ const HomeAboutSection = () => {
 
           <AboutCardsWrapper>
             {/* Card 1 — Post-Production */}
-            <AboutCard>
+            <AboutCard to="/services/post-production">
               <AboutCardHeader>
                 <AboutCardIcon>
                   <PostProductionIcon />
@@ -84,7 +87,7 @@ const HomeAboutSection = () => {
             </AboutCard>
 
             {/* Card 2 — VFX */}
-            <AboutCard>
+            <AboutCard to="/services/vfx">
               <AboutCardHeader>
                 <AboutCardIcon>
                   <VFXIcon />

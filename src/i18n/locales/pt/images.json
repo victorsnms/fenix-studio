@@ -168,6 +168,7 @@
         "alt": "AmericanHorrorStory",
         "pathSmall": "film-small/AmericanHorrorStory.jpg",
         "title": "American Horror Story",
+        "rating": "7.9",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -175,6 +176,7 @@
         "alt": "APaixaoSegundoGH",
         "pathSmall": "film-small/APaixaoSegundoGH.jpg",
         "title": "A Paixão Segundo G.H.",
+        "rating": "6.3",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -182,6 +184,7 @@
         "alt": "ArmyoftheDead",
         "pathSmall": "film-small/ArmyoftheDead.jpg",
         "title": "Army of the Dead",
+        "rating": "5.8",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -189,6 +192,7 @@
         "alt": "Armyofthieves",
         "pathSmall": "film-small/Armyofthieves.jpg",
         "title": "Army of Thieves",
+        "rating": "6.4",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -196,6 +200,7 @@
         "alt": "BadBoysForLife",
         "pathSmall": "film-small/BadBoysForLife.jpg",
         "title": "Bad Boys for Life",
+        "rating": "6.5",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -203,6 +208,7 @@
         "alt": "BlackWidow",
         "pathSmall": "film-small/BlackWidow.jpg",
         "title": "Black Widow",
+        "rating": "6.6",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -210,6 +216,7 @@
         "alt": "DarkWinds",
         "pathSmall": "film-small/DarkWinds.jpg",
         "title": "Dark Winds",
+        "rating": "7.7",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -217,6 +224,7 @@
         "alt": "Evil",
         "pathSmall": "film-small/Evil.jpg",
         "title": "Evil",
+        "rating": "7.7",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -224,6 +232,7 @@
         "alt": "FreeGuy",
         "pathSmall": "film-small/FreeGuy.jpg",
         "title": "Free Guy",
+        "rating": "7.1",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -231,6 +240,7 @@
         "alt": "hunters",
         "pathSmall": "film-small/hunters.jpg",
         "title": "Hunters",
+        "rating": "7.2",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -238,6 +248,7 @@
         "alt": "MeuNomeEGal",
         "pathSmall": "film-small/MeuNomeEGal.jpg",
         "title": "Meu Nome É Gal",
+        "rating": "6.3",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -245,6 +256,7 @@
         "alt": "MissMarvel",
         "pathSmall": "film-small/MissMarvel.jpg",
         "title": "Ms. Marvel",
+        "rating": "6.2",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -252,6 +264,7 @@
         "alt": "RittenhouseSquare",
         "pathSmall": "film-small/RittenhouseSquare.jpg",
         "title": "Rittenhouse Square",
+        "rating": "6.9",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -259,6 +272,7 @@
         "alt": "SheHulk",
         "pathSmall": "film-small/SheHulk.jpg",
         "title": "She-Hulk: Attorney at Law",
+        "rating": "1.7",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -266,6 +280,7 @@
         "alt": "ShinningVale",
         "pathSmall": "film-small/ShinningVale.jpg",
         "title": "Shining Vale",
+        "rating": "7.0",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -273,6 +288,7 @@
         "alt": "TaEscrito",
         "pathSmall": "film-small/TaEscrito.jpg",
         "title": "Tá Escrito",
+        "rating": "5.0",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -280,6 +296,7 @@
         "alt": "TerminatorDarkFate",
         "pathSmall": "film-small/TerminatorDarkFate.jpg",
         "title": "Terminator: Dark Fate",
+        "rating": "6.2",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -287,6 +304,7 @@
         "alt": "TheRookie",
         "pathSmall": "film-small/TheRookie.jpg",
         "title": "The Rookie",
+        "rating": "8.0",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -294,6 +312,7 @@
         "alt": "UmDiaCincoEstrelas",
         "pathSmall": "film-small/UmDiaCincoEstrelas.jpg",
         "title": "Um Dia Cinco Estrelas",
+        "rating": "5.0",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -301,6 +320,7 @@
         "alt": "Veep",
         "pathSmall": "film-small/Veep.jpg",
         "title": "Veep",
+        "rating": "8.4",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -308,6 +328,7 @@
         "alt": "WinningTimeLakers",
         "pathSmall": "film-small/WinningTimeLakers.jpg",
         "title": "Winning Time: The Rise of the Lakers Dynasty",
+        "rating": "8.3",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       },
       {
@@ -315,25 +336,25 @@
         "alt": "Yellowstone",
         "pathSmall": "film-small/Yellowstone.jpg",
         "title": "Yellowstone",
+        "rating": "8.6",
         "imdbUrl": "https://www.imdb.com/title/tt0993840/"
       }
     ],
     "reelsMediaGallery": [
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "breakdowns" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "films" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" },
-      { "type": "video", "url": "/videos/main_video.mp4", "thumbnail": "images/badboysbg.png", "title": "Bad Boys", "text": "test text", "category": "series" }
+      { "type": "video", "url": "https://youtu.be/Cukb47piTj8", "thumbnail": "/thumbnails 1x1/ThumNail AHS 1x1 (0-00-03-13).jpg", "title": "American Horror Story", "category": "series" },
+      { "type": "video", "url": "https://youtu.be/8MC7Qaf-9Ls", "thumbnail": "/thumbnails 1x1/ThumNail AOTD 1x1 (0-00-00-00).jpg", "title": "Army of the Dead", "category": "films" },
+      { "type": "video", "url": "https://youtu.be/NlarBo8wPBU", "thumbnail": "/thumbnails 1x1/ThumNail BBF 1x1 (0-00-00-00).jpg", "title": "Bad Boys for Life", "category": "films" },
+      { "type": "video", "url": "https://youtu.be/W96xOsks8w8", "thumbnail": "/thumbnails 1x1/ThumNail MNM 1x1 (0-00-00-00).jpg", "title": "Mila no Multiverso", "category": "films" },
+      { "type": "video", "url": "https://youtu.be/OUR5WZ2LQiM", "thumbnail": "/thumbnails 1x1/ThumNail MSM 1x1 (0-00-00-00).jpg", "title": "Ms. Marvel", "category": "series" },
+      { "type": "video", "url": "https://youtu.be/nRK7i_Lkuto", "thumbnail": "/thumbnails 1x1/ThumNail NEO 1x1 (0-00-00-00).jpg", "title": "Neo", "category": "films" },
+      { "type": "video", "url": "https://youtu.be/nVpkEGyc1-o", "thumbnail": "/thumbnails 1x1/ThumNail SHK 1x1 (0-00-00-00).jpg", "title": "She-Hulk: Attorney at Law", "category": "series" },
+      { "type": "video", "url": "https://youtu.be/J-2Alh52XXo", "thumbnail": "/thumbnails 1x1/ThumNail TDF 1x1 (0-00-00-00).jpg", "title": "Terminator: Dark Fate", "category": "films" },
+      { "type": "video", "url": "https://youtu.be/ge0-3ZzW-VE", "thumbnail": "/thumbnails 1x1/ThumNail WTL 1x1 (0-00-00-00).jpg", "title": "Winning Time: The Rise of the Lakers Dynasty", "category": "series" },
+      { "type": "video", "url": "https://youtu.be/MPMmAChThn0", "thumbnail": "/thumbnails 1x1/ThumNail YLS 1x1 (0-00-00-00).jpg", "title": "Yellowstone", "category": "series" },
+      { "type": "video", "url": "https://youtu.be/YWVYvw5wb5Y", "thumbnail": "/thumbnails 1x1/ThumNail 3D 1x1 (0-00-00-00).jpg", "title": "3D", "category": "breakdowns" },
+      { "type": "video", "url": "https://youtu.be/4_o65jRR-eE", "thumbnail": "/thumbnails 1x1/ThumNail Compositing 1x1 (0-00-00-00).jpg", "title": "Compositing", "category": "breakdowns" },
+      { "type": "video", "url": "https://youtu.be/kXUbKAE9ddU", "thumbnail": "/thumbnails 1x1/ThumNail Roto 1x1 (0-00-03-13).jpg", "title": "Roto", "category": "breakdowns" },
+      { "type": "video", "url": "https://youtu.be/U5diS8gMjqw", "thumbnail": "/thumbnails 1x1/ThumNail Visualization 1x1 (0-00-00-00).jpg", "title": "Visualization", "category": "breakdowns" }
     ],
     "servicesGif": [
       {

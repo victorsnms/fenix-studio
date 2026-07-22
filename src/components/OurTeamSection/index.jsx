@@ -1,4 +1,4 @@
-import { useContext, useState, useCallback, useEffect } from "react";
+import { useContext, useState, useCallback, useEffect, Fragment } from "react";
 import { createPortal } from "react-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { CommonContext } from "../../providers/CommonContext";
@@ -52,7 +52,7 @@ const ArrowRight = () => (
 const MemberCard = ({ member, bioLabel, onBioClick }) => (
   <TeamCard>
     <TeamCardImage
-      src="/images/teammember.png"
+      src={member.imagePath}
       alt={member.author}
       loading="lazy"
     />
@@ -93,6 +93,21 @@ const OurTeamSection = () => {
     };
   }, [emblaApi, updateScrollState]);
 
+  // The carousel viewport lives in a sibling that's toggled via CSS
+  // (display: none/block) rather than mounted/unmounted, so Embla can measure
+  // it before layout has settled. Force a re-measure once mount has committed
+  // and again on every resize so slide widths stay in sync with the CSS breakpoints.
+  useEffect(() => {
+    if (!emblaApi) return;
+    const reInit = () => emblaApi.reInit();
+    const raf = requestAnimationFrame(reInit);
+    window.addEventListener("resize", reInit);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", reInit);
+    };
+  }, [emblaApi]);
+
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
@@ -115,15 +130,14 @@ const OurTeamSection = () => {
             {/* Desktop grid */}
             <OurTeamGrid>
               {members.map((member, i) => (
-                <>
+                <Fragment key={i}>
                   <MemberCard
-                    key={i}
                     member={member}
                     bioLabel={bioLabel}
                     onBioClick={setModalMember}
                   />
                   {i === 0 && <div key="spacer" />}
-                </>
+                </Fragment>
               ))}
             </OurTeamGrid>
 
@@ -148,6 +162,7 @@ const OurTeamSection = () => {
                 aria-label="Previous"
                 $hidden={!canScrollPrev}
                 $side="left"
+                marginLeft="8px"
               >
                 <ArrowLeft />
               </CarouselNavBtn>
@@ -177,7 +192,7 @@ const OurTeamSection = () => {
               <ModalInner>
                 <ModalImageWrap>
                   <ModalImage
-                    src="/images/teammember.png"
+                    src={modalMember.imagePath}
                     alt={modalMember.author}
                   />
                 </ModalImageWrap>
@@ -185,26 +200,32 @@ const OurTeamSection = () => {
                   <ModalMemberName>{modalMember.author}</ModalMemberName>
                   <ModalMemberRole>{modalMember.occupation}</ModalMemberRole>
                   <ModalBody>
-                    <p>{modalMember.text1}</p>
-                    <p>{modalMember.text2}</p>
-                    <p>{modalMember.text3}</p>
+                    {modalMember.bio.map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
                   </ModalBody>
-                  <ModalActions>
-                    <ModalActionBtn
-                      href={modalMember.imdbUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {t("aboutPage.bioImdb")}
-                    </ModalActionBtn>
-                    <ModalActionBtn
-                      href={modalMember.linkedinUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {t("aboutPage.bioLinkedin")}
-                    </ModalActionBtn>
-                  </ModalActions>
+                  {(modalMember.imdbUrl || modalMember.linkedinUrl) && (
+                    <ModalActions>
+                      {modalMember.imdbUrl && (
+                        <ModalActionBtn
+                          href={modalMember.imdbUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t("aboutPage.bioImdb")}
+                        </ModalActionBtn>
+                      )}
+                      {modalMember.linkedinUrl && (
+                        <ModalActionBtn
+                          href={modalMember.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t("aboutPage.bioLinkedin")}
+                        </ModalActionBtn>
+                      )}
+                    </ModalActions>
+                  )}
                 </ModalContent>
               </ModalInner>
             </ModalBox>

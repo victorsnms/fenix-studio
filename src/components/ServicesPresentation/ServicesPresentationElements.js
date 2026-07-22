@@ -24,7 +24,7 @@ export const ServiceCard = styled.div`
   overflow: hidden;
   cursor: pointer;
   transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: url(${({ $img }) => $img});
+  background-image: url("${({ $img }) => $img}");
   background-size: cover;
   background-position: center;
 `;
@@ -94,7 +94,7 @@ export const CardBody = styled.p`
   color: rgba(255, 255, 255, 0.85);
   margin: 0 0 auto;
   flex: 1;
-  overflow: hidden;
+  overflow: scroll;
   display: -webkit-box;
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
@@ -165,7 +165,7 @@ export const CarouselSlide = styled.div`
 export const MobileCard = styled.div`
   position: relative;
   height: 500px;
-  background-image: url(${({ $img }) => $img});
+  background-image: url("${({ $img }) => $img}");
   background-size: cover;
   background-position: center;
   overflow: hidden;

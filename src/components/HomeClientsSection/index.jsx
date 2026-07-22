@@ -40,7 +40,7 @@ const logos = [
 const autoScrollOpts = (direction) => ({
   direction,
   stopOnInteraction: false,
-  stopOnMouseEnter: true,
+  stopOnMouseEnter: false,
   speed: 1,
 });
 

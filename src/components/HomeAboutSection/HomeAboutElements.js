@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const AboutSection = styled.section`
   width: 100%;
@@ -48,7 +49,7 @@ export const AboutImageCol = styled.div`
   }
 `;
 
-export const AboutImage = styled.img`
+export const AboutVideo = styled.video`
   display: block;
   width: 100%;
   height: 100%;
@@ -100,13 +101,19 @@ export const AboutCardsWrapper = styled.div`
   gap: 16px;
 `;
 
-export const AboutCard = styled.div`
+export const AboutCard = styled(Link)`
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
 
   @media (max-width: 480px) {
     padding: 20px;

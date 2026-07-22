@@ -25,6 +25,22 @@ const FILTERS = [
   { key: "series",     labelKey: "reelPage.filterSeries" },
 ];
 
+const getYoutubeEmbedUrl = (url) => {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes("youtu.be")) {
+      return `https://www.youtube.com/embed/${parsed.pathname.slice(1)}`;
+    }
+    if (parsed.hostname.includes("youtube.com")) {
+      const id = parsed.searchParams.get("v");
+      if (id) return `https://www.youtube.com/embed/${id}`;
+    }
+  } catch {
+    return url;
+  }
+  return url;
+};
+
 export const MediaGallery = ({ imageSection = "reelsMediaGallery" }) => {
   const [t] = useTranslation(["images"]);
   const { t: tc } = useContext(CommonContext);
@@ -86,7 +102,7 @@ export const MediaGallery = ({ imageSection = "reelsMediaGallery" }) => {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </VideoPlayBtn>
-                <VideoCardTitle>{item.title} {file?.type}</VideoCardTitle>
+                <VideoCardTitle>{item.title}</VideoCardTitle>
               </>
             ) : (
               <TextOnHover>
@@ -100,7 +116,7 @@ export const MediaGallery = ({ imageSection = "reelsMediaGallery" }) => {
 
       {visibleImages < images.length && (
         <LoadMoreCTA transitionDelay={0.5} onClick={handleLoadMore}>
-          Load More
+          {tc("reelPage.loadMore")}
         </LoadMoreCTA>
       )}
 
@@ -111,7 +127,15 @@ export const MediaGallery = ({ imageSection = "reelsMediaGallery" }) => {
       >
         <span onClick={() => setFile(null)}>&times;</span>
         {file?.type === "video"
-          ? <video src={file?.url?.startsWith("/") || file?.url?.startsWith("http") ? file?.url : `/${file?.url}`} muted autoPlay controls />
+          ? (
+            <iframe
+              src={`${getYoutubeEmbedUrl(file.url)}?autoplay=1`}
+              title={file.title}
+              frameBorder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
+          )
           : <img src={file?.url} alt="" />
         }
       </PopupMedia>

@@ -1,6 +1,7 @@
 import { useState, useCallback, useContext } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { CommonContext } from "../../providers/CommonContext";
+import { SERVICE_CARD_IMAGES } from "../../serviceCardImages";
 import {
   ServicesPresentationSection,
   DesktopCards,
@@ -23,14 +24,6 @@ import {
   NavBtn,
 } from "./ServicesPresentationElements";
 
-const CARD_IMAGES = [
-  { en: "/services/Comp_EN.png",          pt: "/services/Comp_PT.png" },
-  { en: "/services/MattePainting_PTEN.png", pt: "/services/MattePainting_PTEN.png" },
-  { en: "/services/Visu_EN.png",          pt: "/services/Visu_PT.png" },
-  { en: "/services/Motion_PTEN.png",      pt: "/services/Motion_PTEN.png" },
-  { en: "/services/Sup_EN.png",           pt: "/services/Sup_PT.png" },
-];
-
 const ArrowLeft = () => (
   <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -43,13 +36,14 @@ const ArrowRight = () => (
   </svg>
 );
 
-const ServicesPresentation = ({ scrollTargetId = "contact-form" }) => {
-  const { t, language } = useContext(CommonContext);
+const ServicesPresentation = ({ scrollTargetId = "contact-form", service = "post-production" }) => {
+  const { t } = useContext(CommonContext);
   const [hoveredIdx, setHoveredIdx] = useState(null);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
-  const cards = t("servicesPresentation.cards", { returnObjects: true });
-  const isPt = language === "pt-BR";
+  const cardsKey = service === "vfx" ? "servicesPresentation.vfxCards" : "servicesPresentation.postProductionCards";
+  const cards = t(cardsKey, { returnObjects: true });
+  const images = SERVICE_CARD_IMAGES[service];
 
   const scrollToContact = () => {
     document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: "smooth" });
@@ -65,12 +59,11 @@ const ServicesPresentation = ({ scrollTargetId = "contact-form" }) => {
         {Array.isArray(cards) &&
           cards.map((card, i) => {
             const expanded = hoveredIdx === i;
-            const img = isPt ? CARD_IMAGES[i].pt : CARD_IMAGES[i].en;
 
             return (
               <ServiceCard
                 key={i}
-                $img={img}
+                $img={images[i]}
                 $expanded={expanded}
                 onMouseEnter={() => setHoveredIdx(i)}
               >
@@ -100,10 +93,9 @@ const ServicesPresentation = ({ scrollTargetId = "contact-form" }) => {
           <CarouselContainer>
             {Array.isArray(cards) &&
               cards.map((card, i) => {
-                const img = isPt ? CARD_IMAGES[i].pt : CARD_IMAGES[i].en;
                 return (
                   <CarouselSlide key={i}>
-                    <MobileCard $img={img}>
+                    <MobileCard $img={images[i]}>
                       <MobileCardOverlay />
                       <MobileCardContent>
                         <MobileCardTitle>{card.title}</MobileCardTitle>

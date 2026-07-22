@@ -20,7 +20,7 @@ export const PageNotFound = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <PageNotFoundContainer>
-        <NotFoundImage src="/images/404.png" alt="404" />
+        <NotFoundImage src="/404/404_v00.png" alt="404" />
         <NotFoundText>{t("pagenotfound.description")}</NotFoundText>
         <NotFoundCTA to="/">{t("pagenotfound.cta")}</NotFoundCTA>
       </PageNotFoundContainer>

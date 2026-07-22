@@ -3,20 +3,28 @@ import FadeInAnimation from "../FadeInAnimation";
 
 export const MediaGalleryContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin: 20px auto;
   padding: 0 50px;
   max-width: 1300px;
   gap: 30px;
+  justify-items: center;
+   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 `;
 
 export const Media = styled(FadeInAnimation)`
-  height: 220px;
-  width: 100%;
+  /* height: 350px; */
+  max-height: 350px;
+  aspect-ratio: 1/1;
   box-shadow: 0px 5px 15px var(--color-overlay-70);
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  /* @media screen and (min-width: 1024px) {
+    max-width: 350px;
+  } */
 
   video,
   img {
@@ -46,6 +54,18 @@ export const PopupMedia = styled.div`
     max-width: 95%;
     max-height: 95%;
     object-fit: contain;
+    border: 3px solid var(--color-white);
+  }
+
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 90vw;
+    max-width: 1000px;
+    height: calc(min(90vw, 1000px) * 9 / 16);
     border: 3px solid var(--color-white);
   }
   span {
@@ -222,6 +242,8 @@ export const LoadMoreCTA = styled(FadeInAnimation)`
   margin: 0 auto;
   max-width: 120px;
   margin-bottom: 40px;
+  text-transform: uppercase;
+  justify-content: center;
 
   &:hover {
     transition: all 0.2s ease-in-out;

@@ -93,6 +93,7 @@ export const OurTeamCTA = styled.a`
 export const OurTeamCardsArea = styled.div`
   flex: 1;
   min-width: 0;
+  max-width: 100%;
 `;
 
 /* Desktop grid */
@@ -145,6 +146,7 @@ export const CarouselNavBtn = styled.button`
   top: 50%;
   transform: translateY(-50%);
   ${({ $side }) => $side === "left" ? "left: -20px;" : "right: -20px;"}
+  ${({ $side }) => $side === "left" ? "margin-left: 8px;" : "margin-right: 8px;"}
   z-index: 2;
   width: 48px;
   height: 48px;
@@ -178,8 +180,8 @@ export const TeamCardImage = styled.img`
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  /* object-position: center top; */
 
   @media (max-width: 1024px) {
     aspect-ratio: unset;

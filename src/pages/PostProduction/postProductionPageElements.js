@@ -21,7 +21,7 @@ export const PostProductionIntroSection = styled.section`
   }
 `;
 
-export const PostProductionHeroImage = styled.img`
+export const PostProductionHeroVideo = styled.video`
   display: block;
   width: 100%;
   max-height: 520px;

@@ -53,7 +53,7 @@ const MarqueeInfinite = ({ imageSection = "marqueeImages", noBackground, showMet
                       <FilmRating>
                         <ImdbIcon />
                         <StarIcon />
-                        <FilmRatingText>9.5</FilmRatingText>
+                        <FilmRatingText>{image.rating}</FilmRatingText>
                       </FilmRating>
                       {image.title && <FilmTitle>{image.title}</FilmTitle>}
                     </FilmMeta>

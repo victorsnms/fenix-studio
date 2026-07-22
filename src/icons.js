@@ -66,6 +66,7 @@ export {
   FaRegStar    as IconStarEmpty,
   FaFilm       as IconFilm,
   FaSlidersH   as IconFilter,
+  FaSearch     as IconSearch,
 } from 'react-icons/fa';
 
 // ─── Icon Size Scale ─────────────────────────────────────────────────────────

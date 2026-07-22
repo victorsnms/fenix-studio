@@ -18,7 +18,7 @@ import {
   ModalIframeWrap,
 } from "./HomeReelElements";
 
-const YOUTUBE_EMBED = "https://www.youtube.com/embed/YTh4OuZ1nfA";
+const YOUTUBE_EMBED = "https://www.youtube.com/embed/3I79HlMmBog";
 const THUMBNAIL    = "/reel-thumbnail.jpg";
 
 const ReelModal = ({ onClose, title }) => {

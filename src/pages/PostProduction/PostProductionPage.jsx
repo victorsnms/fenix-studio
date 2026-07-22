@@ -13,7 +13,7 @@ import ServicesPresentation from "../../components/ServicesPresentation";
 import {
   PostProductionPageContainer,
   PostProductionIntroSection,
-  PostProductionHeroImage,
+  PostProductionHeroVideo,
   PostProductionIntroCopy,
   TimelineSection,
   TimelineHeader,
@@ -51,9 +51,12 @@ export const PostProductionPage = () => {
         {/* Intro: hero image + body text */}
         <FadeInAnimation threshold={0.2}>
           <PostProductionIntroSection>
-            <PostProductionHeroImage
-              src="/images/404bg.png"
-              alt={t("postProductionPage.title")}
+            <PostProductionHeroVideo
+              src="/videosHQ/Video_NossosServicos.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
             <PostProductionIntroCopy>
               <p>{t("postProductionPage.introBody1")}</p>
@@ -84,7 +87,7 @@ export const PostProductionPage = () => {
 
         {/* Services Presentation */}
         <FadeInAnimation threshold={0.2}>
-          <ServicesPresentation scrollTargetId="contact-form" />
+          <ServicesPresentation scrollTargetId="contact-form" service="post-production" />
         </FadeInAnimation>
 
         {/* Contact form + Need Help */}

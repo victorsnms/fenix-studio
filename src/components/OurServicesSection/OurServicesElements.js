@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const OurServicesSectionWrapper = styled.section`
   width: 100%;
@@ -84,72 +85,38 @@ export const OurServicesExploreCta = styled.a`
 
 export const OurServicesCarouselArea = styled.div`
   flex: 1;
+  width: 100%;
   min-width: 0;
   position: relative;
   padding: 0 28px;
 `;
 
-export const OurServicesEmblaViewport = styled.div`
-  overflow: hidden;
-`;
-
-export const OurServicesEmblaContainer = styled.div`
-  display: flex;
-  user-select: none;
-`;
-
-export const OurServicesEmblaSlide = styled.div`
-  flex: 0 0 100%;
-  min-width: 0;
+export const OurServicesFadeArea = styled.div`
+  position: relative;
+  height: 776px;
   padding: 0 10px;
 
-  @media (max-width: 768px) {
-    flex: 0 0 100%;
-  }
-`;
-
-/* Nav buttons */
-export const ServiceNavBtn = styled.button`
-  display: ${({ $hidden }) => ($hidden ? "none" : "flex")};
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  ${({ $side }) => $side === "left" ? "left: -20px;" : "right: -20px;"}
-  z-index: 2;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: var(--color-background);
-  color: var(--color-white);
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  &:hover {
-    border-color: var(--color-white);
-    background: rgba(255, 255, 255, 0.08);
+  @media (max-width: 1024px) {
+    height: 394px;
   }
 `;
 
 /* ── Service card ─────────────────────────────────────────────────────────── */
 
-export const ServiceCard = styled.div`
-  position: relative;
+export const ServiceCard = styled(Link)`
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 420px;
   overflow: hidden;
-  background-image: ${({ $img }) => $img ? `url(${$img})` : "none"};
+  background-image: ${({ $img }) => $img ? `url("${$img}")` : "none"};
   background-size: cover;
   background-position: center;
-  max-width: 1200px;
+  text-decoration: none;
+  opacity: ${({ $active }) => ($active ? 1 : 0)};
+  pointer-events: ${({ $active }) => ($active ? "auto" : "none")};
+  transition: opacity 0.8s ease;
 
   &::before {
     content: '';
@@ -161,14 +128,6 @@ export const ServiceCard = styled.div`
       rgba(0, 0, 0, 0.45) 50%,
       rgba(0, 0, 0, 0.15) 100%
     );
-  }
-
-  @media (max-width: 1024px) {
-    min-height: 360px;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 320px;
   }
 `;
 
@@ -200,7 +159,7 @@ export const ServiceCardDescription = styled.p`
   margin: 0;
 `;
 
-export const ServiceCardCta = styled.a`
+export const ServiceCardCta = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -214,11 +173,9 @@ export const ServiceCardCta = styled.a`
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 12px 24px;
-  text-decoration: none;
-  cursor: pointer;
   transition: border-color 0.2s ease, background 0.2s ease;
 
-  &:hover {
+  ${ServiceCard}:hover & {
     border-color: var(--color-white);
     background: rgba(255, 255, 255, 0.1);
   }

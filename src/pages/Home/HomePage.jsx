@@ -57,10 +57,10 @@ export const HomePage = () => {
           </div>
           <HomeClientsSection />
         </FadeInAnimation>
-        {/* Study Section */}
-        <FadeInAnimation threshold={0.5}>
+        {/* Study Section - hidden for now*/}        
+        {/* <FadeInAnimation threshold={0.5}>
           <HomeStudySection />
-        </FadeInAnimation>
+        </FadeInAnimation> */}
         {/* Newsletter */}
         <HomeNewsletterSection />
       </HomePageContainer>

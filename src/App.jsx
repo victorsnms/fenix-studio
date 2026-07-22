@@ -6,6 +6,7 @@ import { ContactPage } from "./pages/Contact/ContactPage";
 import { ReelPage } from "./pages/Reel/ReelPage";
 import { ServicesPage } from "./pages/Services/ServicesPage";
 import { StudyPage } from "./pages/Study/StudyPage";
+import { StudyInProgressPage } from "./pages/StudyInProgress/StudyInProgressPage";
 import { PostProductionPage } from "./pages/PostProduction/PostProductionPage";
 import { VFXPage } from "./pages/VFX/VFXPage";
 import { HomePage } from "./pages/Home/HomePage.jsx";
@@ -23,6 +24,7 @@ export function App() {
         <Route path="/services/post-production" exact element={<PostProductionPage />} />
         <Route path="/services/vfx" exact element={<VFXPage />} />
         <Route path="/study" exact element={<StudyPage />} />
+        <Route path="/study-in-progress" exact element={<StudyInProgressPage />} />
         <Route path="*" exact element={<PageNotFound />} />
       </Routes>
     </Router>

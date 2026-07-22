@@ -13,7 +13,7 @@ import ServicesPresentation from "../../components/ServicesPresentation";
 import {
   PostProductionPageContainer,
   PostProductionIntroSection,
-  PostProductionHeroImage,
+  PostProductionHeroVideo,
   PostProductionIntroCopy,
   TimelineSection,
   TimelineHeader,
@@ -50,9 +50,12 @@ export const VFXPage = () => {
         {/* Intro: hero image + body text */}
         <FadeInAnimation threshold={0.2}>
           <PostProductionIntroSection>
-            <PostProductionHeroImage
-              src="/images/404bg.png"
-              alt={t("vfxPage.title")}
+            <PostProductionHeroVideo
+              src="/videosHQ/Video_NossosServicos.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
             <PostProductionIntroCopy>
               <p>{t("vfxPage.introBody1")}</p>
@@ -83,7 +86,7 @@ export const VFXPage = () => {
 
         {/* Services Presentation */}
         <FadeInAnimation threshold={0.2}>
-          <ServicesPresentation scrollTargetId="vfx-contact-form" />
+          <ServicesPresentation scrollTargetId="vfx-contact-form" service="vfx" />
         </FadeInAnimation>
 
         {/* Contact form + Need Help */}

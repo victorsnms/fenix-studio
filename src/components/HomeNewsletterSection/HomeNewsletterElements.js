@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const NewsletterSection = styled.section`
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 120px;
   background-image: url('/images/newsletter-bg.png');
   background-size: cover;
   background-position: center;

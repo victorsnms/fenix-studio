@@ -4,17 +4,21 @@ import {
   BlockInner,
   BlockImageWrap,
   BlockImage,
+  BlockVideo,
   BlockContent,
   BlockTitle,
   BlockBody,
   BlockCTA,
 } from "./ServiceContentBlockElements";
 
-const ServiceContentBlock = ({ imageLeft = true, image, topLabel, title, paragraphs, ctaLabel, ctaUrl }) => (
+const ServiceContentBlock = ({ imageLeft = true, image, video, topLabel, title, paragraphs, ctaLabel, ctaUrl }) => (
   <BlockSection>
     <BlockInner $imageLeft={imageLeft}>
       <BlockImageWrap>
-        <BlockImage src={image} alt={title} loading="lazy" />
+        {video
+          ? <BlockVideo src={video} autoPlay loop muted playsInline />
+          : <BlockImage src={image} alt={title} loading="lazy" />
+        }
       </BlockImageWrap>
       <BlockContent>
         <SectionTopTitle>{topLabel}</SectionTopTitle>

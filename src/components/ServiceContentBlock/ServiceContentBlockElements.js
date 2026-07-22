@@ -46,6 +46,14 @@ export const BlockImage = styled.img`
   object-position: center;
 `;
 
+export const BlockVideo = styled.video`
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+`;
+
 /* ── Text side ────────────────────────────────────────────────────────────── */
 
 export const BlockContent = styled.div`

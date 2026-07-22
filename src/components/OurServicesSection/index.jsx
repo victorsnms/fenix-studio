@@ -1,5 +1,4 @@
-import { useContext, useState, useCallback, useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useContext, useState, useEffect, useRef, useCallback } from "react";
 import { CommonContext } from "../../providers/CommonContext";
 import SectionTopTitle from "../SectionTopTitle";
 import {
@@ -9,10 +8,7 @@ import {
   OurServicesTitle,
   OurServicesExploreCta,
   OurServicesCarouselArea,
-  OurServicesEmblaViewport,
-  OurServicesEmblaContainer,
-  OurServicesEmblaSlide,
-  ServiceNavBtn,
+  OurServicesFadeArea,
   ServiceCard,
   ServiceCardTitle,
   ServiceCardBody,
@@ -20,46 +16,71 @@ import {
   ServiceCardCta,
 } from "./OurServicesElements";
 
-const ArrowLeft = () => (
-  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const AUTOPLAY_DELAY = 5000;
 
-const ArrowRight = () => (
-  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+// Scoped to this section only (not shared with ServicesPresentation) —
+// order must match servicesPresentation.postProductionCards / vfxCards in the locale files.
+const ABOUT_SERVICE_IMAGES = {
+  "post-production": [
+    "/services_photos_1360x547/Color Grading 1360x547 (0_00_00_11).jpg",
+    "/services_photos_1360x547/Conform 1360x547 (0_00_03_08).jpg",
+    "/services_photos_1360x547/Coordenação de Pós 1360x547 (0_00_01_11).jpg",
+    "/services_photos_1360x547/Lab and Data Management 1360x547 (0_00_04_17).jpg",
+    "/services_photos_1360x547/Master and Delivery 1360x547 (0_00_02_08).jpg",
+  ],
+  vfx: [
+    "/services_photos_1360x547/3D 1360x547 (0_00_09_00).jpg",
+    "/services_photos_1360x547/Compositing 1360x547 (0_00_06_24).jpg",
+    "/services_photos_1360x547/Supervisão 1360x547 (0_00_11_01).jpg",
+    "/services_photos_1360x547/Motion Graphics 1360x547 (0_00_09_23).jpg",
+    "/services_photos_1360x547/Visualização 1360x547 (0_00_07_23).jpg",
+  ],
+};
+
+const buildCards = (postProductionCards, vfxCards) => {
+  const cards = [];
+  const length = Math.max(postProductionCards.length, vfxCards.length);
+
+  for (let i = 0; i < length; i++) {
+    if (postProductionCards[i]) {
+      cards.push({
+        ...postProductionCards[i],
+        service: "post-production",
+        img: ABOUT_SERVICE_IMAGES["post-production"][i],
+      });
+    }
+    if (vfxCards[i]) {
+      cards.push({
+        ...vfxCards[i],
+        service: "vfx",
+        img: ABOUT_SERVICE_IMAGES.vfx[i],
+      });
+    }
+  }
+
+  return cards;
+};
 
 const OurServicesSection = () => {
   const { t } = useContext(CommonContext);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const intervalRef = useRef(null);
 
-  const cards = t("aboutPage.serviceCards", { returnObjects: true });
+  const postProductionCards = t("servicesPresentation.postProductionCards", { returnObjects: true });
+  const vfxCards = t("servicesPresentation.vfxCards", { returnObjects: true });
+  const cards = buildCards(postProductionCards, vfxCards);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
-
-  const updateScrollState = useCallback(() => {
-    if (!emblaApi) return;
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  const restartAutoplay = useCallback(() => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % cards.length);
+    }, AUTOPLAY_DELAY);
+  }, [cards.length]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    updateScrollState();
-    emblaApi.on("select", updateScrollState);
-    emblaApi.on("reInit", updateScrollState);
-    return () => {
-      emblaApi.off("select", updateScrollState);
-      emblaApi.off("reInit", updateScrollState);
-    };
-  }, [emblaApi, updateScrollState]);
-
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+    restartAutoplay();
+    return () => clearInterval(intervalRef.current);
+  }, [restartAutoplay]);
 
   return (
     <OurServicesSectionWrapper>
@@ -73,43 +94,26 @@ const OurServicesSection = () => {
           </OurServicesExploreCta>
         </OurServicesContent>
 
-        {/* Right column — carousel */}
+        {/* Right column — fading sequence of cards */}
         <OurServicesCarouselArea>
-          <ServiceNavBtn
-            onClick={scrollPrev}
-            aria-label="Previous"
-            $hidden={!canScrollPrev}
-            $side="left"
-          >
-            <ArrowLeft />
-          </ServiceNavBtn>
-
-          <OurServicesEmblaViewport ref={emblaRef}>
-            <OurServicesEmblaContainer>
-              {cards.map((card, i) => (
-                <OurServicesEmblaSlide key={i}>
-                  <ServiceCard $img={card.imagePath}>
-                    <ServiceCardBody>
-                      <ServiceCardTitle>{card.title}</ServiceCardTitle>
-                      <ServiceCardDescription>{card.description}</ServiceCardDescription>
-                      <ServiceCardCta href={card.ctaUrl}>
-                        {t("aboutPage.serviceCardCta")}
-                      </ServiceCardCta>
-                    </ServiceCardBody>
-                  </ServiceCard>
-                </OurServicesEmblaSlide>
-              ))}
-            </OurServicesEmblaContainer>
-          </OurServicesEmblaViewport>
-
-          <ServiceNavBtn
-            onClick={scrollNext}
-            aria-label="Next"
-            $hidden={!canScrollNext}
-            $side="right"
-          >
-            <ArrowRight />
-          </ServiceNavBtn>
+          <OurServicesFadeArea>
+            {cards.map((card, i) => (
+              <ServiceCard
+                key={i}
+                to={card.service === "vfx" ? "/services/vfx" : "/services/post-production"}
+                $img={card.img}
+                $active={i === activeIndex}
+              >
+                <ServiceCardBody>
+                  <ServiceCardTitle>{card.title}</ServiceCardTitle>
+                  <ServiceCardDescription>{card.text}</ServiceCardDescription>
+                  <ServiceCardCta>
+                    {t("aboutPage.serviceCardCta")}
+                  </ServiceCardCta>
+                </ServiceCardBody>
+              </ServiceCard>
+            ))}
+          </OurServicesFadeArea>
         </OurServicesCarouselArea>
       </OurServicesInner>
     </OurServicesSectionWrapper>

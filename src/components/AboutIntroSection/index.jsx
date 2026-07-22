@@ -33,7 +33,7 @@ const AboutIntroSectionComponent = () => {
         </AboutIntroContent>
 
         <AboutIntroImageWrap>
-          <AboutIntroImage src="/images/aboutushero.png" alt={t("aboutPage.sectionTitle")} loading="lazy" />
+          <AboutIntroImage src="/about/SobreaFenixStudios (0;00;08;17).jpg" alt={t("aboutPage.sectionTitle")} loading="lazy" />
           <AboutIntroDecor />
         </AboutIntroImageWrap>
       </AboutIntroInner>

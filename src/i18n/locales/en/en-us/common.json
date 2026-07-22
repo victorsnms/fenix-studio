@@ -60,38 +60,6 @@
       "servicesTitle": "Our Services",
       "servicesExploreCta": "Explore Services",
       "serviceCardCta": "Learn more",
-      "serviceCards": [
-        {
-          "title": "Compositing",
-          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
-          "imagePath": "/images/composition.png",
-          "ctaUrl": "/services"
-        },
-        {
-          "title": "Compositing",
-          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
-          "imagePath": "/images/composition.png",
-          "ctaUrl": "/services"
-        },
-        {
-          "title": "Compositing",
-          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
-          "imagePath": "/images/composition.png",
-          "ctaUrl": "/services"
-        },
-        {
-          "title": "Compositing",
-          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
-          "imagePath": "/images/composition.png",
-          "ctaUrl": "/services"
-        },
-        {
-          "title": "Compositing",
-          "description": "The combination of two or more images/videos/elements into a single product. Within our compositing process we offer Keying solutions (Chroma)...",
-          "imagePath": "/images/composition.png",
-          "ctaUrl": "/services"
-        }
-      ],
       "pageDescription1": "With the purpose of elevating, revitalizing and inspiring future generations in the Visual Effects market, Fenix Studios was born in 2022, acting in the post production market.",
       "pageDescription2": "We are defined by our team. We prioritize the collaboration of our members. Our success comes from a united team in a sustainable environment for the creative process. This is culture.",
       "pageDescription3": "We challenge ourselves to create visual effects on an international scale with a compact and specialized team using a modern pipeline workflow that enables us to adapt to the constant changes of a project and client demands."
@@ -180,16 +148,24 @@
       "filterAll": "All",
       "filterBreakdowns": "Breakdowns",
       "filterFilms": "Films",
-      "filterSeries": "Series"
+      "filterSeries": "Series",
+      "loadMore": "Load More"
     },
     "servicesPresentation": {
       "ctaLabel": "Contact us",
-      "cards": [
-        { "title": "Composition",        "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
-        { "title": "Matte Painting",     "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
-        { "title": "Visualization",      "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
-        { "title": "Motion Graphics",    "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." },
-        { "title": "Virtual Production", "text": "Joining two or more images/videos/elements into a single product. Within our compositing process we offer Keying (Chroma), Rotoscoping, Color Correction, 2D and 3D Element Clean-up, Application of various Effects or Footage, 3D Projection, Digital Beauty/Makeup and Set Extension solutions." }
+      "postProductionCards": [
+        { "title": "Color Grading", "text": "Color grading with a cinematic approach and refined aesthetic direction. We shape light, color, and depth to create consistent, sophisticated, and emotionally striking imagery, respecting the visual identity of each production while elevating its narrative strength." },
+        { "title": "Conform", "text": "Conform carried out with technical precision and complete attention to narrative integrity. We organize, synchronize, and rebuild timelines with consistency and reliability, ensuring a seamless connection between editing, finishing, and delivery without compromising quality, pacing, or visual fidelity." },
+        { "title": "Post-Production Coordination", "text": "Post-production coordination focused on ensuring clarity, control, and alignment throughout every stage of the project. We manage schedules, teams, deliveries, and pipelines with organization and precision, connecting creative, technical, and operational processes to keep production efficient from start to finish." },
+        { "title": "Lab & Data Management", "text": "Lab and data management focused on security, organization, and operational continuity. We structure ingest, backup, verification, and media management workflows with technical precision, ensuring file integrity, traceability, and stability throughout every stage of post-production." },
+        { "title": "Master & Delivery", "text": "Master and delivery handled with technical rigor and uncompromising quality control. We finalize and distribute content across multiple formats and specifications, ensuring visual consistency, technical compliance, and reliability throughout every stage of delivery." }
+      ],
+      "vfxCards": [
+        { "title": "3D", "text": "3D production focused on film, advertising, and high-impact visual experiences. We develop environments, assets, and animations with refined technical execution, combining artistic direction, realism, and performance to deliver imagery that strengthens narratives, enhances brands, and expands the visual scale of every project." },
+        { "title": "Compositing", "text": "Compositing designed to merge technique with invisibility. We integrate 3D elements, visual effects, and live-action footage with precise control over light, texture, and depth, ensuring cohesive, natural, and visually solid imagery from the first frame to the last." },
+        { "title": "Supervision", "text": "Technical and creative supervision focused on ensuring visual consistency, operational efficiency, and complete control over every stage of production. We oversee processes, teams, and deliveries with strategic vision and technical precision, ensuring each project reaches its highest aesthetic and narrative potential." },
+        { "title": "Motion Graphics", "text": "Motion graphics designed to transform information, identity, and narrative into movement. We create animations with precise visual direction, refined pacing, and strong aesthetic impact, combining design and cinematic language to communicate ideas with clarity and personality." },
+        { "title": "Visualization", "text": "Visualization developed to anticipate aesthetics, composition, and visual language before final execution. We create clear and strategic visual previews that support creative decisions, technical alignment, and narrative development throughout the entire production process." }
       ]
     },
     "vfxPage": {
@@ -251,6 +227,9 @@
       "sectionTitle": "We are building a new learning experience",
       "bodyText1": "Get ready for a complete platform with courses focused on Post-production and VFX. Developed with a practical methodology with industry professionals preparing you for the market.",
       "bodyText2": "Secure your priority at launch, receive exclusive content and be notified before everyone else!",
+      "heroLabel": "Premium Learning",
+      "heroTitle": "Professional Training",
+      "heroCta": "Check it out",
       "formTitle": "Secure early access",
       "formText": "Fill in your details to receive updates, launch dates, special conditions and exclusive materials.",
       "formSubtitle": "REQUIRED FIELDS ARE MARKED WITH *",
@@ -260,68 +239,110 @@
       "formCta": "Guarantee my spot",
       "subtitle1": "Our courses contain a diverse selection of content with different levels and focus. With each completed course you get closer to your objectives.",
       "subtitle2": "With our hands-on approach, you learn by doing and asking questions, and with each module you finish you add a new piece to your portfolio. See below all our offered courses and expand your knowledge!",
+      "coursesSectionLabel": "",
+      "coursesSectionTitle": "",
+      "filterAll": "All",
+      "searchPlaceholder": "Search",
+      "filterToggleLabel": "Filter",
+      "filterModalTitle": "Filter",
+      "filterAllOption": "All",
+      "applyLabel": "Apply",
+      "facetGroups": [
+        { "key": "level", "label": "Level" },
+        { "key": "duration", "label": "Duration" },
+        { "key": "format", "label": "Format" },
+        { "key": "language", "label": "Language" }
+      ],
       "categories": [
         {
-          "categorTitle": "Tecnologia",
+          "categorTitle": "Technology",
           "courses": [
             {
               "courseTitle": "TechFinance",
-              "courseDescription": "Um outro nível de Consultor Financeiro. Aumente seu valor no mercado oferecendo um método eficiente e tecnológico em suas consultorias.",
-              "buttonLabel": "Saiba Mais",
+              "courseDescription": "A new level for Financial Consultants. Increase your market value by offering an efficient, tech-driven method in your consulting work.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Beginner",
+              "duration": "Short",
+              "format": "Online",
+              "language": "Portuguese"
             },
             {
               "courseTitle": "TechFinance Business®",
-              "courseDescription": "Torne-se um Consultor Financeiro Empresarial lucrativo e bem-posicionado em apenas 2 meses.",
-              "buttonLabel": "Saiba Mais",
+              "courseDescription": "Become a profitable, well-positioned Corporate Financial Consultant in just 2 months.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediate",
+              "duration": "Medium",
+              "format": "Online",
+              "language": "Portuguese"
             }
           ]
         },
         {
-          "categorTitle": "Cursos Rápidos",
+          "categorTitle": "Quick Courses",
           "courses": [
             {
-              "courseTitle": "Start do Consultor Financeiro®",
-              "courseDescription": "O guia completo para você começar uma nova carreira monetizando seu conhecimento sobre Educação Financeira. Tudo na dosagem certa, amparado em quase uma década de experiência dos nossos especialistas em negócios no mercado financeiro.",
-              "buttonLabel": "Saiba Mais",
+              "courseTitle": "Financial Consultant Starter®",
+              "courseDescription": "The complete guide to starting a new career by monetizing your knowledge of Financial Education. Everything in the right dose, backed by nearly a decade of experience from our financial market business experts.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Beginner",
+              "duration": "Short",
+              "format": "Hybrid",
+              "language": "Portuguese"
             }
           ]
         },
         {
-          "categorTitle": "Mentoria & Treinamentos",
+          "categorTitle": "Mentorship & Training",
           "courses": [
             {
-              "courseTitle": "Mentoria Equity®",
-              "courseDescription": "Conte com o apoio dos cérebros por trás da Empreender Dinheiro como se fossem Sócios do seu negócio e acesse uma metodologia que já acelerou o resultado de educadores financeiros em todo o país.",
-              "buttonLabel": "Saiba Mais",
+              "courseTitle": "Equity Mentorship®",
+              "courseDescription": "Count on the support of the minds behind Empreender Dinheiro as if they were partners in your business, and access a methodology that has already accelerated results for financial educators across the country.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Advanced",
+              "duration": "Long",
+              "format": "In-person",
+              "language": "Portuguese"
             },
             {
-              "courseTitle": "Programa YouCash®",
-              "courseDescription": "A formação de educadores financeiros mais completa do mercado. Formação técnica + formação didática + todas as estratégias de monetização que já utilizamos.",
-              "buttonLabel": "Saiba Mais",
+              "courseTitle": "YouCash Program®",
+              "courseDescription": "The most complete training for financial educators on the market. Technical training + teaching training + every monetization strategy we've ever used.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediate",
+              "duration": "Long",
+              "format": "Online",
+              "language": "Portuguese"
             },
             {
-              "courseTitle": "Programa Oratória Persuasiva®",
-              "courseDescription": "Ganhe destaque na Educação Financeira como um orador acima da média. Dominando a Oratória e Persuasão, você será capaz de influenciar pessoas, ativando no cérebro da sua audiência o desejo de dizer sempre “sim” para você.",
-              "buttonLabel": "Saiba Mais",
+              "courseTitle": "Persuasive Public Speaking Program®",
+              "courseDescription": "Stand out in Financial Education as an above-average speaker. By mastering public speaking and persuasion, you'll be able to influence people, triggering your audience's desire to always say \"yes\" to you.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediate",
+              "duration": "Medium",
+              "format": "Hybrid",
+              "language": "Portuguese"
             },
             {
               "courseTitle": "NeuroExpert®",
-              "courseDescription": "Entender os fundamentos do Comportamento Humano é o caminho mais seguro para se diferenciar como profissional da área e garantir que o seu cliente alcance os resultados financeiros que espera.",
-              "buttonLabel": "Saiba Mais",
+              "courseDescription": "Understanding the fundamentals of Human Behavior is the safest path to stand out as a professional in the field and ensure your client achieves the financial results they expect.",
+              "buttonLabel": "Learn more",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Advanced",
+              "duration": "Medium",
+              "format": "Online",
+              "language": "Portuguese"
             }
           ]
         }
@@ -335,58 +356,93 @@
     "testimonyList": [
       {
         "author": "Bernardo Teixeira Pereira",
-        "occupation": "Founder | Visual Effects Supervisor",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
-        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
-        "imdbUrl": "https://www.imdb.com",
-        "linkedinUrl": "https://www.linkedin.com"
+        "occupation": "Founder | Post-Production Supervisor | VFX Supervisor",
+        "imagePath": "/teamPhotos/Perfil_Bernardo1.jpg",
+        "imageAlt": "Bernardo Teixeira Pereira",
+        "bio": [
+          "Graduated in Animation & Visual Effects in San Francisco, California, Bernardo founded Fenix Studios, creating a distinctive working model within the industry. He has worked on major national and international film productions.",
+          "Bernardo created and executed unique visual effects for a variety of international films and series, including Black Widow, Terminator: Dark Fate, Bad Boys for Life, Free Guy, Army of the Dead, She-Hulk: Attorney at Law, Winning Time: The Rise of the Lakers Dynasty and Ms. Marvel.",
+          "In Brazil, he worked as a Visual Effects Supervisor, contributing to productions such as Tá Escrito, Minha Irmã e Eu, Meu Nome é Gal, A Paixão Segundo G.H., Férias Trocadas and Um Dia Cinco Estrelas."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm9483527/",
+        "linkedinUrl": "https://www.linkedin.com/in/bernardo-teixeira-pereira/"
       },
       {
-        "author": "Bernardo Teixeira Pereira",
-        "occupation": "Founder | Visual Effects Supervisor",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
-        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
-        "imdbUrl": "https://www.imdb.com",
-        "linkedinUrl": "https://www.linkedin.com"
+        "author": "Bernardo de Paula Douahy",
+        "occupation": "VFX Coordinator",
+        "imagePath": "/teamPhotos/Perfil_Bernardo_02.jpg",
+        "imageAlt": "Bernardo de Paula Douahy",
+        "bio": [
+          "Bernardo de Paula Douahy is a VFX Producer and Film Producer working across cinema, advertising, and digital content, with a strong focus on post-production, pipeline integration, and visual effects operations. Graduated from FAPCOM, he has built his career by moving between multiple areas of audiovisual production, developing a broad understanding of narrative, technical workflows, and finishing processes.",
+          "During his time at Paris Filmes, he worked as a VFX Coordination Assistant on productions such as Meu Nome é Gal, Tá Escrito, Férias Trocadas, and Minha Irmã e Eu, supporting post-production workflows and technical coordination for Brazilian feature films. He later expanded into the advertising and digital market, working with social media and podcast production for YouTube at Agência Camucá, leading projects with figures such as Atilio Bari, Sérgio Stern, Ricardo Cavallini, and Amanda Paschoal.",
+          "He made his independent film debut with the documentary Mãos que Não se Alcançam, winner of Best Film at the Mostra Itapety de Cinema, where he worked as producer, executive producer, screenwriter, and interviewer. Currently, he works at Fenix Studios as a VFX Producer, operating across lab, conform, coordination, and art departments to ensure operational fluidity, communication, and consistency throughout the entire post-production pipeline."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm17627972/",
+        "linkedinUrl": "https://www.linkedin.com/in/bernardo-douahy-4b1a95304/"
       },
       {
-        "author": "Bernardo Teixeira Pereira",
-        "occupation": "Founder | Visual Effects Supervisor",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
-        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
-        "imdbUrl": "https://www.imdb.com",
-        "linkedinUrl": "https://www.linkedin.com"
+        "author": "Carolina Reichel",
+        "occupation": "Post-Production Coordinator",
+        "imagePath": "/teamPhotos/Perfil_Carol.jpg",
+        "imageAlt": "Carolina Reichel",
+        "bio": [
+          "Carolina Reichel has worked in the audiovisual industry for over 17 years, building a solid career in post-production, client services, and project coordination across advertising, film, and television. She began her career in traffic and post-production coordination support, developing an early understanding of operational workflows, pipeline organization, and production dynamics. At the same time, she closely followed film sets as a production assistant, expanding her connection to audiovisual language beyond the post-production environment.",
+          "During her first year working in advertising post-production, she contributed to the feature film 2 Coelhos, an experience that marked the beginning of a career connected to both the advertising market and Brazilian cinema. Over the years, she has worked with studios and production companies such as Black Maria, Cine, Trator Filmes, Jonathan Post, Paris Pós, and Paris Filmes, strengthening her expertise in post-production coordination and the relationship between creative, technical, and operational teams.",
+          "Throughout her career, she has collaborated with directors such as Afonso Poyart, Tico Vicente, Xico de Deus, Rogério Utimura, Caco Souza, Drico Mello, Rodrigo Moreira, Rafa Coutinho, Clovis Mello, Cris Vida, Ivan Abujanra, Alex Miranda, Halder Gomes, Hsu Chien, Luiz Fernando Carvalho, Bruno Barreto, Esmir Filho, João Wainer, Claudio Ellovitch, and Marcos Jorge. Each collaboration expanded her perspective on narrative, aesthetics, and production workflows, shaping a professional profile defined by organization, creative sensitivity, and the ability to lead complex projects with clarity and precision."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm15402731/",
+        "linkedinUrl": "https://www.linkedin.com/in/carolina-reichel-8b0153339/"
       },
       {
-        "author": "Bernardo Teixeira Pereira",
-        "occupation": "Founder | Visual Effects Supervisor",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
-        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
-        "imdbUrl": "https://www.imdb.com",
-        "linkedinUrl": "https://www.linkedin.com"
+        "author": "Marcos Mackza",
+        "occupation": "Motion Graphics Designer | Compositor",
+        "imagePath": "/teamPhotos/Perfil_Marcos.jpg",
+        "imageAlt": "Marcos Mackza",
+        "bio": [
+          "Marcos Mackza is a Motion Graphics Designer and Compositor with over 20 years of experience in post-production, working across advertising, live events, and Brazilian cinema. Throughout his career, he has taken on multiple roles within the post-production pipeline, building a broad understanding of visual direction, compositing, and motion-driven storytelling.",
+          "His work combines graphic language, technical precision, and aesthetic sensitivity to create visually striking pieces. Most recently, he was part of the team at Paris Filmes, working as a Motion Designer, Art Director, and Compositor on productions such as Homem com H, Tá Escrito, and Central de Inteligência Cearense. He is highly proficient in tools such as Adobe After Effects, Cinema 4D, Mocha Pro, Adobe Photoshop, Adobe Illustrator, and Nuke."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm15588249/",
+        "linkedinUrl": "https://www.linkedin.com/in/marcos-maczka-vfx/"
       },
       {
-        "author": "Bernardo Teixeira Pereira",
-        "occupation": "Founder | Visual Effects Supervisor",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Graduated in Animation & Visual Effects in San Francisco, California. Founded Fenix Studios creating a differentiated work model in the industry. Worked on big titles of international and national cinema.",
-        "text2": "Bernardo created and executed unique visual effects for a variety of international films and series: Black Widow, Terminator: Dark Fate, Bad Boys For Life, Free Guy, Army Of The Dead, She-Hulk, Winning Time: The Rise Of The Lakers Dynasty and Ms. Marvel.",
-        "text3": "In Brazil, he worked as a Visual Effects Supervisor contributing in the creation of a number of hit titles: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
-        "imdbUrl": "https://www.imdb.com",
-        "linkedinUrl": "https://www.linkedin.com"
+        "author": "Renan Lopes",
+        "occupation": "Compositing Lead",
+        "imagePath": "/teamPhotos/Perfil_Renan.jpg",
+        "imageAlt": "Renan Lopes",
+        "bio": [
+          "Renan Lopes is a Digital Compositor with 7 years of experience in the film and television industry, working on visual effects projects focused on CG integration, 2D/3D compositing, and image finishing. A specialist in Nuke, he has developed a technical approach centered on visual precision, operational efficiency, and agile problem-solving within complex VFX pipelines.",
+          "Throughout his career, he has contributed to productions such as Ripley, Abigail, and Back in Action, working on compositing and finishing processes for international film and streaming productions. His work combines technical expertise, refined visual integration, and clear communication between departments, helping deliver consistent results in high-end productions."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm8420799/",
+        "linkedinUrl": "https://www.linkedin.com/in/lopesrenan/"
+      },
+      {
+        "author": "Andre Luiz dos Santos",
+        "occupation": "IT Manager | Pipeline TD",
+        "imagePath": "/teamPhotos/Perfil_Andre.jpg",
+        "imageAlt": "Andre Luiz dos Santos",
+        "bio": [
+          "A professional with a background in Electro-Electronics from SENAI, he began his career working with POS terminal maintenance, though programming quickly became the true foundation of his professional path. His growth accelerated after joining a call center company as a Programmer Trainee, where he developed strong technical foundations and gained valuable experience solving real-world operational challenges in high-demand environments.",
+          "Over the years, he has worked across different companies and technology sectors, building practical experience in development, infrastructure, support, and operations. This trajectory shaped a versatile profile capable of moving seamlessly between technical and strategic responsibilities. During the pandemic, a major career shift led him into the audiovisual industry, where he began working with technology focused on post-production environments, operational support, and infrastructure for complex creative pipelines.",
+          "His generalist mindset became a rare advantage in an increasingly specialized industry. More than mastering isolated tools or functions, his work is defined by the ability to connect departments, anticipate problems, and sustain operations with stability, adaptability, and broad technical vision."
+        ],
+        "imdbUrl": "",
+        "linkedinUrl": ""
+      },
+      {
+        "author": "Rogério Faggione",
+        "occupation": "VFX Generalist",
+        "imagePath": "/teamPhotos/Perfil_Rogerio.jpg",
+        "imageAlt": "Rogério Faggione",
+        "bio": [
+          "Rogério Faggione works as a VFX Compositor, combining experience in digital compositing, pipeline development, and technical workflows for visual effects productions. With a background that includes software development and 3D generalism, he has built a multidisciplinary profile that connects artistic language, technical thinking, and constant adaptation to emerging technologies within the audiovisual industry.",
+          "Specialized in workflows involving Nuke and Unreal Engine, he develops solutions focused on visual integration, process automation, and pipeline optimization, always pursuing efficiency without compromising creative quality. His experience spans compositing, CG, custom tools, and technical project structuring, providing a broad understanding of the different stages of post-production.",
+          "With a strong interest in art, technology, and visual experimentation, he maintains a creative approach driven by curiosity and the constant pursuit of new aesthetic and operational possibilities. Beyond the digital environment, he is also involved in traditional artistic practices such as photography, drawing, painting, and sculpture, expanding his visual perception and artistic sensitivity within the projects he contributes to.",
+          "His profile combines autonomy, collaboration, and technical commitment, consistently contributing to teams that require fluidity, organization, and problem-solving capabilities within complex VFX pipelines."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm14280260/",
+        "linkedinUrl": "https://www.linkedin.com/in/rog%C3%A9rio-faggione-0a45b729/"
       }
     ],
     "testimonyListArtists": [
@@ -463,10 +519,6 @@
         {
           "media": "Whatsapp",
           "link": "https://www.whatsapp.com/catalog/558100000000/?app_absent=0"
-        },
-        {
-          "media": "TikTok",
-          "link": "www.google.com"
         }
       ],
       "institucionalTitle": "Institutional",
