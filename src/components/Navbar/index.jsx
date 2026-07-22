@@ -1,56 +1,89 @@
-import React, { useEffect, useState, useContext } from "react";
-import { FaBars } from "react-icons/fa";
-import { CommonContext } from "../../providers/CommonContext";
-import fenixLogo from "../../images/logo.png";
-import isMobileOrTablet from "../../utils/isMobile";
+import React, { useContext } from "react";
 import ReactCountryFlag from "react-country-flag";
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, Logo, Flag, NavLinksR } from "./NavBarElements";
+import { CommonContext } from "../../providers/CommonContext";
+import { brandLogos } from "../../logos";
+import { IconMenu, IconArrowDown } from "../../icons";
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  Logo,
+  NavMenu,
+  NavItem,
+  NavLinksR,
+  NavRight,
+  LangToggle,
+  MobileIcon,
+  DropdownMenu,
+  DropdownItem,
+} from "./NavBarElements";
 
-export const Navbar = ({ toggle, darkMode = false }) => {
+export const Navbar = ({ toggle }) => {
   const { t, language, changeLanguage, toggleHome } = useContext(CommonContext);
-  const [isMT, setIsMT] = useState(false);
 
-  useEffect(() => {
-    setIsMT(isMobileOrTablet(946));
-  }, []);
+  const flagCode  = language === "en-US" ? "BR" : "US";
+  const langLabel = language === "en-US" ? "BR" : "EN";
+
   return (
-    <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
-            <Logo src={fenixLogo} alt={t("menu.accessibility.navLogoAlt")} />
-          </NavLogo>
-          <MobileIcon onClick={toggle} aria-label={t("menu.accessibility.menuBurguerAriaLabel")}>
-            <FaBars />
+    <Nav>
+      <NavbarContainer>
+        {/* Logo — SVG asset from Figma node 2191:9892, 193×50px */}
+        <NavLogo to="/" onClick={toggleHome} aria-label={t("menu.accessibility.navLogoAlt")}>
+          <Logo src={brandLogos.horizontalSvg} alt="Fenix Studios" />
+        </NavLogo>
+
+        {/* Desktop nav links — hidden on tablet/mobile */}
+        <NavMenu>
+          <NavItem>
+            <NavLinksR to="/">{t("menu.home")}</NavLinksR>
+          </NavItem>
+          <NavItem>
+            <NavLinksR to="/about">{t("menu.about")}</NavLinksR>
+          </NavItem>
+          <NavItem>
+            <NavLinksR to="/reels">{t("menu.reel")}</NavLinksR>
+          </NavItem>
+          <NavItem>
+            <NavLinksR to="/services">
+              {t("menu.services")}
+              <IconArrowDown size={12} aria-hidden="true" />
+            </NavLinksR>
+            <DropdownMenu>
+              <li><DropdownItem to="/services/post-production">Pós Produção</DropdownItem></li>
+              <li><DropdownItem to="/services/vfx">VFX</DropdownItem></li>
+            </DropdownMenu>
+          </NavItem>
+          <NavItem>
+            <NavLinksR to="/study">{t("menu.study")}</NavLinksR>
+          </NavItem>
+          <NavItem>
+            <NavLinksR to="/contact">{t("menu.contact")}</NavLinksR>
+          </NavItem>
+        </NavMenu>
+
+        {/* Right controls: language toggle + hamburger (tablet/mobile only) */}
+        <NavRight>
+          <LangToggle
+            onClick={changeLanguage}
+            aria-label={t("menu.accessibility.flagBtnAriaLabel")}
+          >
+            <ReactCountryFlag
+              countryCode={flagCode}
+              svg
+              style={{ width: "18px", height: "12px" }}
+              aria-hidden="true"
+            />
+            {langLabel}
+          </LangToggle>
+
+          <MobileIcon
+            onClick={toggle}
+            aria-label={t("menu.accessibility.menuBurguerAriaLabel")}
+          >
+            <IconMenu size={24} aria-hidden="true" />
           </MobileIcon>
-          <NavMenu aria-hidden={isMT ? true : false}>
-            <NavItem>
-              <NavLinksR to="/">{t("menu.home")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/about">{t("menu.about")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/contact">{t("menu.contact")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/reels">{t("menu.reel")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/services">{t("menu.services")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/study">{t("menu.study")}</NavLinksR>
-            </NavItem>
-            <NavItem>
-              <Flag onClick={changeLanguage} aria-label={t("menu.accessibility.flagBtnAriaLabel")}>
-                <ReactCountryFlag countryCode={language === "en-US" ? "BR" : "US"} svg alt="" />
-                <span>{language === "en-US" ? "pt-BR" : "en-US"}</span>
-              </Flag>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>
-    </>
+        </NavRight>
+      </NavbarContainer>
+    </Nav>
   );
 };

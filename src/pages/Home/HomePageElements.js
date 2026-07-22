@@ -4,7 +4,7 @@ import { Link as LinkR } from "react-router-dom";
 
 export const HomePageContainer = styled.div`
   width: 100%;
-  background: #151515;
+  background: var(--color-background);
   background-size: 400% 400%;
   position: relative;
 
@@ -30,7 +30,7 @@ export const SectionTitle = styled.div`
   display: flex;
   justify-content: start;
   font-size: 28px;
-  color: white;
+  color: var(--color-white);
   @media screen and (max-width: 768px) {
     font-size: 22px;
     width: 90%;
@@ -78,7 +78,7 @@ export const PlatformSection = styled(FadeInAnimation)`
 
 export const PlatformTextContainer = styled.div`
   max-width: 700px;
-  color: #f7f8fa;
+  color: var(--color-text);
   @media screen and (min-width: 1343px) {
     order: ${({ inverted }) => (inverted ? 1 : 0)};
   }
@@ -132,15 +132,26 @@ export const PlatformImageContainer = styled.div`
   }
 `;
 
+export const FilmographyTitle = styled.h2`
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-heavy);
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+  margin: 0 0 8px;
+`;
+
 export const CourseCTA = styled(LinkR)`
   height: 40px;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  background: #ed1c24;
+  background: var(--color-primary);
   white-space: nowrap;
   padding: 10px 20px;
-  color: #f6f7f8;
+  color: var(--color-text);
   font-weight: 700;
   font-size: 16px;
   border: none;
@@ -157,7 +168,7 @@ export const CourseCTA = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #f7f8fa;
-    color: #151515;
+    background: var(--color-text);
+    color: var(--color-background);
   }
 `;

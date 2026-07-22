@@ -1,63 +1,128 @@
 import React, { useContext } from "react";
-import { FooterContainer, FooterWrap, FooterBrand, FooterBrandText, SocialLogo, Logo, SocialMedia, SocialMediaList, SocialMediaItem, SocialIconLink, SocialIcon, FooterLinksContainer, FooterLinksList, FooterLinkItem, FooterLink, WebSiteRights, WebSiteRightsText } from "./FooterElements";
-import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
-import fenixLogo from "../../images/logo.png";
+import { Link } from "react-router-dom";
+import {
+  FooterContainer,
+  FooterWatermark,
+  FooterInner,
+  FooterMain,
+  FooterBrandCol,
+  FooterLogo,
+  FooterSlogan,
+  FooterNavCol,
+  FooterColTitle,
+  FooterNavList,
+  FooterNavItem,
+  FooterNavLink,
+  FooterSocialCol,
+  FooterSocialList,
+  FooterSocialItem,
+  FooterSocialLink,
+  FooterBottom,
+  FooterCredits,
+  FooterTermsLink,
+} from "./FooterElements";
+import {
+  IconInstagram,
+  IconWhatsapp,
+  IconTiktok,
+  IconLinkedin,
+  IconYoutube,
+  IconTwitter,
+  IconFacebook,
+} from "../../icons";
+import { brandLogos } from "../../logos";
 import { CommonContext } from "../../providers/CommonContext";
 
-const socialIcon = {
-  Linkedin: <FaLinkedin />,
-  Facebook: <FaFacebook />,
-  Instagram: <FaInstagram />,
-  Twitter: <FaTwitter />,
-  Youtube: <FaYoutube />,
-  Whatsapp: <FaWhatsapp />,
-  TikTok: <FaTiktok />,
+const SOCIAL_ICON_MAP = {
+  Instagram: <IconInstagram size={16} aria-hidden="true" />,
+  Whatsapp:  <IconWhatsapp  size={16} aria-hidden="true" />,
+  TikTok:    <IconTiktok    size={16} aria-hidden="true" />,
+  Linkedin:  <IconLinkedin  size={16} aria-hidden="true" />,
+  Youtube:   <IconYoutube   size={16} aria-hidden="true" />,
+  Twitter:   <IconTwitter   size={16} aria-hidden="true" />,
+  Facebook:  <IconFacebook  size={16} aria-hidden="true" />,
 };
 
 export const Footer = () => {
-  const { t, toggleHome, footerContent } = useContext(CommonContext);
+  const { footerContent, toggleHome } = useContext(CommonContext);
 
   return (
-    <FooterContainer>
-      <FooterWrap>
-        <FooterBrand>
-          <SocialLogo to="/" onClick={toggleHome}>
-            <Logo src={fenixLogo} alt={footerContent.accessibility.altLogo} style={{ maxHeight: "100px" }} />
-          </SocialLogo>
-          <FooterBrandText>{footerContent.shortText}</FooterBrandText>
-        </FooterBrand>
+    <FooterContainer role="contentinfo">
+      {/* Decorative watermark — hidden from assistive tech */}
+      <FooterWatermark aria-hidden="true">
+        <img src={brandLogos.icon} alt="" />
+      </FooterWatermark>
 
-        <FooterLinksContainer>
-          <FooterLinksList>
-            {footerContent.pageLinks.map((pageLink, index) => (
-              <FooterLinkItem key={index}>
-                <FooterLink to={pageLink.path}>{pageLink.title}</FooterLink>
-              </FooterLinkItem>
-            ))}
-          </FooterLinksList>
-        </FooterLinksContainer>
+      <FooterInner>
+        <FooterMain>
+          {/* ── Column 1: Logo + Slogan ── */}
+          <FooterBrandCol>
+            <Link to="/" onClick={toggleHome} aria-label={footerContent.accessibility.altLogo}>
+              <FooterLogo src={brandLogos.horizontalWhite} alt="Fenix Studios" />
+            </Link>
+            <FooterSlogan>{footerContent.shortText}</FooterSlogan>
+          </FooterBrandCol>
 
-        <SocialMedia>
-          <SocialMediaList>
-            {footerContent.socialLinks.map((socialLink, index) => (
-              <SocialMediaItem key={index}>
-                <SocialIconLink href={socialLink.link} target="_blank">
-                  <SocialIcon>{socialIcon[socialLink.media]}</SocialIcon>
-                  {socialLink.media}
-                </SocialIconLink>
-              </SocialMediaItem>
-            ))}
-          </SocialMediaList>
-        </SocialMedia>
-      </FooterWrap>
-      <WebSiteRights>
-        <WebSiteRightsText>
-          ©{new Date().getFullYear()} {t("footer.rights")}
-          <a href="https://www.linkedin.com/in/victor--martins/" target="_blank" rel="noreferrer">
-            {t("footer.developed")} Victor Martins
-          </a>
-        </WebSiteRightsText>
-      </WebSiteRights>
+          {/* ── Column 2: Institucional ── */}
+          <FooterNavCol aria-label={footerContent.institucionalTitle}>
+            <FooterColTitle>{footerContent.institucionalTitle}</FooterColTitle>
+            <FooterNavList>
+              {footerContent.institucionalLinks.map((link, i) => (
+                <FooterNavItem key={i}>
+                  <FooterNavLink to={link.path}>{link.title}</FooterNavLink>
+                </FooterNavItem>
+              ))}
+            </FooterNavList>
+          </FooterNavCol>
+
+          {/* ── Column 3: Serviços ── */}
+          <FooterNavCol aria-label={footerContent.servicosTitle}>
+            <FooterColTitle>{footerContent.servicosTitle}</FooterColTitle>
+            <FooterNavList>
+              {footerContent.serviceLinks.map((link, i) => (
+                <FooterNavItem key={i}>
+                  <FooterNavLink to={link.path}>{link.title}</FooterNavLink>
+                </FooterNavItem>
+              ))}
+            </FooterNavList>
+          </FooterNavCol>
+
+          {/* ── Column 4: Social Media ── */}
+          <FooterSocialCol>
+            <FooterColTitle>{footerContent.socialMediaTitle}</FooterColTitle>
+            <FooterSocialList
+              aria-label={footerContent.accessibility.socialMediaSectionLabel}
+            >
+              {footerContent.socialLinks.map((socialLink, i) => (
+                <FooterSocialItem key={i}>
+                  <FooterSocialLink
+                    href={socialLink.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={socialLink.media}
+                  >
+                    {SOCIAL_ICON_MAP[socialLink.media]}
+                  </FooterSocialLink>
+                </FooterSocialItem>
+              ))}
+            </FooterSocialList>
+          </FooterSocialCol>
+        </FooterMain>
+      </FooterInner>
+
+      {/* ── Bottom bar ── */}
+      <FooterBottom>
+        <FooterCredits>
+          &copy;2025 {footerContent.rights} {footerContent.madeBy}{" "}
+          <FooterTermsLink to="/rael-design">Rael Design</FooterTermsLink>
+          {" "}&amp;{" "}
+          <FooterTermsLink to="/victor-martins">Victor Martins</FooterTermsLink>
+        </FooterCredits>
+
+        <FooterTermsLink to={footerContent.termsPath}>
+          {footerContent.terms}
+        </FooterTermsLink>
+      </FooterBottom>
     </FooterContainer>
   );
 };

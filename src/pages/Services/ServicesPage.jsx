@@ -8,8 +8,8 @@ import { Footer } from "../../components/Footer";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import PageTitle from "../../components/PageTitle";
 import { ServicesPageContainer } from "./servicesPageElements";
-import Text from "../../components/Text";
-import ImageGallery from "../../components/ImageGallery";
+import ServiceContentBlock from "../../components/ServiceContentBlock";
+import ServiceContactBanner from "../../components/ServiceContactBanner";
 
 export const ServicesPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -23,43 +23,53 @@ export const ServicesPage = () => {
       <Navbar toggle={toggle} />
       {/* BODY */}
       <ServicesPageContainer>
-        <FadeInAnimation threshold={0.5}>
-          <PageTitle title={t("servicesPage.title")} lightText={true} />
+        <PageTitle
+          title={t("servicesPage.title")}
+          breadcrumbs={[
+            { label: t("menu.home"), to: "/" },
+            { label: t("servicesPage.title") },
+          ]}
+        />
+
+        {/* Post-Production */}
+        <FadeInAnimation threshold={0.2}>
+          <ServiceContentBlock
+            imageLeft={true}
+            video="/videosHQ/Futuro_VFX_v001.mp4"
+            topLabel={t("servicesPage.postProductionLabel")}
+            title={t("servicesPage.postProductionTitle")}
+            paragraphs={[
+              t("servicesPage.postProductionBody1"),
+              t("servicesPage.postProductionBody2"),
+            ]}
+            ctaLabel={t("servicesPage.postProductionCta")}
+            ctaUrl="/services/post-production"
+          />
         </FadeInAnimation>
 
-        <Text {...servicesTitle}>{t("servicesPage.text1title")}</Text>
-        <Text {...servicesText}>{t("servicesPage.text1content")}</Text>
-        {/* <MarqueeSection noBackground imageSection="marqueeImages" /> */}
-        <ImageGallery imageSection="ServicesGalleryImages" />
-        {/* DO NOT DELETE May use latter */}
-        {/* <Text {...servicesTitle}>{t("servicesPage.text2title")}</Text> */}
-        {/* <Text {...servicesText}>{t("servicesPage.text2content")}</Text> */}
-        {/* <ImageGallery imageSection="OurArtistsImages" /> */}
+        {/* VFX */}
+        <FadeInAnimation threshold={0.2}>
+          <ServiceContentBlock
+            imageLeft={false}
+            video="/videosHQ/Futuro_VFX_v001.mp4"
+            topLabel={t("servicesPage.vfxLabel")}
+            title={t("servicesPage.vfxTitle")}
+            paragraphs={[
+              t("servicesPage.vfxBody1"),
+              t("servicesPage.vfxBody2"),
+            ]}
+            ctaLabel={t("servicesPage.vfxCta")}
+            ctaUrl="/services/vfx"
+          />
+        </FadeInAnimation>
+
+        {/* Contact Banner */}
+        <FadeInAnimation threshold={0.2}>
+          <ServiceContactBanner />
+        </FadeInAnimation>
       </ServicesPageContainer>
       {/* FOOTER */}
       <Footer />
     </>
   );
-};
-
-const servicesTitle = {
-  lightBg: false,
-  lightText: true,
-  textAlign: "center",
-  fontSize: "2em",
-  textMargin: "0 auto",
-  textMaxWidth: "720px",
-  containerPadding: "20px 50px",
-  fontWeight: "700",
-  color: "#ed1c24",
-};
-
-const servicesText = {
-  lightBg: false,
-  lightText: true,
-  textAlign: "center",
-  fontSize: "1.5em",
-  textMargin: "0 auto",
-  textMaxWidth: "720px",
-  containerPadding: "20px 50px",
 };

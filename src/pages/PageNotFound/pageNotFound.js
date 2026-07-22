@@ -1,53 +1,56 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const PageNotFoundContainer = styled.div`
-  max-width: 930px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 110px;
-  padding-bottom: 110px;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-background);
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 20px;
+  text-align: center;
 `;
 
-export const LogoAndTextContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
-    align-items: center;
+export const NotFoundImage = styled.img`
+  width: 100%;
+  max-width: 480px;
+
+  @media (max-width: 768px) {
+    max-width: 280px;
   }
 `;
 
-export const MainTextContainer = styled.div`
-  color: #f6f7f8;
-  display: flex;
-  flex-direction: column;
+export const NotFoundText = styled.p`
+  font-family: var(--ds-font-brand);
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: var(--ds-font-weight-regular);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  line-height: 1.7;
+  margin: 0;
+`;
+
+export const NotFoundCTA = styled(Link)`
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-`;
+  border: none;
+  color: var(--color-white);
+  background: var(--color-primary);
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 
-export const PageNotFoundNumberText = styled.div`
-  text-align: center;
-  font-size: 120px;
-`;
-
-export const PageNotFoundMessageText = styled.div`
-  font-size: 32px;
-  text-align: center;
-`;
-
-export const PageNotFoundDescriptionText = styled.div`
-  text-align: center;
-  font-size: 18px;
-  color: #f6f7f8;
-  padding-left: 25px;
-  padding-right: 25px;
-`;
-
-export const PageNotFoundLogo = styled.img`
-  max-width: 300px;
-  max-height: 300px;
-  filter: brightness(0) invert(1);
+  &:hover {
+    background: #c00;
+  }
 `;

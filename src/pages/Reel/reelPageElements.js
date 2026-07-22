@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ReelPageContainer = styled.div`
   width: 100%;
-  background: #151515;
+  background: var(--color-background);
   background-size: 400% 400%;
   padding-bottom: 40px;
 
@@ -33,7 +33,7 @@ export const ReelPageTitle = styled.div`
   display: flex;
   justify-content: start;
   font-size: 28px;
-  color: white;
+  color: var(--color-white);
   margin: 20px auto;
   padding: 0 50px;
   max-width: 1300px;

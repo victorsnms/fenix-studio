@@ -1,129 +1,284 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
 
+// ─── Overlay / Shell ──────────────────────────────────────────────────────────
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #0d0d0d;
-  display: grid;
+  inset: 0;
+  background: var(--color-bg-darker);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
+  pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
+`;
+
+// ─── Header (logo + close button) ─────────────────────────────────────────────
+// Mirrors the navbar header bar height so the logo aligns visually
+export const SidebarHeader = styled.div`
+  display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-`;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: 90px;
+  padding: 0 20px 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-export const CloseIcon = styled(FaTimes)`
-  color: white;
-`;
-
-export const Icon = styled.button`
-  position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  border: none;
-`;
-
-export const SidebarWrapper = styled.div`
-  color: white;
-`;
-
-export const SidebarMenu = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
-  text-align: center;
-
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+  @media (max-width: 480px) {
+    height: 68px;
+    padding: 0 15px;
   }
 `;
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLogo = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+`;
+
+export const SidebarLogoImg = styled.img`
+  display: block;
+  width: 150px;
+  height: 38.86px;
+  object-fit: contain;
+  object-position: left center;
+`;
+
+export const CloseBtn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: white;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  color: var(--color-white);
+  font-size: 22px;
+  padding: 8px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
 
-  &:hover {
-    color: ##ed1c24;
-    transition: 0.2s ease-in-out;
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
   }
 `;
 
+// ─── Scrollable content area ───────────────────────────────────────────────────
+export const SidebarScrollArea = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+
+  /* Custom scrollbar */
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+`;
+
+// ─── Nav link list ─────────────────────────────────────────────────────────────
+export const SidebarMenu = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+// Every item has a bottom divider
 export const SidebarItem = styled.li`
-  display: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+`;
+
+const linkBase = css`
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 18px 20px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px 15px;
+  }
 `;
 
 export const SidebarLinkR = styled(LinkR)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: white;
-  cursor: pointer;
-
-  &:hover {
-    color: #ed1c24;
-    transition: 0.2s ease-in-out;
-  }
+  ${linkBase}
 `;
 
-export const SideBtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #ed1c24;
-  white-space: nowrap;
-  padding: 16px 64px;
-  color: #222633;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: white;
-    color: #222633;
-  }
-`;
-
-export const Flag = styled.button`
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+// ─── Services accordion button ─────────────────────────────────────────────────
+export const ServicesBtn = styled.button`
+  ${linkBase}
+  background: transparent;
   border: none;
-  background-color: transparent;
+  cursor: pointer;
+  justify-content: space-between;
 
-  span {
-    margin-left: 10px;
-    font-size: 0.8rem;
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+    transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  }
+`;
+
+// Sub-menu (PÓS PRODUÇÃO, VFX)
+export const SidebarSubMenu = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: ${({ isOpen }) => (isOpen ? "200px" : "0")};
+  transition: max-height 0.3s ease;
+`;
+
+export const SidebarSubItem = styled.li`
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+`;
+
+export const SidebarSubLinkR = styled(LinkR)`
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 15px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px 14px 44px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    outline: none;
   }
 
-  span:hover {
-    transition: all 0.2s ease-in-out;
-    color: #ed1c24;
+  @media (max-width: 480px) {
+    padding: 12px 15px 12px 36px;
+  }
+`;
+
+// ─── Contact info section ──────────────────────────────────────────────────────
+export const SidebarContact = styled.div`
+  padding: 24px 20px 0;
+
+  @media (max-width: 480px) {
+    padding: 20px 15px 0;
+  }
+`;
+
+// 2-col on tablet, 1-col on mobile
+export const SidebarContactGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+`;
+
+export const SidebarContactItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-regular);
+  font-size: 12px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  svg {
+    flex-shrink: 0;
+    color: var(--color-icon-muted);
+  }
+`;
+
+// ─── Social icons ─────────────────────────────────────────────────────────────
+export const SidebarSocial = styled.div`
+  padding: 20px 20px 0;
+
+  @media (max-width: 480px) {
+    padding: 18px 15px 0;
+  }
+`;
+
+export const SidebarSocialList = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const SidebarSocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  color: var(--color-white);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    outline: none;
+  }
+`;
+
+// ─── CTA button ───────────────────────────────────────────────────────────────
+export const SidebarCTAWrap = styled.div`
+  padding: 20px 20px 0;
+
+  @media (max-width: 480px) {
+    padding: 18px 15px 0;
+  }
+`;
+
+export const SidebarCTABtn = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 18px 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--ds-font-brand);
+  font-weight: var(--ds-font-weight-bold);
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-primary-hover);
+    outline: none;
   }
 `;

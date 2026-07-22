@@ -5,10 +5,13 @@
       "about": "Sobre",
       "platforms": "Plataformas",
       "services": "Serviços",
+      "servicesPostProduction": "Pós Produção",
+      "servicesVfx": "VFX",
       "careers": "Carreira",
       "reel": "Reels",
       "study": "Aprenda",
       "contact": "Fale Conosco",
+      "contactCta": "Entre em Contato",
       "articles": "Blog",
       "projects": "Projetos",
       "studioreels": "Studio Reel",
@@ -37,17 +40,40 @@
       "work_with_us": "Trabalhe conosco"
     },
     "pagenotfound": {
-      "title": "Page not found",
-      "description": "We're sorry, but the page you're looking for can't be found."
+      "title": "Página não encontrada",
+      "description": "A página que você procura não está disponível ou não existe.",
+      "cta": "Voltar para Home"
     },
     "aboutPage": {
       "title": "Sobre",
+      "sectionLabel": "Sobre a Fenix Studios",
+      "sectionTitle": "Elevando o poder dos efeitos visuais",
+      "teamCta": "Conheça nosso time",
+      "teamSectionLabel": "Nosso Time",
+      "teamTitle": "Conheça as mentes criativas por trás das lentes",
+      "teamBody": "Nossa equipe é formada por profissionais do audiovisual especializados em pós-produção que transformam ideias em experiências cinematográficas.",
+      "teamContactCta": "Fale Conosco",
+      "verBio": "Ver bio",
+      "bioImdb": "IMDB",
+      "bioLinkedin": "LinkedIn",
+      "servicesSectionLabel": "Nossos Serviços",
+      "servicesTitle": "Nossos Serviços",
+      "servicesExploreCta": "Explorar Serviços",
+      "serviceCardCta": "Saiba mais",
       "pageDescription1": "Com o propósito de elevar, revitalizar e inspirar futuras gerações no mercado de efeitos visuais, a Fenix Studios nasceu em 2022, atuando no mercado de pós-produção.",
       "pageDescription2": "Somos definidos pela nossa equipe. Priorizamos a colaboração dos nossos membros e o nosso sucesso vem de uma equipe unida num ambiente sustentável para o processo criativo. Isso é cultura.",
       "pageDescription3": "Nos desafiamos a criar efeitos visuais em escala internacional com um time compacto e especializado utilizando uma pipeline moderna que consegue se moldar às constantes mudanças de um projeto."
     },
     "contactPage": {
       "title": "Fale Conosco",
+      "formTitle": "Estamos Aqui Para Ajudar!",
+      "formSubtitle": "Campos obrigatórios são marcados com *",
+      "needHelpTitle": "Precisa de Ajuda",
+      "needHelpSubtitle": "Fale com nossa equipe",
+      "phone": "+55 11 9 7701 9229 | +1 323.712.5229",
+      "contactEmail": "contato@fenixstudios.com",
+      "locationLabel": "Local",
+      "location": "São Paulo - SP, Brasil",
       "info": [
         {
           "label": "Fenix Studios",
@@ -65,25 +91,168 @@
     },
     "homePage": {
       "title": "Home",
+      "heroLabel": "Audiovisual e Tecnologia",
+      "heroTitle": "Criando Narrativas com Propósito",
+      "heroSubtitle": "Especialistas em Pós-Produção e VFX, Transformamos imaginação em imagem e tecnologia em emoção.",
+      "heroCta": "Saiba mais",
+      "reelLabel": "Studio Reel",
+      "reelTitle": "O Poder do Cinema",
+      "reelModalTitle": "Studio Reel — Fenix Studios",
+      "aboutLabel": "Sobre a Fenix Studios",
+      "aboutTitle": "O Futuro dos Efeitos Visuais",
+      "aboutBodyPre": "Na Fenix Studios, unimos",
+      "aboutBodyBold": "arte, tecnologia e inovação",
+      "aboutBodyPost": "para criar narrativas visuais de excelência. Da concepção à entrega, buscamos o equilíbrio entre técnica e emoção. Acreditamos que cada detalhe é uma oportunidade de encantar.",
+      "aboutCard1Title": "Pós-Produção",
+      "aboutCard1Body1": "Cuidamos de cada etapa do processo: Edição, VFX, Color Grading, Finalização e Entrega com foco em traduzir a visão criativa do projeto em sua forma mais refinada. Nosso objetivo é unir storytelling e estética para alcançar o máximo impacto visual e emocional.",
+      "aboutCard1Body2": "Transformamos imagens em experiências, garantindo coesão narrativa, fluidez visual e excelência técnica.",
+      "aboutCard2Title": "Visual Effects – VFX",
+      "aboutCard2Body1": "Desenvolvemos efeitos visuais que equilibram arte e precisão técnica, seja integrando CG de alta complexidade, composições sutis ou simulações realistas.",
+      "aboutCard2Body2": "Damos vida ao impossível. Cada detalhe é pensado para ampliar o impacto visual da narrativa, unindo realismo, emoção e qualidade cinematográfica.",
+      "clientsLabel": "Clientes",
+      "clientsTitle": "Entre os gigantes, nossa arte encontra espaço",
+      "filmographyLabel": "Filmografia",
+      "filmographyTitle": "Produções Globais",
       "studyTitle": "THE FENIX STUDIO ACADEMY",
+      "studySectionTitle": "Domine as técnicas que moldam o futuro do cinema",
+      "studySectionCta": "Explorar Cursos",
+      "studyCardCta": "Saiba Mais",
+      "studyFeaturedCards": [
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance1.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance2.png",
+          "ctaUrl": "/study"
+        },
+        {
+          "category": "Tecnologia",
+          "title": "TechFinance - Consultor Financeiro",
+          "imagePath": "courseImages/techfinance3.png",
+          "ctaUrl": "/study"
+        }
+      ],
       "studyText": "Explore o extraordinário mundo dos efeitos visuais com os cursos oferecidos pela Fenix Studios. Nossa academia é um ponto de encontro para mentes criativas que desejam dominar as técnicas mais avançadas em VFX. Deixe-se envolver pela magia da criação digital através de um currículo abrangente e prático. Nosso curso é projetado para capacitar você a dar vida às suas visões mais ambiciosas. Junte-se a nós e embarque em uma jornada emocionante para se tornar um especialista em efeitos visuais.",
       "studyCTALabel": "Mais",
       "studyCTAUrl": "/study"
     },
     "reelPage": {
-      "title": "Studio Reels"
+      "title": "Studio Reels",
+      "sectionLabel": "Nossa Arte",
+      "sectionTitle": "Reels",
+      "filterAll": "Todos",
+      "filterBreakdowns": "Breakdowns",
+      "filterFilms": "Filmes",
+      "filterSeries": "Séries",
+      "loadMore": "Ver mais"
+    },
+    "servicesPresentation": {
+      "ctaLabel": "Entre em contato",
+      "postProductionCards": [
+        { "title": "Color Grading", "text": "Color grading com abordagem cinematográfica e direção estética apurada. Refinamos luz, cor e profundidade para criar imagens consistentes, sofisticadas e emocionalmente marcantes, respeitando a identidade visual de cada produção e elevando a força narrativa do material." },
+        { "title": "Conform", "text": "Conform realizado com precisão técnica e atenção absoluta à integridade da narrativa. Organizamos, sincronizamos e reconstruímos timelines com segurança e consistência, garantindo fluidez entre edição, finalização e entrega sem comprometer qualidade, ritmo ou fidelidade visual." },
+        { "title": "Coordenação de Pós", "text": "Coordenação de pós-produção voltada para garantir fluidez, controle e alinhamento em todas as etapas do projeto. Gerenciamos prazos, equipes, entregas e pipelines com organização e precisão, conectando criação, técnica e operação para manter a produção eficiente do início à finalização." },
+        { "title": "Lab & Data Management", "text": "Lab e data management com foco em segurança, organização e continuidade operacional. Estruturamos fluxos de ingest, backup, verificação e gerenciamento de mídia com precisão técnica, garantindo integridade dos arquivos, rastreabilidade e estabilidade para todas as etapas da pós-produção." },
+        { "title": "Master & Delivery", "text": "Master e delivery conduzidos com rigor técnico e absoluto controle de qualidade. Finalizamos e distribuímos materiais em múltiplos formatos e especificações, garantindo consistência visual, conformidade técnica e segurança em cada etapa de entrega." }
+      ],
+      "vfxCards": [
+        { "title": "3D", "text": "Produção 3D voltada para cinema, publicidade e experiências visuais de alto impacto. Desenvolvemos ambientes, objetos e animações com acabamento técnico refinado, integrando direção artística, realismo e performance para entregar imagens que sustentam narrativas, fortalecem marcas e ampliam o alcance visual de cada projeto." },
+        { "title": "Compositing", "text": "Compositing desenvolvido para unir técnica e invisibilidade. Integramos elementos 3D, efeitos visuais e captações reais com precisão de luz, textura e profundidade, garantindo imagens coesas, naturais e visualmente sólidas do primeiro ao último frame." },
+        { "title": "Supervisão", "text": "Supervisão técnica e criativa voltada para garantir consistência visual, eficiência operacional e controle absoluto sobre cada etapa da produção. Acompanhamos processos, equipes e entregas com olhar estratégico e precisão técnica, assegurando que cada projeto alcance seu máximo potencial estético e narrativo." },
+        { "title": "Motion Graphics", "text": "Motion graphics desenvolvidos para transformar informação, identidade e narrativa em movimento. Criamos animações com direção visual precisa, ritmo refinado e forte impacto estético, integrando design e linguagem cinematográfica para comunicar ideias com clareza e personalidade." },
+        { "title": "Visualização", "text": "Visualização desenvolvida para antecipar estética, composição e linguagem antes da execução final. Criamos previsões visuais claras e estratégicas que auxiliam decisões criativas, alinhamento técnico e construção narrativa ao longo de toda a produção." }
+      ]
+    },
+    "vfxPage": {
+      "title": "VFX",
+      "breadcrumb": "VFX",
+      "introBody1": "Desenvolvemos efeitos visuais que combinam precisão técnica e direção artística: Motion Graphics, CG, Composição, Visualização, Animação, Rigging, Concept Art, Supervisão e Coordenação de VFX. Trabalhamos de forma integrada em todas as etapas do processo, garantindo consistência estética, eficiência técnica e alinhamento criativo.",
+      "introBody2": "Cada frame é pensado para ampliar o impacto da narrativa, entregando realismo, emoção e qualidade cinematográfica para a obra.",
+      "timelineTitle": "Acompanhamento Completo",
+      "steps": [
+        { "number": "01", "title": "Pré-produção e Planejamento" },
+        { "number": "02", "title": "Captura de Dados e Supervisão de Set" },
+        { "number": "03", "title": "Criação e Integração de Efeitos Visuais" },
+        { "number": "04", "title": "Refino e Ajustes Criativos" },
+        { "number": "05", "title": "Finalização e Entrega de VFX" }
+      ],
+      "formTitle": "Solicite seu orçamento",
+      "formSubtitle": "CAMPOS OBRIGATÓRIOS SÃO MARCADOS COM *"
+    },
+    "postProductionPage": {
+      "title": "Pós Produção",
+      "breadcrumb": "Pós Produção",
+      "introBody1": "Oferecemos soluções completas e refinadas em pós-produção audiovisual. Lab, Data Management, Conform, Edição Online, Atendimento, Coordenação de Pós-Produção, Color Grading, Masterização, QC & Delivery. Com um acompanhamento próximo e contínuo, garantimos um fluxo de trabalho ágil e eficiente, sempre alinhado às suas necessidades criativas.",
+      "introBody2": "Criamos experiências, garantindo coesão narrativa, fluidez visual e excelência técnica.",
+      "timelineTitle": "Acompanhamento Completo",
+      "steps": [
+        { "number": "01", "title": "Desenvolvimento & Preparação de Pós" },
+        { "number": "02", "title": "Conceito e Construção Narrativa" },
+        { "number": "03", "title": "VFX & Conform" },
+        { "number": "04", "title": "Finalização de Imagem & Som" },
+        { "number": "05", "title": "Masterização, QC & Delivery" }
+      ],
+      "formTitle": "Solicite seu orçamento",
+      "formSubtitle": "CAMPOS OBRIGATÓRIOS SÃO MARCADOS COM *"
     },
     "servicesPage": {
       "title": "Serviços",
       "text1title": "Fenix Art Department",
       "text1content": "O Departamento de Arte Fenix trabalhará de forma próxima com você em sua visão – personagens, criaturas, ambientes e mais! Podemos ajudar você a construir o mundo dos seus sonhos.",
       "text2title": "Our Artists",
-      "text2content": "Our Artists will help you design and create your world no matter how large or small."
+      "text2content": "Our Artists will help you design and create your world no matter how large or small.",
+      "postProductionLabel": "Pós-Produção",
+      "postProductionTitle": "Pós-Produção que Transforma",
+      "postProductionBody1": "Oferecemos soluções completas e refinadas em pós-produção audiovisual. Lab, Data Management, Conform, Edição Online, Atendimento, Coordenação de Pós-Produção, Color Grading, Masterização, QC & Delivery. Com um acompanhamento próximo e contínuo, garantimos um fluxo de trabalho ágil e eficiente, sempre alinhado às suas necessidades criativas.",
+      "postProductionBody2": "Criamos experiências, garantindo coesão narrativa, fluidez visual e excelência técnica.",
+      "postProductionCta": "Saiba mais",
+      "vfxLabel": "VFX",
+      "vfxTitle": "VFX que Expande Realidades",
+      "vfxBody1": "Desenvolvemos efeitos visuais que combinam precisão técnica e direção artística: Motion Graphics, CG, Composição, Visualização, Animação, Rigging, Concept Art, Supervisão e Coordenação de VFX. Trabalhamos de forma integrada em todas as etapas do processo, garantindo consistência estética, eficiência técnica e alinhamento criativo.",
+      "vfxBody2": "Cada frame é pensado para ampliar o impacto da narrativa, entregando realismo, emoção e qualidade cinematográfica para a obra.",
+      "vfxCta": "Saiba mais",
+      "bannerTitle": "Transforme sua visão em realidade cinematográfica",
+      "bannerSubtitle": "Trazemos soluções precisas e criativas para impulsionar a qualidade visual do seu projeto.",
+      "bannerCta": "Entre em contato"
     },
     "studyPage": {
-      "title": "Soluções Premium",
+      "title": "Aprenda",
+      "breadcrumb": "Aprenda",
+      "sectionLabel": "Em breve",
+      "sectionTitle": "Estamos construindo uma nova experiência de aprendizado",
+      "bodyText1": "Prepare-se para uma plataforma completa em cursos focados em Pós-produção e VFX. Desenvolvido com metodologia prática com profissionais da área preparando você para o mercado.",
+      "bodyText2": "Garanta prioridade no lançamento, receba conteúdos exclusivos e seja avisado antes de todo mundo!",
+      "heroLabel": "Aprendizado Premium",
+      "heroTitle": "Treinamento Profissional",
+      "heroCta": "Confira",
+      "formTitle": "Garanta acesso antecipado",
+      "formText": "Preencha seus dados para receber novidades, datas de lançamento, condições especiais e materiais exclusivos.",
+      "formSubtitle": "CAMPOS OBRIGATÓRIOS SÃO MARCADOS COM *",
+      "formNameLabel": "Seu Nome",
+      "formPhoneLabel": "Telefone",
+      "formEmailLabel": "E-mail",
+      "formCta": "Garantir minha vaga",
       "subtitle1": "Nossos cursos abrangem uma diversa seleção de conteúdo com diferentes níveis e focos. A cada curso concluído você fica cada vez mais próximo de seus objetivos.",
       "subtitle2": "Com a nossa abordagem hands-on, você aprende na prática tirando dúvidas, e a cada módulo concluído você adiciona uma nova peça ao seu portfólio. Veja abaixo todos os cursos oferecidos e expanda seu conhecimento!",
+      "coursesSectionLabel": "",
+      "coursesSectionTitle": "",
+      "filterAll": "Todos",
+      "searchPlaceholder": "Busca",
+      "filterToggleLabel": "Filtro",
+      "filterModalTitle": "Filtro",
+      "filterAllOption": "Todas",
+      "applyLabel": "Aplicar",
+      "facetGroups": [
+        { "key": "level", "label": "Nível" },
+        { "key": "duration", "label": "Duração" },
+        { "key": "format", "label": "Formato" },
+        { "key": "language", "label": "Idioma" }
+      ],
       "categories": [
         {
           "categorTitle": "Tecnologia",
@@ -93,14 +262,22 @@
               "courseDescription": "Um outro nível de Consultor Financeiro. Aumente seu valor no mercado oferecendo um método eficiente e tecnológico em suas consultorias.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Iniciante",
+              "duration": "Curta",
+              "format": "Online",
+              "language": "Português"
             },
             {
               "courseTitle": "TechFinance Business®",
               "courseDescription": "Torne-se um Consultor Financeiro Empresarial lucrativo e bem-posicionado em apenas 2 meses.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediário",
+              "duration": "Média",
+              "format": "Online",
+              "language": "Português"
             }
           ]
         },
@@ -112,7 +289,11 @@
               "courseDescription": "O guia completo para você começar uma nova carreira monetizando seu conhecimento sobre Educação Financeira. Tudo na dosagem certa, amparado em quase uma década de experiência dos nossos especialistas em negócios no mercado financeiro.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Iniciante",
+              "duration": "Curta",
+              "format": "Híbrido",
+              "language": "Português"
             }
           ]
         },
@@ -124,28 +305,44 @@
               "courseDescription": "Conte com o apoio dos cérebros por trás da Empreender Dinheiro como se fossem Sócios do seu negócio e acesse uma metodologia que já acelerou o resultado de educadores financeiros em todo o país.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Avançado",
+              "duration": "Longa",
+              "format": "Presencial",
+              "language": "Português"
             },
             {
               "courseTitle": "Programa YouCash®",
               "courseDescription": "A formação de educadores financeiros mais completa do mercado. Formação técnica + formação didática + todas as estratégias de monetização que já utilizamos.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediário",
+              "duration": "Longa",
+              "format": "Online",
+              "language": "Português"
             },
             {
               "courseTitle": "Programa Oratória Persuasiva®",
               "courseDescription": "Ganhe destaque na Educação Financeira como um orador acima da média. Dominando a Oratória e Persuasão, você será capaz de influenciar pessoas, ativando no cérebro da sua audiência o desejo de dizer sempre “sim” para você.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Intermediário",
+              "duration": "Média",
+              "format": "Híbrido",
+              "language": "Português"
             },
             {
               "courseTitle": "NeuroExpert®",
               "courseDescription": "Entender os fundamentos do Comportamento Humano é o caminho mais seguro para se diferenciar como profissional da área e garantir que o seu cliente alcance os resultados financeiros que espera.",
               "buttonLabel": "Saiba Mais",
               "buttonUrl": "http://www.google.com",
-              "imagePath": "courseImages/test.png"
+              "imagePath": "placeholders/study-placeholder.png",
+              "level": "Avançado",
+              "duration": "Média",
+              "format": "Online",
+              "language": "Português"
             }
           ]
         }
@@ -160,11 +357,92 @@
       {
         "author": "Bernardo Teixeira Pereira",
         "occupation": "Fundador | Supervisor de Efeitos Visuais",
-        "imagePath": "marquee/marquee_3.png",
-        "imageAlt": "Author",
-        "text1": "Formado em Animação & Efeitos Visuais em São Francisco, Califórnia. Fundou a Fenix Studios criando um modelo diferenciado de trabalho na Indústria. Trabalhou em grandes títulos do cinema internacional e nacional.",
-        "text2": "Bernardo criou e executou efeitos visuais únicos para uma variedade de filmes e séries internacionais: Viúva Negra, Exterminador do Futuro: Destino Sombrio, Bad Boys Para Sempre, Free Guy: Assumindo O Controle, Army Of The Dead: Invasão em Las Vegas, Mulher-Hulk: Defensora de Herois, Lakers: Hora de Vencer e Ms. Marvel.",
-        "text3": "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "imagePath": "/teamPhotos/Perfil_Bernardo1.jpg",
+        "imageAlt": "Bernardo Teixeira Pereira",
+        "bio": [
+          "Formado em Animação & Efeitos Visuais em São Francisco, Califórnia. Fundou a Fenix Studios criando um modelo diferenciado de trabalho na indústria. Trabalhou em grandes títulos do cinema internacional e nacional.",
+          "Bernardo criou e executou efeitos visuais únicos para uma variedade de filmes e séries internacionais: Viúva Negra, Exterminador do Futuro: Destino Sombrio, Bad Boys Para Sempre, Free Guy: Assumindo o Controle, Army Of The Dead: Invasão em Las Vegas, Mulher-Hulk: Defensora de Herois, Lakers: Hora de Vencer e Ms. Marvel.",
+          "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm9483527/",
+        "linkedinUrl": "https://www.linkedin.com/in/bernardo-teixeira-pereira/"
+      },
+      {
+        "author": "Bernardo de Paula Douahy",
+        "occupation": "VFX Coordinator",
+        "imagePath": "/teamPhotos/Perfil_Bernardo_02.jpg",
+        "imageAlt": "Bernardo de Paula Douahy",
+        "bio": [
+          "Bernardo de Paula Douahy é VFX Producer e Produtor Cinematográfico, atuando em projetos de cinema, publicidade e conteúdo digital com foco em pós-produção, integração de pipelines e gestão operacional de efeitos visuais. Formado pela FAPCOM, construiu sua trajetória transitando entre diferentes áreas da produção audiovisual, desenvolvendo uma visão ampla sobre narrativa, técnica e estrutura de finalização.",
+          "Durante sua passagem pela Paris Filmes, atuou como Assistente de Coordenação de VFX em produções como Meu Nome é Gal, Tá Escrito, Férias Trocadas e Minha Irmã e Eu, acompanhando fluxos de pós-produção e coordenação técnica em longas-metragens nacionais. Posteriormente, expandiu sua atuação para o mercado publicitário e digital, trabalhando com redes sociais e produção de podcasts para YouTube na Agência Camucá, conduzindo projetos com nomes como Atilio Bari, Sérgio Stern, Ricardo Cavallini e Amanda Paschoal.",
+          "Estreou no cinema independente com o documentário Mãos que Não se Alcançam, vencedor do prêmio de Melhor Filme na Mostra Itapety de Cinema, onde atuou como produtor, produtor executivo, roteirista e entrevistador. Atualmente, integra a equipe da Fenix Studios como Produtor de VFX, atuando de forma transversal entre os setores de lab, conform, coordenação e arte, conectando equipes e processos para garantir fluidez operacional e consistência ao longo de toda a pós-produção."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm17627972/",
+        "linkedinUrl": "https://www.linkedin.com/in/bernardo-douahy-4b1a95304/"
+      },
+      {
+        "author": "Carolina Reichel",
+        "occupation": "Post-Production Coordinator",
+        "imagePath": "/teamPhotos/Perfil_Carol.jpg",
+        "imageAlt": "Carolina Reichel",
+        "bio": [
+          "Carolina Reichel atua há mais de 17 anos no mercado audiovisual, construindo uma trajetória sólida dentro da pós-produção, atendimento e coordenação de projetos para publicidade, cinema e televisão. Iniciou sua carreira nos setores de tráfego e assistência de coordenação de pós, desenvolvendo desde cedo uma visão ampla sobre operação, organização de pipeline e dinâmica de produção. Paralelamente, acompanhava sets de filmagem como assistente de produção, aproximando-se da linguagem audiovisual também no ambiente de captação.",
+          "Ainda em seu primeiro ano na pós-produção publicitária, participou do longa-metragem 2 Coelhos, experiência que marcou o início de uma trajetória conectada tanto ao mercado publicitário quanto ao cinema nacional. Ao longo dos anos, passou por produtoras e estúdios como Black Maria, Cine, Trator Filmes, Jonathan Post, Paris Pós e Paris Filmes, consolidando sua experiência em coordenação de pós-produção e relacionamento entre equipes criativas, técnicas e operacionais.",
+          "Durante sua trajetória, trabalhou ao lado de diretores como Afonso Poyart, Tico Vicente, Xico de Deus, Rogério Utimura, Caco Souza, Drico Mello, Rodrigo Moreira, Rafa Coutinho, Clovis Mello, Cris Vida, Ivan Abujanra, Alex Miranda, Halder Gomes, Hsu Chien, Luiz Fernando Carvalho, Bruno Barreto, Esmir Filho, João Wainer, Claudio Ellovitch e Marcos Jorge. Cada colaboração ampliou sua visão sobre narrativa, estética e operação dentro da pós-produção, consolidando um perfil profissional marcado por organização, sensibilidade criativa e capacidade de conduzir projetos complexos com fluidez e precisão."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm15402731/",
+        "linkedinUrl": "https://www.linkedin.com/in/carolina-reichel-8b0153339/"
+      },
+      {
+        "author": "Marcos Mackza",
+        "occupation": "Motion Graphics Designer | Compositor",
+        "imagePath": "/teamPhotos/Perfil_Marcos.jpg",
+        "imageAlt": "Marcos Mackza",
+        "bio": [
+          "Marcos Mackza é Motion Graphics Designer e Compositor com mais de 20 anos de experiência em pós-produção, atuando em projetos para publicidade, eventos e cinema nacional. Ao longo de sua trajetória, passou por diferentes áreas do pipeline de pós, desenvolvendo uma visão ampla sobre direção visual, composição e construção de imagem em movimento.",
+          "Seu trabalho combina linguagem gráfica, precisão técnica e sensibilidade estética para criar peças visualmente marcantes. Recentemente, integrou a equipe da Paris Filmes, atuando como Motion Designer, diretor de arte e compositor em produções como Homem com H, Tá Escrito e Central de Inteligência Cearense. Domina ferramentas como Adobe After Effects, Cinema 4D, Mocha Pro, Adobe Photoshop, Adobe Illustrator e Nuke."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm15588249/",
+        "linkedinUrl": "https://www.linkedin.com/in/marcos-maczka-vfx/"
+      },
+      {
+        "author": "Renan Lopes",
+        "occupation": "Compositing Lead",
+        "imagePath": "/teamPhotos/Perfil_Renan.jpg",
+        "imageAlt": "Renan Lopes",
+        "bio": [
+          "Renan Lopes é Compositor Digital com 7 anos de experiência no mercado de cinema e televisão, atuando em projetos de efeitos visuais com foco em integração de CG, composição 2D/3D e tratamento de imagem. Especialista em Nuke, desenvolveu uma abordagem técnica voltada para precisão visual, fluidez operacional e resolução eficiente de desafios complexos dentro do pipeline de VFX.",
+          "Ao longo de sua trajetória, participou de produções como Ripley, Abigail e Back in Action, trabalhando em processos de finalização e composição voltados para cinema e streaming internacional. Seu trabalho combina domínio técnico, integração visual refinada e comunicação clara entre equipes, contribuindo para resultados sólidos em produções de alta complexidade."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm8420799/",
+        "linkedinUrl": "https://www.linkedin.com/in/lopesrenan/"
+      },
+      {
+        "author": "Andre Luiz dos Santos",
+        "occupation": "IT Manager | Pipeline TD",
+        "imagePath": "/teamPhotos/Perfil_Andre.jpg",
+        "imageAlt": "Andre Luiz dos Santos",
+        "bio": [
+          "Profissional com formação em Eletroeletrônica pelo SENAI, iniciou sua trajetória na área técnica atuando com manutenção de terminais POS, mas encontrou na programação o verdadeiro eixo da sua carreira. Seu desenvolvimento profissional ganhou força ao ingressar como Programador Trainee em uma empresa de call center, experiência que consolidou sua base técnica e ampliou sua visão sobre operação, lógica e resolução de problemas em ambientes de alta demanda.",
+          "Ao longo dos anos, passou por diferentes empresas e áreas da tecnologia, acumulando experiência prática em múltiplos segmentos. Esse percurso construiu um perfil versátil, capaz de transitar entre desenvolvimento, infraestrutura, suporte e operação com fluidez técnica e visão estratégica. Durante a pandemia, uma mudança decisiva o aproximou do setor audiovisual, onde passou a atuar com tecnologia aplicada à pós-produção, suporte operacional e infraestrutura voltada a ambientes criativos e pipelines de alta complexidade.",
+          "Seu perfil generalista se tornou um diferencial raro em um mercado cada vez mais segmentado. Mais do que dominar ferramentas ou funções específicas, seu trabalho é marcado pela capacidade de conectar áreas, antecipar problemas e sustentar operações com estabilidade, adaptação e pensamento técnico amplo."
+        ],
+        "imdbUrl": "",
+        "linkedinUrl": ""
+      },
+      {
+        "author": "Rogério Faggione",
+        "occupation": "VFX Generalist",
+        "imagePath": "/teamPhotos/Perfil_Rogerio.jpg",
+        "imageAlt": "Rogério Faggione",
+        "bio": [
+          "Rogério Faggione atua como VFX Compositor, reunindo experiência em composição digital, desenvolvimento de pipelines e fluxos técnicos voltados para efeitos visuais. Com passagem por áreas como desenvolvimento de software e generalismo 3D, construiu um perfil multidisciplinar que conecta linguagem artística, pensamento técnico e adaptação constante às novas tecnologias da indústria audiovisual.",
+          "Especialista em workflows envolvendo Nuke e Unreal Engine, desenvolve soluções focadas em integração visual, automação de processos e otimização de pipeline, sempre buscando eficiência sem comprometer a qualidade criativa. Sua experiência transita entre composição, CG, ferramentas customizadas e estruturação técnica de projetos, permitindo uma compreensão ampla das diferentes etapas da pós-produção.",
+          "Com forte interesse por arte, tecnologia e experimentação visual, mantém uma abordagem criativa sustentada pela curiosidade e pela busca constante por novas possibilidades estéticas e operacionais. Além do ambiente digital, também possui envolvimento com práticas artísticas tradicionais como fotografia, desenho, pintura e escultura, ampliando sua percepção visual e sensibilidade estética dentro dos projetos em que atua.",
+          "Seu perfil combina autonomia, colaboração e comprometimento técnico, contribuindo de forma consistente para equipes que demandam fluidez, organização e capacidade de resolução em pipelines complexos de VFX."
+        ],
+        "imdbUrl": "https://www.imdb.com/pt/name/nm14280260/",
+        "linkedinUrl": "https://www.linkedin.com/in/rog%C3%A9rio-faggione-0a45b729/"
       }
     ],
     "testimonyListArtists": [
@@ -175,7 +453,9 @@
         "imageAlt": "Author",
         "text1": "Formado em Animação & Efeitos Visuais em São Francisco, Califórnia. Fundou a Fenix Studios criando um modelo diferenciado de trabalho na Indústria. Trabalhou em grandes títulos do cinema internacional e nacional.",
         "text2": "Bernardo criou e executou efeitos visuais únicos para uma variedade de filmes e séries internacionais: Viúva Negra, Exterminador do Futuro: Destino Sombrio, Bad Boys Para Sempre, Free Guy: Assumindo O Controle, Army Of The Dead: Invasão em Las Vegas, Mulher-Hulk: Defensora de Herois, Lakers: Hora de Vencer e Ms. Marvel.",
-        "text3": "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "text3": "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
       },
       {
         "author": "Bernardo Teixeira Pereira",
@@ -184,16 +464,18 @@
         "imageAlt": "Author",
         "text1": "Formado em Animação & Efeitos Visuais em São Francisco, Califórnia. Fundou a Fenix Studios criando um modelo diferenciado de trabalho na Indústria. Trabalhou em grandes títulos do cinema internacional e nacional.",
         "text2": "Bernardo criou e executou efeitos visuais únicos para uma variedade de filmes e séries internacionais: Viúva Negra, Exterminador do Futuro: Destino Sombrio, Bad Boys Para Sempre, Free Guy: Assumindo O Controle, Army Of The Dead: Invasão em Las Vegas, Mulher-Hulk: Defensora de Herois, Lakers: Hora de Vencer e Ms. Marvel.",
-        "text3": "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas."
+        "text3": "No Brasil, atuou como Supervisor de Efeitos Visuais contribuindo na criação de grandes títulos: Tá Escrito, Minha Irmã e Eu, Meu Nome É Gal, A Paixão Segundo GH, Férias Trocadas e Um Dia Cinco Estrelas.",
+        "imdbUrl": "https://www.imdb.com",
+        "linkedinUrl": "https://www.linkedin.com"
       }
     ],
     "footer": {
       "aboutUs": "Sobre nós",
       "howItWorks": "Como trabalhamos",
-      "terms": "Termos",
+      "terms": "Termos de uso",
       "careers": "Carreiras",
       "rights": "Todos os direitos reservados.",
-      "shortText": "Transformando visões em obras-primas cinematográficas.",
+      "shortText": "O Renascer da Imagem",
       "developed": "Desenvolvido por ",
       "pageLinks": [
         {
@@ -237,15 +519,34 @@
         {
           "media": "Whatsapp",
           "link": "https://www.whatsapp.com/catalog/558100000000/?app_absent=0"
-        },
-        {
-          "media": "TikTok",
-          "link": "www.google.com"
         }
       ],
+      "institucionalTitle": "Institucional",
+      "servicosTitle": "Serviços",
+      "socialMediaTitle": "Social Media",
+      "madeBy": "feito por",
+      "termsPath": "/terms",
+      "institucionalLinks": [
+        { "title": "Sobre", "path": "/about" },
+        { "title": "Reels", "path": "/reels" },
+        { "title": "Aprenda", "path": "/study" },
+        { "title": "Contato", "path": "/contact" }
+      ],
+      "serviceLinks": [
+        { "title": "Pós Produção", "path": "/services" },
+        { "title": "Efeitos Visuais", "path": "/services" },
+        { "title": "Color Grading", "path": "/services" },
+        { "title": "Motion Graphics", "path": "/services" }
+      ],
       "accessibility": {
-        "altLogo": "Ir para a página inicial"
+        "altLogo": "Ir para a página inicial",
+        "socialMediaSectionLabel": "Links de redes sociais"
       }
+    },
+    "newsletter": {
+      "title": "Assine para receber inspirações e insights cinematográficos",
+      "placeholder": "Seu e-mail",
+      "cta": "Inscrever"
     },
     "clients": {
       "trustedMessage": "Confiança de grandes empresas"

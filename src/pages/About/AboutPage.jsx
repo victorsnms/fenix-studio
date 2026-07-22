@@ -8,9 +8,10 @@ import { Footer } from "../../components/Footer";
 import PageTitle from "../../components/PageTitle";
 import FadeInAnimation from "../../components/FadeInAnimation";
 import { AboutPageContainer } from "./aboutPageElements";
-import PageDescription from "../../components/PageDescription";
-import TestimonyColumns from "../../components/TestimonyColumns";
-import { ServicesGif } from "../../components/ServicesGif";
+import AboutIntroSection from "../../components/AboutIntroSection";
+import OurTeamSection from "../../components/OurTeamSection";
+import OurServicesSection from "../../components/OurServicesSection";
+import HomeNewsletterSection from "../../components/HomeNewsletterSection";
 
 export const AboutPage = () => {
   const { t, isOpen, toggle } = useContext(CommonContext);
@@ -23,18 +24,25 @@ export const AboutPage = () => {
       <Navbar toggle={toggle} />
       {/* BODY */}
       <AboutPageContainer>
-        <FadeInAnimation threshold={0.5}>
-          <PageTitle title={t("aboutPage.title")} lightText={true} />
+        <PageTitle
+          title={t("aboutPage.title")}
+          breadcrumbs={[
+            { label: t("menu.home"), to: "/" },
+            { label: t("aboutPage.title") },
+          ]}
+        />
+        <FadeInAnimation threshold={0.2}>
+          <AboutIntroSection />
         </FadeInAnimation>
         <FadeInAnimation threshold={0.2}>
-          <PageDescription text={t("aboutPage.pageDescription1")} />
-          <PageDescription text={t("aboutPage.pageDescription2")} />
-          <PageDescription text={t("aboutPage.pageDescription3")} />
-          {/* <SkillsList skillList={skillsList} skillList2={skillsList2}></SkillsList> */}
-          <ServicesGif />
+          <OurTeamSection />
         </FadeInAnimation>
-        <TestimonyColumns testimonyList={t("testimonyList", { returnObjects: true })} main />
-        <TestimonyColumns testimonyList={t("testimonyListArtists", { returnObjects: true })} />
+        <FadeInAnimation threshold={0.2}>
+          <OurServicesSection />
+        </FadeInAnimation>
+        <FadeInAnimation threshold={0.2}>
+          <HomeNewsletterSection />
+        </FadeInAnimation>
       </AboutPageContainer>
       {/* FOOTER */}
       <Footer />
