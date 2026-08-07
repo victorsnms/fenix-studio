@@ -135,21 +135,31 @@ the deploy target, and (b) a real end-to-end send test by the client (their Emai
 None are blockers; the form will function once env vars + EmailJS templates are live. The
 spam/feedback items are the ones worth doing before public launch.
 
-### 4.2 Newsletter  ❌ _Not started (UI only)_
+### 4.2 Newsletter — Brevo  🚧 _Code complete, blocked on config/auth_
+
+> **📄 See [`NEWSLETTER_BREVO_STATUS.md`](NEWSLETTER_BREVO_STATUS.md) for the full, current
+> status** — decisions, Brevo IDs, env vars, the active blocker, and remaining steps.
 
 **Where used**: `HomeNewsletterSection` renders on **Home, About, Contact, Reels** (the red band
 above the footer): an email input + "Inscrever"/"Subscribe" button.
 
-**Current behavior**: `handleSubscribe` only does `console.log("Newsletter email:", email)`.
-**No backend, no storage, no provider.** This is the main pending service.
+**Chosen solution**: **Brevo** with **double opt-in**, called from a **Vercel serverless
+function** (`api/subscribe.js`) so the Brevo API key stays server-side. This corresponds to
+"Option B" in Section 5 below.
 
-i18n keys already exist (`newsletter.title/placeholder/cta`), so only the wiring is missing.
+**Status**: implemented and pushed (commit `e78a5ea`) — the component now POSTs to
+`/api/subscribe` with loading/success/error states. **Not yet working in production**: the
+endpoint returns `provider_error`, and direct Brevo API calls are returning `401` during
+debugging. Details and next steps in the status doc above.
 
-→ Full options analysis, costs, and recommendation in **Section 5**.
+**Note**: requires Vercel (the function can't run on GitHub Pages / static hosting).
 
 ---
 
-## 5. Newsletter — Options, Costs & Recommendation
+## 5. Newsletter — Options, Costs & Recommendation  _(historical — decision made: Brevo)_
+
+> Kept for reference on pricing/alternatives. The client chose **Brevo**; see §4.2 and
+> `NEWSLETTER_BREVO_STATUS.md` for what was actually built.
 
 **Important framing**: a "newsletter" is **two jobs**:
 1. **Capture** subscribers (easy — the UI already exists).
@@ -260,7 +270,10 @@ before public launch.
 - [ ] EmailJS: production env vars set on deploy target; client sends a real test from each form
       (Contact, Post-Production, VFX, Study early-access).
 - [ ] EmailJS: enable reCAPTCHA + domain allow-list; add success/error UI + submit-disabled state.
-- [ ] Newsletter: pick an option from Section 5 and wire `HomeNewsletterSection.handleSubscribe`.
+- [x] Newsletter: provider chosen (Brevo) and `HomeNewsletterSection` wired to `/api/subscribe`.
+- [ ] Newsletter: finish Brevo config + fix the `provider_error` / `401` blocker, verify the full
+      double-opt-in flow end to end, and authenticate the sending domain
+      → see [`NEWSLETTER_BREVO_STATUS.md`](NEWSLETTER_BREVO_STATUS.md).
 - [ ] Study: decide `/study` vs `/study-in-progress` cutover; replace mocked course data & links;
       re-enable SEO if cutting over.
 - [ ] EN locale audit of `src/i18n/locales/en/en-us/common.json`.
