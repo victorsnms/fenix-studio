@@ -89,7 +89,7 @@ const OurServicesSection = () => {
         <OurServicesContent>
           <SectionTopTitle>{t("aboutPage.servicesSectionLabel")}</SectionTopTitle>
           <OurServicesTitle>{t("aboutPage.servicesTitle")}</OurServicesTitle>
-          <OurServicesExploreCta href="/services">
+          <OurServicesExploreCta to="/services">
             {t("aboutPage.servicesExploreCta")}
           </OurServicesExploreCta>
         </OurServicesContent>

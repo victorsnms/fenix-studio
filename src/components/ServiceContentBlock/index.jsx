@@ -26,7 +26,7 @@ const ServiceContentBlock = ({ imageLeft = true, image, video, topLabel, title, 
         <BlockBody>
           {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
         </BlockBody>
-        <BlockCTA href={ctaUrl}>{ctaLabel}</BlockCTA>
+        <BlockCTA to={ctaUrl}>{ctaLabel}</BlockCTA>
       </BlockContent>
     </BlockInner>
   </BlockSection>

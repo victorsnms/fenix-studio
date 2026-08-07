@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const BlockSection = styled.section`
   width: 100%;
@@ -93,7 +94,7 @@ export const BlockBody = styled.div`
   }
 `;
 
-export const BlockCTA = styled.a`
+export const BlockCTA = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const OurTeamSectionWrapper = styled.section`
   width: 100%;
@@ -64,7 +65,7 @@ export const OurTeamBody = styled.p`
   margin: 0;
 `;
 
-export const OurTeamCTA = styled.a`
+export const OurTeamCTA = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -253,24 +254,28 @@ export const ModalOverlay = styled.div`
   padding: 24px;
 `;
 
+/* Not the scroll container — ModalInner scrolls instead, so the absolutely
+   positioned close button stays pinned to the corner instead of scrolling away. */
 export const ModalBox = styled.div`
   background: #141414;
   width: min(960px, 100%);
   max-height: 90vh;
-  overflow-y: auto;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ModalCloseBtn = styled.button`
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 10px;
   background: transparent;
   border: none;
   color: var(--color-white);
   cursor: pointer;
   line-height: 1;
-  z-index: 1;
+  z-index: 3;
   padding: 4px;
 
   svg {
@@ -280,7 +285,12 @@ export const ModalCloseBtn = styled.button`
   }
 `;
 
+/* The scrolling region. min-height: 0 lets it shrink inside the flex parent so
+   overflow actually kicks in rather than the box growing past max-height. */
 export const ModalInner = styled.div`
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
   display: flex;
   flex-direction: row;
   align-items: stretch;

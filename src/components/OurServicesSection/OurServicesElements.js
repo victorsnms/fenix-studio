@@ -57,7 +57,7 @@ export const OurServicesTitle = styled.h2`
   margin: 0;
 `;
 
-export const OurServicesExploreCta = styled.a`
+export const OurServicesExploreCta = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;

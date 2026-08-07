@@ -113,7 +113,7 @@ export const Footer = () => {
       {/* ── Bottom bar ── */}
       <FooterBottom>
         <FooterCredits>
-          &copy;2025 {footerContent.rights} {footerContent.madeBy}{" "}
+          &copy;{new Date().getFullYear()} {footerContent.rights} {footerContent.madeBy}{" "}
           <FooterTermsLink to="/rael-design">Rael Design</FooterTermsLink>
           {" "}&amp;{" "}
           <FooterTermsLink to="/victor-martins">Victor Martins</FooterTermsLink>

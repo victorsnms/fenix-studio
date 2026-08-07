@@ -8,15 +8,15 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 100;
   width: 100%;
-  height: 120px;
+  height: var(--ds-header-height);
   background: var(--color-bg-darker);
 
   @media (max-width: 1024px) {
-    height: 90px;
+    height: var(--ds-header-height-tablet);
   }
 
   @media (max-width: 480px) {
-    height: 68px;
+    height: var(--ds-header-height-mobile);
   }
 `;
 

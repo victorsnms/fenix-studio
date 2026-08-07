@@ -120,6 +120,12 @@
   /* UI */
   --color-border: #cccccc;
 
+  /* Layout — Navbar height, per breakpoint. Anything that needs to sit clear
+     of the sticky header (e.g. the back-to-top button) offsets from these. */
+  --ds-header-height: 120px;
+  --ds-header-height-tablet: 90px;
+  --ds-header-height-mobile: 68px;
+
   /* Overlays */
   --color-overlay-30: rgba(0, 0, 0, 0.3);
   --color-overlay-50: rgba(0, 0, 0, 0.5);

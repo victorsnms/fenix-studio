@@ -11,10 +11,13 @@ import { PostProductionPage } from "./pages/PostProduction/PostProductionPage";
 import { VFXPage } from "./pages/VFX/VFXPage";
 import { HomePage } from "./pages/Home/HomePage.jsx";
 import { PageNotFound } from "./pages/PageNotFound/PageNotFound.jsx";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" exact element={<HomePage />} />
         <Route path="/about" exact element={<AboutPage />} />
@@ -27,6 +30,7 @@ export function App() {
         <Route path="/study-in-progress" exact element={<StudyInProgressPage />} />
         <Route path="*" exact element={<PageNotFound />} />
       </Routes>
+      <ScrollToTopButton />
     </Router>
   );
 }

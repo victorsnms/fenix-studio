@@ -24,7 +24,7 @@ const ServiceContactBanner = () => {
         <BannerContent>
           <BannerTitle>{t("servicesPage.bannerTitle")}</BannerTitle>
           <BannerSubtitle>{t("servicesPage.bannerSubtitle")}</BannerSubtitle>
-          <BannerCTA href="/contact">{t("servicesPage.bannerCta")}</BannerCTA>
+          <BannerCTA to="/contact">{t("servicesPage.bannerCta")}</BannerCTA>
           <BannerDecor />
         </BannerContent>
       </BannerInner>

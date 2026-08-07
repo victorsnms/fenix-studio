@@ -10,7 +10,6 @@ import {
   IconLocation,
   IconInstagram,
   IconWhatsapp,
-  IconTiktok,
   IconLinkedin,
   IconYoutube,
 } from "../../icons";
@@ -39,11 +38,10 @@ import {
 } from "./SidebarElements";
 
 const SOCIAL_ICONS = [
-  { icon: <IconInstagram size={16} aria-hidden="true" />, label: "Instagram",  href: "https://www.instagram.com/fenix/" },
-  { icon: <IconLinkedin  size={16} aria-hidden="true" />, label: "LinkedIn",   href: "https://www.linkedin.com/company/fenix/" },
-  { icon: <IconYoutube   size={16} aria-hidden="true" />, label: "YouTube",    href: "https://www.youtube.com/fenix" },
-  { icon: <IconWhatsapp  size={16} aria-hidden="true" />, label: "WhatsApp",   href: "https://www.whatsapp.com/catalog/558100000000/?app_absent=0" },
-  { icon: <IconTiktok    size={16} aria-hidden="true" />, label: "TikTok",     href: "https://www.tiktok.com/@fenix" },
+  { icon: <IconInstagram size={16} aria-hidden="true" />, label: "Instagram",  href: "https://www.instagram.com/fenix.vfx/" },
+  { icon: <IconLinkedin  size={16} aria-hidden="true" />, label: "LinkedIn",   href: "https://www.linkedin.com/company/fenixstudios/" },
+  { icon: <IconYoutube   size={16} aria-hidden="true" />, label: "YouTube",    href: "https://www.youtube.com/@FenixStudiosLTDA" },
+  { icon: <IconWhatsapp  size={16} aria-hidden="true" />, label: "WhatsApp",   href: "https://wa.me/5511917703209" },
 ];
 
 export const Sidebar = ({ isOpen, toggle }) => {

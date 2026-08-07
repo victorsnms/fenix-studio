@@ -21,7 +21,8 @@
       "accessibility": {
         "navLogoAlt": "Go homepage",
         "flagBtnAriaLabel": "Change language to Portuguese",
-        "menuBurguerAriaLabel": "Close sidebar"
+        "menuBurguerAriaLabel": "Close sidebar",
+        "scrollToTop": "Back to top"
       }
     },
     "contactForm": {
@@ -34,8 +35,8 @@
       "phone_optional": "Phone (Optional)",
       "contact_preference": "Contact Preference",
       "contact_subject": "Reason for Contact",
-      "others": "Others",
-      "budget": "Budget",
+      "others": "Other",
+      "budget": "Bidding",
       "vfx_academy": "VFX Academy",
       "work_with_us": "Work with us"
     },
@@ -378,7 +379,7 @@
           "He made his independent film debut with the documentary Mãos que Não se Alcançam, winner of Best Film at the Mostra Itapety de Cinema, where he worked as producer, executive producer, screenwriter, and interviewer. Currently, he works at Fenix Studios as a VFX Producer, operating across lab, conform, coordination, and art departments to ensure operational fluidity, communication, and consistency throughout the entire post-production pipeline."
         ],
         "imdbUrl": "https://www.imdb.com/pt/name/nm17627972/",
-        "linkedinUrl": "https://www.linkedin.com/in/bernardo-douahy-4b1a95304/"
+        "linkedinUrl": ""
       },
       {
         "author": "Carolina Reichel",
@@ -506,19 +507,19 @@
       "socialLinks": [
         {
           "media": "Linkedin",
-          "link": "https://www.linkedin.com/company/fenix/"
+          "link": "https://www.linkedin.com/company/fenixstudios/"
         },
         {
           "media": "Instagram",
-          "link": "https://www.instagram.com/fenix/"
+          "link": "https://www.instagram.com/fenix.vfx/"
         },
         {
           "media": "Youtube",
-          "link": "https://www.youtube.com/fenix"
+          "link": "https://www.youtube.com/@FenixStudiosLTDA"
         },
         {
           "media": "Whatsapp",
-          "link": "https://www.whatsapp.com/catalog/558100000000/?app_absent=0"
+          "link": "https://wa.me/5511917703209"
         }
       ],
       "institucionalTitle": "Institutional",
@@ -533,10 +534,10 @@
         { "title": "Contact", "path": "/contact" }
       ],
       "serviceLinks": [
-        { "title": "Post Production", "path": "/services" },
-        { "title": "Visual Effects", "path": "/services" },
-        { "title": "Color Grading", "path": "/services" },
-        { "title": "Motion Graphics", "path": "/services" }
+        { "title": "Post Production", "path": "/services/post-production" },
+        { "title": "Visual Effects", "path": "/services/vfx" },
+        { "title": "Color Grading", "path": "/services/post-production" },
+        { "title": "Motion Graphics", "path": "/services/vfx" }
       ],
       "accessibility": {
         "altLogo": "Go homepage",

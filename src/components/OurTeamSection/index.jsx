@@ -122,7 +122,7 @@ const OurTeamSection = () => {
             <SectionTopTitle>{t("aboutPage.teamSectionLabel")}</SectionTopTitle>
             <OurTeamTitle>{t("aboutPage.teamTitle")}</OurTeamTitle>
             <OurTeamBody>{t("aboutPage.teamBody")}</OurTeamBody>
-            <OurTeamCTA href="/contact">{t("aboutPage.teamContactCta")}</OurTeamCTA>
+            <OurTeamCTA to="/contact">{t("aboutPage.teamContactCta")}</OurTeamCTA>
           </OurTeamContent>
 
           {/* Right column */}
