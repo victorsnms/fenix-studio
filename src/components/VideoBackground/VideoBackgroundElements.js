@@ -21,8 +21,34 @@ export const VideoContainer = styled.div`
     inset: 0;
   }
 
+  /* Bottom fade — blends the video into the page background so it doesn't cut
+     off on a hard edge, mirroring the edge fade on the filmography posters.
+     Ends on --color-background (the same token body/HomePageContainer use) so
+     the seam stays invisible if that colour ever changes.
+     No z-index: HeroContent sits at z-index 1 and stays above this. */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--color-background) 100%
+    );
+    pointer-events: none;
+  }
+
   @media (max-width: 1024px) {
     max-width: 810px;
+  }
+
+  @media (max-width: 768px) {
+    &::after {
+      height: 120px;
+    }
   }
 
   @media (max-width: 480px) {

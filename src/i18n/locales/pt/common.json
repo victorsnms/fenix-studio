@@ -21,7 +21,8 @@
       "accessibility": {
         "navLogoAlt": "Ir para a página inicial",
         "flagBtnAriaLabel": "Mudar idioma para Inglês",
-        "menuBurguerAriaLabel": "Fechar barra de navegação"
+        "menuBurguerAriaLabel": "Fechar barra de navegação",
+        "scrollToTop": "Voltar ao topo"
       }
     },
     "contactForm": {
@@ -34,7 +35,7 @@
       "phone_optional": "Telefone (Opcional)",
       "contact_preference": "Preferência de contato",
       "contact_subject": "Motivo do contato",
-      "others": "Outros",
+      "others": "Outro",
       "budget": "Orçamento",
       "vfx_academy": "VFX Academy",
       "work_with_us": "Trabalhe conosco"
@@ -162,7 +163,7 @@
       ],
       "vfxCards": [
         { "title": "3D", "text": "Produção 3D voltada para cinema, publicidade e experiências visuais de alto impacto. Desenvolvemos ambientes, objetos e animações com acabamento técnico refinado, integrando direção artística, realismo e performance para entregar imagens que sustentam narrativas, fortalecem marcas e ampliam o alcance visual de cada projeto." },
-        { "title": "Compositing", "text": "Compositing desenvolvido para unir técnica e invisibilidade. Integramos elementos 3D, efeitos visuais e captações reais com precisão de luz, textura e profundidade, garantindo imagens coesas, naturais e visualmente sólidas do primeiro ao último frame." },
+        { "title": "Composição", "text": "Composição desenvolvida para unir técnica e invisibilidade. Integramos elementos 3D, efeitos visuais e captações reais com precisão de luz, textura e profundidade, garantindo imagens coesas, naturais e visualmente sólidas do primeiro ao último frame." },
         { "title": "Supervisão", "text": "Supervisão técnica e criativa voltada para garantir consistência visual, eficiência operacional e controle absoluto sobre cada etapa da produção. Acompanhamos processos, equipes e entregas com olhar estratégico e precisão técnica, assegurando que cada projeto alcance seu máximo potencial estético e narrativo." },
         { "title": "Motion Graphics", "text": "Motion graphics desenvolvidos para transformar informação, identidade e narrativa em movimento. Criamos animações com direção visual precisa, ritmo refinado e forte impacto estético, integrando design e linguagem cinematográfica para comunicar ideias com clareza e personalidade." },
         { "title": "Visualização", "text": "Visualização desenvolvida para antecipar estética, composição e linguagem antes da execução final. Criamos previsões visuais claras e estratégicas que auxiliam decisões criativas, alinhamento técnico e construção narrativa ao longo de toda a produção." }
@@ -378,7 +379,7 @@
           "Estreou no cinema independente com o documentário Mãos que Não se Alcançam, vencedor do prêmio de Melhor Filme na Mostra Itapety de Cinema, onde atuou como produtor, produtor executivo, roteirista e entrevistador. Atualmente, integra a equipe da Fenix Studios como Produtor de VFX, atuando de forma transversal entre os setores de lab, conform, coordenação e arte, conectando equipes e processos para garantir fluidez operacional e consistência ao longo de toda a pós-produção."
         ],
         "imdbUrl": "https://www.imdb.com/pt/name/nm17627972/",
-        "linkedinUrl": "https://www.linkedin.com/in/bernardo-douahy-4b1a95304/"
+        "linkedinUrl": ""
       },
       {
         "author": "Carolina Reichel",
@@ -506,19 +507,19 @@
       "socialLinks": [
         {
           "media": "Linkedin",
-          "link": "https://www.linkedin.com/company/fenix/"
+          "link": "https://www.linkedin.com/company/fenixstudios/"
         },
         {
           "media": "Instagram",
-          "link": "https://www.instagram.com/fenix/"
+          "link": "https://www.instagram.com/fenix.vfx/"
         },
         {
           "media": "Youtube",
-          "link": "https://www.youtube.com/fenix"
+          "link": "https://www.youtube.com/@FenixStudiosLTDA"
         },
         {
           "media": "Whatsapp",
-          "link": "https://www.whatsapp.com/catalog/558100000000/?app_absent=0"
+          "link": "https://wa.me/5511917703209"
         }
       ],
       "institucionalTitle": "Institucional",
@@ -533,10 +534,10 @@
         { "title": "Contato", "path": "/contact" }
       ],
       "serviceLinks": [
-        { "title": "Pós Produção", "path": "/services" },
-        { "title": "Efeitos Visuais", "path": "/services" },
-        { "title": "Color Grading", "path": "/services" },
-        { "title": "Motion Graphics", "path": "/services" }
+        { "title": "Pós Produção", "path": "/services/post-production" },
+        { "title": "Efeitos Visuais", "path": "/services/vfx" },
+        { "title": "Color Grading", "path": "/services/post-production" },
+        { "title": "Motion Graphics", "path": "/services/vfx" }
       ],
       "accessibility": {
         "altLogo": "Ir para a página inicial",

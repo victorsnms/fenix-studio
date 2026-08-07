@@ -1,0 +1,188 @@
+{
+  "info": {
+    "name": "Fenix Studio - Newsletter (Brevo)",
+    "description": "Diagnostics + integration tests for the newsletter subscribe flow: your Vercel /api/subscribe endpoint and Brevo's API directly. Import the companion environment file (Fenix-Studio-Newsletter.postman_environment.json) alongside this collection and select it in the top-right environment dropdown before running requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "vercel_base_url", "value": "https://fenix-studio-eight.vercel.app" },
+    { "key": "brevo_api_key", "value": "" },
+    { "key": "brevo_list_id", "value": "5" },
+    { "key": "brevo_template_id", "value": "2" },
+    { "key": "brevo_redirect_url", "value": "https://fenix-studio-eight.vercel.app/" },
+    { "key": "test_email", "value": "your-test-address@example.com" }
+  ],
+  "item": [
+    {
+      "name": "1. Brevo Health Checks (run these first)",
+      "item": [
+        {
+          "name": "Get Account (validates API key)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "accept", "value": "application/json" },
+              { "key": "api-key", "value": "{{brevo_api_key}}" }
+            ],
+            "url": {
+              "raw": "https://api.brevo.com/v3/account",
+              "protocol": "https",
+              "host": ["api", "brevo", "com"],
+              "path": ["v3", "account"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('API key is valid (200)', () => pm.response.code === 200);",
+                  "if (pm.response.code !== 200) console.log('BREVO KEY PROBLEM:', pm.response.text());",
+                  "else console.log('Brevo account OK:', pm.response.json().email);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get List by ID (validates BREVO_LIST_ID)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "accept", "value": "application/json" },
+              { "key": "api-key", "value": "{{brevo_api_key}}" }
+            ],
+            "url": {
+              "raw": "https://api.brevo.com/v3/contacts/lists/{{brevo_list_id}}",
+              "protocol": "https",
+              "host": ["api", "brevo", "com"],
+              "path": ["v3", "contacts", "lists", "{{brevo_list_id}}"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('List exists (200)', () => pm.response.code === 200);",
+                  "if (pm.response.code !== 200) console.log('LIST ID PROBLEM:', pm.response.text());",
+                  "else console.log('List found:', pm.response.json().name);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Template by ID (validates BREVO_DOI_TEMPLATE_ID)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "accept", "value": "application/json" },
+              { "key": "api-key", "value": "{{brevo_api_key}}" }
+            ],
+            "url": {
+              "raw": "https://api.brevo.com/v3/smtp/templates/{{brevo_template_id}}",
+              "protocol": "https",
+              "host": ["api", "brevo", "com"],
+              "path": ["v3", "smtp", "templates", "{{brevo_template_id}}"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Template exists (200)', () => pm.response.code === 200);",
+                  "if (pm.response.code === 200) {",
+                  "  const t = pm.response.json();",
+                  "  console.log('Template found:', t.name, '| active:', t.isActive);",
+                  "  pm.test('Template is active', () => t.isActive === true);",
+                  "} else {",
+                  "  console.log('TEMPLATE ID PROBLEM:', pm.response.text());",
+                  "}"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Brevo Double Opt-in (direct — isolates Brevo config from your function)",
+      "item": [
+        {
+          "name": "POST doubleOptinConfirmation",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "accept", "value": "application/json" },
+              { "key": "content-type", "value": "application/json" },
+              { "key": "api-key", "value": "{{brevo_api_key}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{test_email}}\",\n  \"includeListIds\": [{{brevo_list_id}}],\n  \"templateId\": {{brevo_template_id}},\n  \"redirectionUrl\": \"{{brevo_redirect_url}}\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "https://api.brevo.com/v3/contacts/doubleOptinConfirmation",
+              "protocol": "https",
+              "host": ["api", "brevo", "com"],
+              "path": ["v3", "contacts", "doubleOptinConfirmation"]
+            },
+            "description": "Success = HTTP 201 with empty body. If this fails, the problem is in Brevo config (list/template/key/redirect URL), not in your Vercel function — read the response body for Brevo's exact error message/code."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Double opt-in email queued (201)', () => pm.response.code === 201);",
+                  "if (pm.response.code !== 201) console.log('BREVO REJECTED THE REQUEST:', pm.response.code, pm.response.text());",
+                  "else console.log('OK — check the inbox for', pm.variables.get('test_email'));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Your Vercel Endpoint",
+      "item": [
+        {
+          "name": "POST /api/subscribe",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{test_email}}\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{vercel_base_url}}/api/subscribe",
+              "host": ["{{vercel_base_url}}"],
+              "path": ["api", "subscribe"]
+            },
+            "description": "This calls YOUR deployed function, which calls Brevo server-side. If '2. Brevo Double Opt-in (direct)' above succeeds but this fails, the problem is specifically in Vercel's environment variables (missing/mistyped BREVO_API_KEY, BREVO_LIST_ID, BREVO_DOI_TEMPLATE_ID, or BREVO_DOI_REDIRECT_URL) — check Project Settings → Environment Variables and the function logs in the Vercel dashboard."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Subscribe succeeded (200)', () => pm.response.code === 200);",
+                  "if (pm.response.code !== 200) console.log('YOUR ENDPOINT FAILED:', pm.response.code, pm.response.text());",
+                  "else console.log('OK:', pm.response.text());"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -35,7 +35,7 @@ export const ServicesPage = () => {
         <FadeInAnimation threshold={0.2}>
           <ServiceContentBlock
             imageLeft={true}
-            video="/videosHQ/Futuro_VFX_v001.mp4"
+            video="/videosHQ/Pos_Producao_Transforma_v001.mp4"
             topLabel={t("servicesPage.postProductionLabel")}
             title={t("servicesPage.postProductionTitle")}
             paragraphs={[

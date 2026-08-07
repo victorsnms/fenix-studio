@@ -192,12 +192,14 @@ export const FooterBottom = styled.div`
   z-index: 1;
   max-width: 1380px;
   margin: 40px auto 0;
-  padding: 20px 0px 24px;
+  /* 30px gutter matches FooterInner so the bottom bar lines up with the
+     columns above it, and neither child touches the edge below 1380px. */
+  padding: 20px 30px 24px;
   border-top: 1px solid var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 18px;
 
   font-family: var(--ds-font-brand);
   font-weight: var(--ds-font-weight-semibold);
@@ -209,7 +211,7 @@ export const FooterBottom = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 20px 24px;
+    padding: 20px 20px 24px;
     gap: 4px;
   }
 `;
@@ -221,6 +223,7 @@ export const FooterCredits = styled.div`
   align-items: center;
   gap: 4px;
   flex-wrap: wrap;
+  line-height: 18px;
 
   a {
     color: var(--color-white);

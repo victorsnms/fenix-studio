@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const BannerSection = styled.section`
   width: 100%;
@@ -111,7 +112,7 @@ export const BannerSubtitle = styled.p`
   margin: 0;
 `;
 
-export const BannerCTA = styled.a`
+export const BannerCTA = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
