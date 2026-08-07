@@ -39,7 +39,7 @@ const MarqueeInfinite = ({ imageSection = "marqueeImages", noBackground, showMet
 
   return (
     <MarqueeWrapper noBackground={noBackground}>
-      <MarqueeContainer threshold={1} transitionDelay={0.5}>
+      <MarqueeContainer threshold={0.2} transitionDelay={0.5}>
         <EmblaCarousel qty={images.length} ref={emblaRef}>
           <EmblaFilmContainer>
             {images.map((image, index) =>

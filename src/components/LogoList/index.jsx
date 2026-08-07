@@ -22,7 +22,7 @@ const LogoList = ({ imgPathArray, noBackground, children }) => {
 
   return (
     <LogoSection noBackground={noBackground}>
-      <FadeInAnimation threshold={1} transitionDelay={0.5}>
+      <FadeInAnimation threshold={0.2} transitionDelay={0.5}>
         <LogoWrapper>
           <CarouselButtonLeft className="embla__prev" onClick={scrollPrev}>
             <FaPlayCircle
