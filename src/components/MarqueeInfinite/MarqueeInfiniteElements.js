@@ -19,10 +19,22 @@ export const MarqueeWrapper = styled.div`
   }
 `;
 
+/* Edge fade. Two compatibility notes, both of which could blank the whole
+   marquee on mobile if got wrong:
+   - -webkit- prefix is required by Safari before 15.4; without it the
+     unprefixed property is the only one seen and older iOS ignores it.
+   - rgba() instead of the CSS Color 4 `hsl(0 0% 0% / 0)` space-separated
+     syntax. If a browser supports masking but can't parse the gradient, the
+     mask resolves to nothing and masks the element out entirely — i.e. the
+     posters vanish while still occupying layout space. */
+const edgeFade =
+  "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)";
+
 export const MarqueeContainer = styled(FadeInAnimation)`
   display: flex;
   column-gap: 24px;
-  mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 10%, hsl(0 0% 0% / 1) 90%, hsl(0 0% 0% / 0));
+  -webkit-mask-image: ${edgeFade};
+  mask-image: ${edgeFade};
   user-select: none;
   max-width: 1300px;
   margin-left: auto;

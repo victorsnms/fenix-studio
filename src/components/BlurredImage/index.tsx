@@ -1,19 +1,35 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 const BlurredImage = ({ pathSmall, ...props }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
+
+  // The image is held at opacity 0 until it loads. A cached image can finish
+  // loading before React attaches onLoad, so that event never fires and the
+  // image would stay invisible forever — check `complete` on mount to cover it.
+  useEffect(() => {
+    if (imgRef.current?.complete) setImageLoaded(true);
+  }, [props.src]);
 
   // Forcing load small image first
   const img = useMemo(() => (new Image().src = pathSmall), [pathSmall]);
 
   return (
     <CustomImageContainer id="customImageContainer" imageLoaded={imageLoaded} pathSmall={pathSmall}>
-      <CustomImage {...props} imageLoaded={imageLoaded} onLoad={handleImageLoad} loading="lazy" />
+      <CustomImage
+        {...props}
+        ref={imgRef}
+        imageLoaded={imageLoaded}
+        onLoad={handleImageLoad}
+        // Never leave a permanently invisible element if the src fails.
+        onError={handleImageLoad}
+        loading="lazy"
+      />
     </CustomImageContainer>
   );
 };

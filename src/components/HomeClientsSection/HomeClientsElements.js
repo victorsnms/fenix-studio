@@ -8,10 +8,17 @@ export const ClientsSection = styled.section`
   gap: 32px;
 `;
 
+/* Prefixed + rgba() for the same reason as the filmography marquee: without
+   the -webkit- prefix older iOS ignores the mask, and an unparseable gradient
+   can mask the carousel out entirely, leaving blank space. */
+const edgeFade =
+  "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 0) 100%)";
+
 export const ClientsCarouselWrap = styled.div`
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 8%, hsl(0 0% 0% / 1) 92%, hsl(0 0% 0% / 0));
+  -webkit-mask-image: ${edgeFade};
+  mask-image: ${edgeFade};
 `;
 
 export const ClientsEmblaContainer = styled.div`
