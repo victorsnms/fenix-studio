@@ -23,7 +23,7 @@ export const CommonInfoProvider = ({ children }) => {
   const createLogos = (imgPathArray) => {
     return imgPathArray.map((img, index) =>
       imgPathArray.length < 6 ? (
-        <FadeInAnimation key={index} threshold={1} transitionDelay={(index + 1) * 0.33}>
+        <FadeInAnimation key={index} threshold={0.2} transitionDelay={(index + 1) * 0.33}>
           <ImageLogo key={index} src={img.path} alt={img.alt} loading="lazy" />
         </FadeInAnimation>
       ) : (
