@@ -178,7 +178,58 @@ the site's locale system, not something the newsletter integration introduces.
 
 ---
 
-## 7. Related docs
+## 7. Welcome email automation
+
+Unlike the DOI confirmation email, the "Welcome to Fenix Studios" email that follows it is
+**not** triggered by our code — `api/subscribe.js` only ever makes the one
+`doubleOptinConfirmation` call. This one is entirely configured on Brevo's side, as an
+**Automation workflow** that fires when a contact is added to list `5`.
+
+### Why a `LOCALE` attribute is needed
+
+The automation's trigger only sees "a contact was added to this list" — it has no idea
+which DOI template (language) got them there. So the language has to be stored as a
+**contact attribute** at signup time instead. `api/subscribe.js` already sends
+`attributes: { LOCALE: "PT" | "EN" }` on every subscribe call — the automation workflow
+reads that attribute to decide which welcome email to send.
+
+### Setup steps
+
+1. **Create the `LOCALE` attribute first** (if it doesn't already exist): Brevo → Contacts
+   → Settings (or a gear/attributes icon near the contacts list) → **Contact Attributes** →
+   add a new attribute named `LOCALE`, type **Text** (or **Category** with values `PT`/`EN`
+   if Brevo offers that type). Attributes referenced by the API before they exist are
+   typically just dropped rather than erroring, so create this *before* testing — otherwise
+   you'll get contacts with no `LOCALE` set and have to fix them by hand.
+2. **Create both welcome email templates** the same way as the DOI ones (§3) — but this
+   time as regular templates (**Campaigns → Templates → Create a template**), not through
+   the Forms flow, since there's no `{{ doubleoptin }}` confirmation link needed here.
+   Branded HTML is in [`brevo/welcome-template.pt.html`](brevo/welcome-template.pt.html) and
+   [`brevo/welcome-template.en.html`](brevo/welcome-template.en.html) — same logo upload
+   note applies (reuse the hosted URL from the DOI templates, don't re-upload).
+3. **Build the automation**: Brevo → **Marketing → Automations** (or **Automation**) →
+   Create a workflow.
+   - **Trigger**: look for "Contact added to a list" (or a similarly-named list-membership
+     trigger) and set the list to `5`. If Brevo's UI offers a more specific
+     "double opt-in confirmed" trigger, that's an equally valid choice — either fires at the
+     same point in the flow.
+   - **Condition / split step**: branch on the `LOCALE` contact attribute — `LOCALE = EN` →
+     one path, else (or `LOCALE = PT`) → the other path. The exact step name varies by
+     Brevo's editor version — look for "Condition", "If/Else", or "Split" in the workflow
+     step palette.
+   - **Send email step** on each branch: pick the matching welcome template from step 2.
+   - **Activate** the workflow — draft workflows don't run.
+4. **Test**: subscribe with a throwaway address in each language, confirm the DOI email,
+   and check that the correct welcome email arrives shortly after. Automations can have a
+   short processing delay (not instant like the DOI email), so don't assume it's broken if
+   it takes a minute or two.
+
+If your Brevo plan/UI doesn't expose an "Automations" section at all, this feature may
+require a paid tier — check Brevo's plan comparison before spending time hunting for it.
+
+---
+
+## 8. Related docs
 
 - [`NEWSLETTER_BREVO_STATUS.md`](NEWSLETTER_BREVO_STATUS.md) — current implementation
   status, known issues, debugging notes.

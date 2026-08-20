@@ -68,6 +68,13 @@ export default async function handler(req, res) {
           includeListIds: [listId],
           templateId,
           redirectionUrl,
+          // Stored on the contact so a Brevo Automation workflow (e.g. a
+          // welcome email sent after DOI confirmation) can branch on it —
+          // the workflow only sees "contact added to list", not which DOI
+          // template/locale sent them there, so this is the only way it
+          // knows which language to reply in. Must be predefined as a
+          // contact attribute in Brevo first (see BREVO_SETUP_GUIDE.md).
+          attributes: { LOCALE: locale.toUpperCase() },
         }),
       }
     );

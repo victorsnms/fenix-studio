@@ -207,17 +207,16 @@ the deployed Vercel URL.
       closing eventually: an `/api/unsubscribe` endpoint (removes the contact from the list via
       Brevo's contacts API) + a minimal confirmation page. Explicitly deferred as backlog for
       now, not urgent.
-- [ ] **No automatic "Welcome to Fenix Studios" email after confirmation.** Today the DOI
-      confirmation email (§3/§8) is the *only* automated email in the flow — `api/subscribe.js`
-      makes exactly one Brevo call (`doubleOptinConfirmation`), and Brevo does not send any
-      follow-up email on its own once the contact confirms and is added to the list. If a
-      welcome email is wanted, it requires setting up a **Brevo Automation workflow** (Marketing
-      → Automations) with trigger **"contact added to list `5`"** (or similar "list
-      membership"/"DOI confirmed" trigger, depending on what Brevo's automation trigger options
-      call it) → send a separate email. This is entirely configured on Brevo's side; no code
-      changes needed unless the automation's target email itself needs custom branded HTML
-      (in which case, reuse the same approach as §8 — a hand-authored table-based HTML email
-      instead of Brevo's default). Not built — noted as backlog only.
+- [ ] **"Welcome to Fenix Studios" email — partially implemented, not live yet.** Code side
+      is done: `api/subscribe.js` now sends a `LOCALE` (`PT`/`EN`) contact attribute on every
+      subscribe call, and both branded welcome templates exist
+      ([`brevo/welcome-template.pt.html`](brevo/welcome-template.pt.html),
+      [`brevo/welcome-template.en.html`](brevo/welcome-template.en.html)). **Still needed, on
+      the Brevo side**: create the `LOCALE` contact attribute, upload both templates, and
+      build a Brevo Automation workflow (trigger: contact added to list `5` → branch on
+      `LOCALE` → send the matching template). Full instructions in `BREVO_SETUP_GUIDE.md` §7.
+      Until that workflow is built and activated, no welcome email sends at all — the DOI
+      confirmation remains the only automated email.
 - [ ] Real newsletter **content/campaigns** — nothing is scheduled or automated beyond the DOI
       confirmation. Sending actual newsletter issues to list `5` is a manual step in Brevo's
       Campaigns section whenever there's something to send.
