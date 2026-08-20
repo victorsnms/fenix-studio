@@ -14,7 +14,7 @@ import {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const HomeNewsletterSection = () => {
-  const { t } = useContext(CommonContext);
+  const { t, language } = useContext(CommonContext);
   const [email, setEmail] = useState("");
   // idle | loading | success | error | invalid
   const [status, setStatus] = useState("idle");
@@ -32,7 +32,9 @@ const HomeNewsletterSection = () => {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim() }),
+        // language is i18next's raw tag ("en-US" / "pt-BR") — the server maps
+        // it to a Brevo template, so it only needs the leading subtag.
+        body: JSON.stringify({ email: email.trim(), locale: language.split("-")[0] }),
       });
 
       if (res.ok) {

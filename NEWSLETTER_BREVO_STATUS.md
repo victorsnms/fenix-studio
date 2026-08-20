@@ -1,6 +1,6 @@
 # Newsletter (Brevo) — Implementation Status
 
-_Last updated: 2026-07-22 · Branch: `develop` · Status: **code complete, blocked on Brevo auth (401)**_
+_Last updated: 2026-08-20 · Branch: `develop`/`master` · Status: **working end-to-end in production**_
 
 Pick-up doc for the newsletter feature. Code is written, committed and pushed. The remaining
 work is **configuration + debugging**, not development.
@@ -80,18 +80,24 @@ link it produced — our custom UI + API call replace it.
 
 ## 4. Environment variables
 
-Four vars, **no `VITE_` prefix**:
+Six vars, **no `VITE_` prefix** (was four — split into per-locale template IDs when the DOI
+email became language-aware, 2026-08-20; see §8):
 
 ```
-BREVO_API_KEY            # Brevo API v3 key (secret — full account access)
+BREVO_API_KEY               # Brevo API v3 key (secret — full account access)
 BREVO_LIST_ID=5
-BREVO_DOI_TEMPLATE_ID=2
+BREVO_DOI_TEMPLATE_ID_PT=2  # Portuguese DOI template
+BREVO_DOI_TEMPLATE_ID_EN=   # English DOI template (fill in once created — §9)
+BREVO_DOI_TEMPLATE_ID=2     # fallback if a locale-specific one above is unset
 BREVO_DOI_REDIRECT_URL=https://fenix-studio-eight.vercel.app/
 ```
 
-- **Local `.env`** — all four set. Only used by `vercel dev` (see §6). `.env` is gitignored ✅
+- **Local `.env`** — all set except `BREVO_DOI_TEMPLATE_ID_EN`, pending the English template
+  being created in Brevo (see §8). Only used by `vercel dev` (see §6). `.env` is gitignored ✅
 - **Vercel dashboard** (Project → Settings → Environment Variables) — **this is what production
-  reads.** Must be set there and redeployed.
+  reads.** Must be set there and redeployed. **`BREVO_DOI_TEMPLATE_ID_EN` still needs to be
+  added there** once you have the English template's ID — until then, the fallback
+  `BREVO_DOI_TEMPLATE_ID` (Portuguese) is used for English visitors too.
 
 ### ⚠️ Known config bug to verify in Vercel
 `BREVO_DOI_REDIRECT_URL` was originally saved **without the `https://` scheme**
@@ -101,40 +107,50 @@ is a prime suspect for the production `provider_error`.
 
 ---
 
-## 5. Current blocker
+## 5. Resolved: production `provider_error` (2026-08-20)
 
-### Symptom A — production endpoint
-`POST https://fenix-studio-eight.vercel.app/api/subscribe` → `{ "error": "provider_error" }`
-
-Per §2's table, `provider_error` means **Brevo returned something other than 201/204**. It's a
-catch-all, so it doesn't identify the failing field on its own. Check the Vercel **function logs**
-— `api/subscribe.js` logs Brevo's real status + body via `console.error("[subscribe] Brevo error", …)`.
-
-### Symptom B — Postman direct-to-Brevo (where debugging stopped)
-`GET https://api.brevo.com/v3/account` → **`401 Unauthorized`**
+### Root cause
+`POST https://fenix-studio-eight.vercel.app/api/subscribe` was returning `502 { "error":
+"provider_error" }`. Brevo's real response, surfaced via the debug fields described below,
+was:
 ```json
-{ "message": "authentication not found in headers", "code": "unauthorized" }
+{ "providerStatus": 400, "providerCode": "invalid_parameter", "providerMessage": "Invalid redirection Url" }
 ```
 
-Confirmed so far:
-- Header row `api-key` exists, is spelled correctly (lowercase), and is ✅ enabled.
-- Authorization tab was set to **No Auth** (to avoid conflicting with the raw header).
-- Still 401 → strongly suggests **`{{brevo_api_key}}` is resolving to an empty string**.
+Cause: the `BREVO_DOI_REDIRECT_URL` env var **in the Vercel dashboard** was missing the
+`https://` scheme (a stale value from before this was first documented as a risk in §4).
+Local `.env` had the correct value the whole time, which is why this only showed up in
+production. Fixed by correcting the value in Vercel → Settings → Environment Variables and
+redeploying.
 
-**Next step (untested):** In Postman, open the environment editor (eye icon 👁 next to the
-environment dropdown) and check the **"Current Value"** column — not just "Initial Value".
-Imported environments often leave *Current Value* blank, which sends the header empty.
-Paste the key into **Current Value** for `brevo_api_key` (and verify the other four vars), Save,
-re-run.
+### How it was diagnosed
+`api/subscribe.js` was temporarily (now permanently, see below) changed to relay Brevo's own
+`status`/`code`/`message` on a failed call:
+```json
+{ "error": "provider_error", "providerStatus": 400, "providerCode": "invalid_parameter", "providerMessage": "Invalid redirection Url" }
+```
+This made the exact failure visible straight from the browser's Network tab, without needing
+Vercel dashboard log access. **Decision: kept permanently** (not reverted after diagnosis) —
+Brevo's error shape here is its own generic taxonomy, not user PII, so relaying it costs
+nothing and keeps future debugging fast. The client-side newsletter form
+(`src/components/HomeNewsletterSection/index.jsx`) also `console.error`s the full response
+body on failure for the same reason.
 
-If Current Value *is* populated and it still 401s, suspect stray whitespace/newline in the pasted
-key, or that the key was revoked — regenerate in Brevo → Settings → SMTP & API → API Keys.
+### Full flow confirmed working (2026-08-20)
+Submit on production → DOI email received → clicked confirm → contact appeared in Brevo
+list `5` (`victorsantows@gmail.com`, confirmed via Contacts → Lists → Newsletter
+Subscribers). The email landed in **Spam** — expected, see the sending-domain item in §7.
 
-### Debugging order (important)
-1. Get **Brevo direct** (Postman) working first — that isolates Brevo config from our function.
-2. Only once Brevo direct returns **201**, test `/api/subscribe`.
-   - Brevo direct ✅ + our endpoint ❌ ⇒ problem is **Vercel env vars**.
-   - Both ❌ ⇒ problem is **Brevo config** (key/list/template/redirect URL).
+### Postman 401 (separate, still unresolved — no longer blocking)
+This was a *different* investigation (testing Brevo directly, bypassing our function) that
+was paused before the redirect-URL bug was found, and is now moot for shipping since the
+real endpoint works. Left here in case Postman testing is picked up again later:
+
+`GET https://api.brevo.com/v3/account` → `401 { "message": "authentication not found in
+headers", "code": "unauthorized" }`, despite the `api-key` header being present and
+correctly spelled. Leading theory, never confirmed: Postman's environment editor had the key
+in "Initial Value" but not "Current Value" (a common import gotcha that sends an empty
+header) — check that column next time this is picked up.
 
 ---
 
@@ -160,30 +176,74 @@ the deployed Vercel URL.
 
 ## 7. Remaining work
 
-- [ ] **Resolve the Postman 401** (§5) → confirms the API key itself is good.
-- [ ] Run Brevo **direct DOI call** → confirms list `5` + template `2` + redirect URL are all valid.
-- [ ] Verify all four `BREVO_*` vars in the **Vercel dashboard** (esp. the `https://` on the
-      redirect URL), then redeploy.
-- [ ] Re-test `POST /api/subscribe` → expect `200 {ok:true}`.
-- [ ] Full end-to-end: submit via the site UI → receive DOI email → click confirm → verify the
-      contact appears in Brevo list `5` → confirm redirect lands correctly.
+- [x] ~~Resolve the Postman 401~~ — superseded; the production endpoint itself was confirmed
+      working directly (§5), so this is no longer a blocker. Left unresolved as a minor,
+      non-blocking item if Postman testing is picked up again.
+- [x] ~~Verify `BREVO_DOI_REDIRECT_URL` in the Vercel dashboard~~ — this was the actual bug;
+      fixed 2026-08-20 (§5).
+- [x] ~~Re-test `POST /api/subscribe`~~ — confirmed `200 {ok:true}` in production.
+- [x] ~~Full end-to-end~~ — confirmed: submit → DOI email → click confirm → contact appears in
+      Brevo list `5`. (2026-08-20)
+- [x] ~~Design a branded DOI email template~~ — done; see §8 for the template file + setup
+      guide. Uses the site's actual brand colors/logo instead of Brevo's default.
+- [x] ~~Make the DOI email language-aware~~ — code done (client sends `locale`, server picks
+      the matching template). **Not fully live yet**: the English DOI template still needs to
+      be created in Brevo (§8) and its ID set as `BREVO_DOI_TEMPLATE_ID_EN` in the Vercel
+      dashboard. Until then, English-language visitors receive the Portuguese confirmation
+      email (falls back to `BREVO_DOI_TEMPLATE_ID`).
 - [ ] **Authenticate the sending domain** in Brevo (Settings → Senders & IP). Currently the
       sender is `victorsantows@gmail.com` and Brevo warns *"Your domain is not authenticated…we
-      replace your domain with [@brevosend.com]"*. Not blocking, but hurts deliverability
-      (spam-folder risk) — should be done before real launch.
+      replace your domain with [@brevosend.com]"*. **Confirmed causing spam-folder delivery**
+      (the 2026-08-20 test email landed in Spam) — should be done before real launch, no longer
+      just a theoretical risk.
 - [ ] Consider swapping the DOI template's sender to a branded studio address once the domain
       is authenticated.
+- [ ] **No self-service unsubscribe exists yet.** Today, a confirmed subscriber can only be
+      removed (a) manually by Victor in Brevo → Contacts, or (b) automatically via the
+      mandatory unsubscribe footer Brevo injects into actual marketing **campaigns** — which
+      only applies once real newsletter campaigns start going out, not right after DOI
+      confirmation. Given double opt-in was chosen partly for LGPD/GDPR posture (§1), and those
+      regimes generally expect an easy way to withdraw consent at any time, this is worth
+      closing eventually: an `/api/unsubscribe` endpoint (removes the contact from the list via
+      Brevo's contacts API) + a minimal confirmation page. Explicitly deferred as backlog for
+      now, not urgent.
+- [ ] **No automatic "Welcome to Fenix Studios" email after confirmation.** Today the DOI
+      confirmation email (§3/§8) is the *only* automated email in the flow — `api/subscribe.js`
+      makes exactly one Brevo call (`doubleOptinConfirmation`), and Brevo does not send any
+      follow-up email on its own once the contact confirms and is added to the list. If a
+      welcome email is wanted, it requires setting up a **Brevo Automation workflow** (Marketing
+      → Automations) with trigger **"contact added to list `5`"** (or similar "list
+      membership"/"DOI confirmed" trigger, depending on what Brevo's automation trigger options
+      call it) → send a separate email. This is entirely configured on Brevo's side; no code
+      changes needed unless the automation's target email itself needs custom branded HTML
+      (in which case, reuse the same approach as §8 — a hand-authored table-based HTML email
+      instead of Brevo's default). Not built — noted as backlog only.
+- [ ] Real newsletter **content/campaigns** — nothing is scheduled or automated beyond the DOI
+      confirmation. Sending actual newsletter issues to list `5` is a manual step in Brevo's
+      Campaigns section whenever there's something to send.
 
 ---
 
-## 8. Uncommitted work in the tree
+## 8. The DOI email templates
 
-```
- M .gitignore     # adds: postman/*.postman_environment.json
-?? postman/       # collection (safe) + environment (gitignored, has the key)
-```
+The DOI confirmation email uses a branded HTML template (not Brevo's plain default) matching
+the site's dark theme (`#0d0d0d`/`#151515` background, `#e20613` red accent, uppercase bold
+CTA matching the site's button style). **Two versions exist, one per site language**:
+[`brevo/doi-confirmation-template.pt.html`](brevo/doi-confirmation-template.pt.html) and
+[`brevo/doi-confirmation-template.en.html`](brevo/doi-confirmation-template.en.html).
+`api/subscribe.js` picks between `BREVO_DOI_TEMPLATE_ID_PT`/`_EN` based on a `locale` field
+the client sends — see `BREVO_SETUP_GUIDE.md` §6 for the full mechanism.
 
-Committing `postman/` will include **only** the collection — the environment file is ignored.
+- The confirmation button's `href` must keep the `{{ doubleoptin }}` merge tag — Brevo resolves
+  it to the actual per-recipient confirmation URL at send time. Don't hand-edit that link.
+- The header logo is `src/images/logo.png` (icon-only mark, paired with a "FENIX STUDIOS" text
+  label in the template since the icon alone has no text). It had to be uploaded through Brevo's
+  own inline image block (not the "Attachments" panel, which just attaches a downloadable file
+  instead of embedding one) to get a hosted URL for the `<img src>` — only needs uploading once,
+  both language templates reuse the same hosted URL.
+- Full setup instructions — how to (re)create both templates via the Forms flow, how to get each
+  env var, and a migration checklist for swapping to the client's own Brevo account — are in
+  [`BREVO_SETUP_GUIDE.md`](BREVO_SETUP_GUIDE.md).
 
 ---
 
@@ -194,3 +254,6 @@ Committing `postman/` will include **only** the collection — the environment f
 - The other integration, **EmailJS** (contact forms), is separate and unaffected. It still has
   open pre-launch items — no spam protection, and no success/error UI on the main contact form.
   See `PROJECT_DOCUMENTATION.md` §4.1.
+- [`BREVO_SETUP_GUIDE.md`](BREVO_SETUP_GUIDE.md) — the "how to configure this from scratch"
+  reference (env vars, DOI template creation, client-account migration checklist). This doc
+  (`NEWSLETTER_BREVO_STATUS.md`) is the status/history tracker; that one is the setup how-to.

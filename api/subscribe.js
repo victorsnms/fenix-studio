@@ -3,10 +3,19 @@
 // Runs server-side ONLY, so the Brevo API key is never exposed to the browser.
 // Set these in the Vercel project's Environment Variables (NOT VITE_-prefixed —
 // they must stay server-side):
-//   BREVO_API_KEY           — your Brevo API v3 key
-//   BREVO_LIST_ID           — id of the contact list confirmed subscribers join
-//   BREVO_DOI_TEMPLATE_ID   — id of the Brevo "Double opt-in" email template
-//   BREVO_DOI_REDIRECT_URL  — URL Brevo redirects to after the user confirms
+//   BREVO_API_KEY              — your Brevo API v3 key
+//   BREVO_LIST_ID              — id of the contact list confirmed subscribers join
+//   BREVO_DOI_TEMPLATE_ID_PT   — id of the Portuguese DOI email template
+//   BREVO_DOI_TEMPLATE_ID_EN   — id of the English DOI email template
+//   BREVO_DOI_TEMPLATE_ID      — fallback template id, used if the locale-specific
+//                                one above isn't set (e.g. only one language exists
+//                                yet, or an unrecognized locale was sent)
+//   BREVO_DOI_REDIRECT_URL     — URL Brevo redirects to after the user confirms
+//
+// The site has no URL-based locale (see src/i18n/index.js — language lives only in
+// i18next state / localStorage), so the client tells us which language was active
+// via `locale` in the request body ("en" or "pt"). Defaults to "pt" — the site's
+// primary market — if missing or unrecognized.
 //
 // Note: this endpoint only runs on Vercel (or `vercel dev`). It will 404 under
 // plain `npm run dev` (Vite doesn't execute serverless functions).
@@ -30,9 +39,13 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "invalid_email" });
   }
 
+  const locale = body?.locale === "en" ? "en" : "pt";
+  const localeTemplateId =
+    locale === "en" ? process.env.BREVO_DOI_TEMPLATE_ID_EN : process.env.BREVO_DOI_TEMPLATE_ID_PT;
+
   const apiKey = process.env.BREVO_API_KEY;
   const listId = Number(process.env.BREVO_LIST_ID);
-  const templateId = Number(process.env.BREVO_DOI_TEMPLATE_ID);
+  const templateId = Number(localeTemplateId || process.env.BREVO_DOI_TEMPLATE_ID);
   const redirectionUrl = process.env.BREVO_DOI_REDIRECT_URL;
 
   if (!apiKey || !listId || !templateId || !redirectionUrl) {
@@ -73,10 +86,9 @@ export default async function handler(req, res) {
     }
 
     console.error("[subscribe] Brevo error", brevoRes.status, data);
-    // Temporarily relaying Brevo's own status/code/message (its generic error
-    // shape, not user PII) so this is diagnosable from the browser Network
-    // tab without needing Vercel dashboard log access. Remove once the
-    // integration is confirmed working end-to-end.
+    // Relaying Brevo's own status/code/message (its generic error shape, not
+    // user PII) so failures are diagnosable from the browser Network tab
+    // without needing Vercel dashboard log access.
     return res.status(502).json({
       error: "provider_error",
       providerStatus: brevoRes.status,
