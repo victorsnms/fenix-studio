@@ -73,7 +73,16 @@ export default async function handler(req, res) {
     }
 
     console.error("[subscribe] Brevo error", brevoRes.status, data);
-    return res.status(502).json({ error: "provider_error" });
+    // Temporarily relaying Brevo's own status/code/message (its generic error
+    // shape, not user PII) so this is diagnosable from the browser Network
+    // tab without needing Vercel dashboard log access. Remove once the
+    // integration is confirmed working end-to-end.
+    return res.status(502).json({
+      error: "provider_error",
+      providerStatus: brevoRes.status,
+      providerCode: data?.code,
+      providerMessage: data?.message,
+    });
   } catch (err) {
     console.error("[subscribe] request failed", err);
     return res.status(500).json({ error: "unexpected" });
