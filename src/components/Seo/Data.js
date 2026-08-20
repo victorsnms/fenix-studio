@@ -12,7 +12,7 @@ export const aboutSeo = {
   description: "About Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, about ,about us",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const contactSeo = {
@@ -20,7 +20,7 @@ export const contactSeo = {
   description: "Contact Us Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, contact ,contact us",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const homeSeo = {
@@ -28,7 +28,7 @@ export const homeSeo = {
   description: "Fenix Studios",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, home",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const reelSeo = {
@@ -36,7 +36,7 @@ export const reelSeo = {
   description: "Reel Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, reel, reels",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const servicesSeo = {
@@ -44,7 +44,7 @@ export const servicesSeo = {
   description: "Services Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, services , service",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const postProductionSeo = {
@@ -52,7 +52,7 @@ export const postProductionSeo = {
   description: "Post Production Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, post production, pos producao",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const vfxSeo = {
@@ -60,7 +60,7 @@ export const vfxSeo = {
   description: "VFX Page",
   keywords:
     "vfx, visual effects, motion graphics, cg, compositing, animation, rigging, concept art, Fenix Studios, efeitos visuais",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const studySeo = {
@@ -68,7 +68,7 @@ export const studySeo = {
   description: "Study Page",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, study",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };
 
 export const studyInProgressSeo = {
@@ -76,5 +76,5 @@ export const studyInProgressSeo = {
   description: "Study Page Preview",
   keywords:
     "video editing, cinematic effects, movie post-production, visual storytelling, advanced video techniques, film enhancement, creative editing solutions, digital media magic, cinematic innovation, special effects mastery, Fenix Studios, visual arts, film production excellence, dynamic editing, media transformation, study",
-  imageURL: `${SITE_URL}/logo.png`,
+  imageURL: `${SITE_URL}/og-image.png`,
 };

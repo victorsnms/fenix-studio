@@ -3,7 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Seo = ({ seoData }) => {
   const defaultImageURL = useMemo(
-    () => `${import.meta.env.VITE_SITE_URL || "https://fenixstudios.com.br"}/logo.png`,
+    () => `${import.meta.env.VITE_SITE_URL || "https://fenixstudios.com.br"}/og-image.png`,
     []
   );
 

@@ -16,6 +16,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fenix Studios</title>
+
+    <!-- Baseline social share metadata. WhatsApp/Instagram/Facebook's link-preview
+         crawlers fetch this raw HTML and never run JavaScript, so the per-page
+         <Helmet> tags in src/components/Seo/ (rendered client-side) are invisible to
+         them — every shared link needs something here regardless of which page. This
+         is intentionally the same for every route; true per-page previews would need
+         server-side rendering or a crawler-specific prerender, out of scope for now. -->
+    <meta name="description" content="Fenix Studios — estúdio de pós-produção e efeitos visuais (VFX) para cinema, streaming e publicidade." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fenix Studios" />
+    <meta property="og:url" content="https://fenixstudios.com.br/" />
+    <meta property="og:title" content="Fenix Studios" />
+    <meta property="og:description" content="Estúdio de pós-produção e efeitos visuais (VFX) para cinema, streaming e publicidade." />
+    <meta property="og:image" content="https://fenixstudios.com.br/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fenix Studios" />
+    <meta name="twitter:description" content="Estúdio de pós-produção e efeitos visuais (VFX) para cinema, streaming e publicidade." />
+    <meta name="twitter:image" content="https://fenixstudios.com.br/og-image.png" />
   </head>
   <body>
     <div id="root"></div>
