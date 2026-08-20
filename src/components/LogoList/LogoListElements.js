@@ -55,7 +55,7 @@ export const EmblaCarousel = styled.div`
   overflow: hidden;
   padding: 15px 0;
   width: 100%;
-  max-width: 930px;
+  max-width: 1300px;
 
   @media screen and (max-width: 1024px) {
     max-width: 744px;

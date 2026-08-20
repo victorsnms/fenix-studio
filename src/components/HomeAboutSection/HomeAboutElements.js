@@ -67,7 +67,7 @@ export const AboutContentCol = styled.div`
 export const AboutTitle = styled.h2`
   font-family: var(--ds-font-brand);
   font-weight: var(--ds-font-weight-heavy);
-  font-size: clamp(32px, 4vw, 64px);
+  font-size: clamp(32px, 4vw, 60px);
   line-height: 1.0;
   text-transform: uppercase;
   color: var(--color-white);
@@ -78,9 +78,9 @@ export const AboutBody = styled.p`
   font-family: var(--ds-font-brand);
   font-weight: var(--ds-font-weight-regular);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 26px;
   color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 40px;
+  margin: 0 0 25px;
 
   strong {
     font-weight: var(--ds-font-weight-bold);
@@ -98,32 +98,21 @@ export const AboutBody = styled.p`
 export const AboutCardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 `;
 
 export const AboutCard = styled(Link)`
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 24px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 25px;
+  border: 1px solid #414141;
+  padding: 20px;
   text-decoration: none;
   transition: border-color 0.2s ease;
 
   &:hover {
     border-color: var(--color-primary);
   }
-
-  @media (max-width: 480px) {
-    padding: 20px;
-  }
-`;
-
-export const AboutCardHeader = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
 `;
 
 export const AboutCardIcon = styled.div`
@@ -131,21 +120,26 @@ export const AboutCardIcon = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(255, 8, 8, 0.3);
-  background: rgba(255, 8, 8, 0.06);
+  width: 100px;
+  height: 100px;
+  background: #1C1D20;
 
   svg {
     display: block;
   }
 `;
 
+export const AboutCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 export const AboutCardTitle = styled.h3`
   font-family: var(--ds-font-brand);
-  font-weight: var(--ds-font-weight-bold);
-  font-size: 18px;
-  line-height: 1.2;
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: 26px;
+  line-height: 29.1px;
   text-transform: uppercase;
   color: var(--color-white);
   margin: 0;
@@ -158,9 +152,9 @@ export const AboutCardTitle = styled.h3`
 export const AboutCardBody = styled.div`
   font-family: var(--ds-font-brand);
   font-weight: var(--ds-font-weight-regular);
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 18px;
+  color: #7A7A7A;
   display: flex;
   flex-direction: column;
   gap: 12px;

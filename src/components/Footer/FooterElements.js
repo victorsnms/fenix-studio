@@ -202,7 +202,7 @@ export const FooterBottom = styled.div`
   gap: 18px;
 
   font-family: var(--ds-font-brand);
-  font-weight: var(--ds-font-weight-semibold);
+  font-weight: var(--ds-font-weight-regular);
   font-size: 16px;
   line-height: 28.8px;
   text-transform: uppercase;
