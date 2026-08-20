@@ -34,6 +34,22 @@
     <meta name="twitter:title" content="Fenix Studios" />
     <meta name="twitter:description" content="A Fenix Studios é um estúdio de pós-produção e efeitos visuais (VFX) especializado em transformar imaginação em imagem para cinema, streaming e publicidade." />
     <meta name="twitter:image" content="https://fenixstudios.com.br/og-image.png" />
+
+    <!-- Organization structured data. This is a business homepage, not a blog post, so
+         it has no real single "author" or "publish date" — the article:* OG fields some
+         crawlers (LinkedIn) look for don't semantically apply here. schema.org
+         Organization is the correct way to give crawlers a real entity (name, logo, url)
+         to associate with the page instead of fabricating article-specific fields. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fenix Studios",
+        "url": "https://fenixstudios.com.br/",
+        "logo": "https://fenixstudios.com.br/brand-logo.png",
+        "description": "A Fenix Studios é um estúdio de pós-produção e efeitos visuais (VFX) especializado em transformar imaginação em imagem para cinema, streaming e publicidade."
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
