@@ -207,16 +207,15 @@ the deployed Vercel URL.
       closing eventually: an `/api/unsubscribe` endpoint (removes the contact from the list via
       Brevo's contacts API) + a minimal confirmation page. Explicitly deferred as backlog for
       now, not urgent.
-- [ ] **"Welcome to Fenix Studios" email — partially implemented, not live yet.** Code side
-      is done: `api/subscribe.js` now sends a `LOCALE` (`PT`/`EN`) contact attribute on every
-      subscribe call, and both branded welcome templates exist
-      ([`brevo/welcome-template.pt.html`](brevo/welcome-template.pt.html),
-      [`brevo/welcome-template.en.html`](brevo/welcome-template.en.html)). **Still needed, on
-      the Brevo side**: create the `LOCALE` contact attribute, upload both templates, and
-      build a Brevo Automation workflow (trigger: contact added to list `5` → branch on
-      `LOCALE` → send the matching template). Full instructions in `BREVO_SETUP_GUIDE.md` §7.
-      Until that workflow is built and activated, no welcome email sends at all — the DOI
-      confirmation remains the only automated email.
+- [x] ~~"Welcome to Fenix Studios" email~~ — **done and confirmed working end-to-end**
+      (2026-08-20). `api/subscribe.js` sends a `LOCALE` (`PT`/`EN`) contact attribute on
+      every subscribe call; the Brevo Automation workflow (trigger: contact added to list
+      `5` → wait 1 minute → condition on `LOCALE` → send
+      [`brevo/welcome-template.en.html`](brevo/welcome-template.en.html) or
+      [`brevo/welcome-template.pt.html`](brevo/welcome-template.pt.html)) is built and
+      activated. Verified with real test sends on both branches — correct template,
+      correct language, correct branding, arrived promptly. Setup steps documented in
+      `BREVO_SETUP_GUIDE.md` §7 for recreating this in the client's account later.
 - [ ] Real newsletter **content/campaigns** — nothing is scheduled or automated beyond the DOI
       confirmation. Sending actual newsletter issues to list `5` is a manual step in Brevo's
       Campaigns section whenever there's something to send.
@@ -246,7 +245,34 @@ the client sends — see `BREVO_SETUP_GUIDE.md` §6 for the full mechanism.
 
 ---
 
-## 9. Related context
+## 9. Testing gotcha: Gmail's unsubscribe click persists past contact deletion
+
+Discovered while testing the welcome automation (2026-08-20). Clicking Gmail's built-in
+**"Unsubscribe"** chip (next to the sender name in the inbox list — not a link inside the
+email body) sends an unsubscribe signal via the email's `List-Unsubscribe` header, which
+Brevo honors immediately by **blocklisting that raw email address at the transactional
+sending level**.
+
+This blocklist is **separate from, and survives, deleting the Contact record**. Deleting a
+contact removes the CRM object, but not the underlying suppression — re-subscribing with
+the same address afterward returns `200 {ok:true}` from `/api/subscribe` (Brevo *accepts*
+the request) but the confirmation email never arrives, silently blocked with reason
+`"blocked : due to unsubscribed user"`. Verified via **Transactional → Email** (or
+**Statistics → Email logs**) in Brevo — filtering by recipient shows `Sent` immediately
+followed by `Blocked` for every attempt, while other addresses in the same inbox (Gmail
+`+alias` variants) send and get `Opened` normally, confirming it's address-specific, not a
+domain or account-wide issue.
+
+**For testing**: don't click Gmail's unsubscribe chip on test sends unless deliberately
+testing that flow. If it happens, either find Brevo's blocklist management (attempted
+during this session, exact UI location not conclusively found — try Contacts' status
+filters or Transactional's settings) to unblock the address, or simplest in practice: use a
+fresh Gmail `+alias` (e.g. `you+test2@gmail.com`) to keep testing without touching the
+blocked address at all.
+
+---
+
+## 10. Related context
 
 - Full site docs: [`PROJECT_DOCUMENTATION.md`](PROJECT_DOCUMENTATION.md) (§4.2 covers the
   newsletter's pre-Brevo state; §5 has the original provider comparison/costs analysis).

@@ -2,7 +2,10 @@ import { useMemo } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Seo = ({ seoData }) => {
-  const defaultImageURL = useMemo(() => "http://fenix-studios.com/src/images/logo.png", []);
+  const defaultImageURL = useMemo(
+    () => `${import.meta.env.VITE_SITE_URL || "http://fenix-studios.com"}/logo.png`,
+    []
+  );
 
   return (
     <HelmetProvider context={seoData}>
