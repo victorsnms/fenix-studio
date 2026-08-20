@@ -39,9 +39,15 @@ const HomeNewsletterSection = () => {
         setStatus("success");
         setEmail("");
       } else {
+        // The API only ever shows a generic message to visitors, but logs the
+        // real error code here so it's visible in the browser console without
+        // needing to dig through Vercel's function logs for every report.
+        const data = await res.json().catch(() => ({}));
+        console.error(`[newsletter] subscribe failed: HTTP ${res.status}`, data);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("[newsletter] subscribe request failed", err);
       setStatus("error");
     }
   };
