@@ -1,6 +1,6 @@
 // Public info (a domain, not a secret), so VITE_ prefix is correct here — unlike the
 // Brevo API key, this is meant to reach the client bundle.
-const SITE_URL = import.meta.env.VITE_SITE_URL || "http://fenix-studios.com";
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://fenixstudios.com.br";
 
 // logo.png is served from public/ (unprocessed, stable path) rather than imported from
 // src/images/ — social crawlers fetch OG image URLs directly with no build context, so
