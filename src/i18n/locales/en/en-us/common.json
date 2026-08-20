@@ -22,7 +22,8 @@
         "navLogoAlt": "Go homepage",
         "flagBtnAriaLabel": "Change language to Portuguese",
         "menuBurguerAriaLabel": "Close sidebar",
-        "scrollToTop": "Back to top"
+        "scrollToTop": "Back to top",
+        "scrollDown": "Scroll down"
       }
     },
     "contactForm": {

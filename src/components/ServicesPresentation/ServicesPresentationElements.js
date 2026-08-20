@@ -99,6 +99,14 @@ export const CardBody = styled.p`
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   max-width: 286px;
+
+  /* Scrollable, but the scrollbar itself stays invisible. */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* old Edge/IE */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 `;
 
 export const CardCTA = styled.button`

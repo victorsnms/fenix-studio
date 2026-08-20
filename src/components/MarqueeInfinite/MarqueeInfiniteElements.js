@@ -36,9 +36,30 @@ export const MarqueeContainer = styled(FadeInAnimation)`
   -webkit-mask-image: ${edgeFade};
   mask-image: ${edgeFade};
   user-select: none;
+  /* Must match EmblaCarousel's own max-width (LogoListElements), not
+     MarqueeWrapper's 1300px. The mask is applied to this box, so if it's
+     wider than the actual carousel inside it, the child sits flush-left
+     (flex default) and the right-side fade lands on empty space instead of
+     the carousel's real edge — a hard cut on the right instead of a fade.
+     The visible width doesn't change here; EmblaCarousel was already the
+     binding constraint. This just aligns the mask to match it. */
+  width: 100%;
   max-width: 1300px;
+  /* Without this, MarqueeWrapper's column-flex layout refuses to shrink this
+     item below its content's intrinsic width (the flex default min-width is
+     auto, not 0). On narrow viewports that pins the container at its full
+     744/930px even though the screen is only ~390px wide, and the overflow
+     — including the entire right-edge fade zone — gets silently clipped by
+     MarqueeWrapper's overflow:hidden. Confirmed via a real headless-browser
+     measurement: at 390px viewport this box rendered 744px wide before the
+     fix. min-width:0 lets it actually shrink to fit. */
+  min-width: 0;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 744px;
+  }
 `;
 
 export const EmblaFilmContainer = styled.div`

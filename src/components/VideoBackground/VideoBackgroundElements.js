@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const VideoContainer = styled.div`
   width: 100%;
   height: 85vh;
   min-height: 560px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   position: relative;
   overflow: hidden;
 
@@ -41,18 +41,61 @@ export const VideoContainer = styled.div`
     pointer-events: none;
   }
 
-  @media (max-width: 1024px) {
-    max-width: 810px;
-  }
-
   @media (max-width: 768px) {
     &::after {
       height: 120px;
     }
   }
+`;
+
+const bounce = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+`;
+
+/* Sits above the bottom fade (z-index:1, same as HeroContent — the fade's
+   ::after has no z-index so it would otherwise stack above both). */
+export const ScrollDownIndicator = styled.button`
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: flex;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  animation: ${bounce} 1.8s ease-in-out infinite;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
   @media (max-width: 480px) {
-    max-width: 722px;
+    bottom: 16px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 `;
 

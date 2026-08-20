@@ -11,15 +11,15 @@ import {
   AboutBody,
   AboutCardsWrapper,
   AboutCard,
-  AboutCardHeader,
   AboutCardIcon,
+  AboutCardContent,
   AboutCardTitle,
   AboutCardBody,
 } from "./HomeAboutElements";
 
 // ─── Card icons (from Figma, fill #FF0808) ───────────────────────────────────
 const PostProductionIcon = () => (
-  <svg width="28" height="33" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg width="35" height="42" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M34.7318 12.8375L22.8266 0.932076C22.2255 0.330974 21.4269 0 20.5765 0H3.18199C1.42698 0 0 1.42759 0 3.18239V38.6339C0 40.3884 1.42698 41.8158 3.18199 41.8158H32.4823C34.2365 41.8158 35.6641 40.3884 35.6641 38.6339V15.0874C35.6639 14.2379 35.3329 13.4384 34.7318 12.8375ZM33.2361 38.6339C33.2361 39.0495 32.8984 39.3882 32.4825 39.3882H3.18199C2.76613 39.3882 2.42825 39.0495 2.42825 38.6339V3.18218C2.42825 2.76653 2.76613 2.42845 3.18199 2.42845H19.7848C20.2393 2.42845 20.6077 2.79686 20.6077 3.25139V12.2286C20.6077 13.7444 21.8364 14.973 23.3514 14.973H32.4133C32.6318 14.973 32.8409 15.0598 32.9952 15.2141C33.1495 15.3684 33.2363 15.5776 33.2363 15.7959L33.2361 38.6339Z" fill="#FF0808"/>
     <path d="M7.78703 7.4557C7.78703 7.89372 7.43201 8.24853 6.9942 8.24853H5.27558C4.83756 8.24853 4.48275 7.89351 4.48275 7.4557V5.73708C4.48275 5.29906 4.83756 4.94424 5.27558 4.94424H6.9942C7.43222 4.94424 7.78703 5.29927 7.78703 5.73708V7.4557Z" fill="#FF0808"/>
     <path d="M7.78703 13.2793C7.78703 13.7173 7.43201 14.0725 6.9942 14.0725H5.27558C4.83756 14.0725 4.48275 13.7173 4.48275 13.2793V11.5611C4.48275 11.1231 4.83756 10.768 5.27558 10.768H6.9942C7.43222 10.768 7.78703 11.1231 7.78703 11.5611V13.2793Z" fill="#FF0808"/>
@@ -36,7 +36,7 @@ const PostProductionIcon = () => (
 );
 
 const VFXIcon = () => (
-  <svg width="28" height="22" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg width="35" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M3.5 28C2.5375 28 1.70625 27.6646 1.00625 26.9937C0.335417 26.2938 0 25.4625 0 24.5V3.5C0 2.5375 0.335417 1.72083 1.00625 1.05C1.70625 0.35 2.5375 0 3.5 0H24.5C25.4625 0 26.2792 0.35 26.95 1.05C27.65 1.72083 28 2.5375 28 3.5V11.375L35 4.375V23.625L28 16.625V24.5C28 25.4625 27.65 26.2938 26.95 26.9937C26.2792 27.6646 25.4625 28 24.5 28H3.5ZM3.5 24.5H24.5V3.5H3.5V24.5Z" fill="#FF0808"/>
   </svg>
 );
@@ -74,30 +74,30 @@ const HomeAboutSection = () => {
           <AboutCardsWrapper>
             {/* Card 1 — Post-Production */}
             <AboutCard to="/services/post-production">
-              <AboutCardHeader>
-                <AboutCardIcon>
-                  <PostProductionIcon />
-                </AboutCardIcon>
+              <AboutCardIcon>
+                <PostProductionIcon />
+              </AboutCardIcon>
+              <AboutCardContent>
                 <AboutCardTitle>{t("homePage.aboutCard1Title")}</AboutCardTitle>
-              </AboutCardHeader>
-              <AboutCardBody>
-                <p>{t("homePage.aboutCard1Body1")}</p>
-                <p>{t("homePage.aboutCard1Body2")}</p>
-              </AboutCardBody>
+                <AboutCardBody>
+                  <p>{t("homePage.aboutCard1Body1")}</p>
+                  <p>{t("homePage.aboutCard1Body2")}</p>
+                </AboutCardBody>
+              </AboutCardContent>
             </AboutCard>
 
             {/* Card 2 — VFX */}
             <AboutCard to="/services/vfx">
-              <AboutCardHeader>
-                <AboutCardIcon>
-                  <VFXIcon />
-                </AboutCardIcon>
+              <AboutCardIcon>
+                <VFXIcon />
+              </AboutCardIcon>
+              <AboutCardContent>
                 <AboutCardTitle>{t("homePage.aboutCard2Title")}</AboutCardTitle>
-              </AboutCardHeader>
-              <AboutCardBody>
-                <p>{t("homePage.aboutCard2Body1")}</p>
-                <p>{t("homePage.aboutCard2Body2")}</p>
-              </AboutCardBody>
+                <AboutCardBody>
+                  <p>{t("homePage.aboutCard2Body1")}</p>
+                  <p>{t("homePage.aboutCard2Body2")}</p>
+                </AboutCardBody>
+              </AboutCardContent>
             </AboutCard>
           </AboutCardsWrapper>
         </AboutContentCol>

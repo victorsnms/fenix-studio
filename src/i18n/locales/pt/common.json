@@ -22,7 +22,8 @@
         "navLogoAlt": "Ir para a página inicial",
         "flagBtnAriaLabel": "Mudar idioma para Inglês",
         "menuBurguerAriaLabel": "Fechar barra de navegação",
-        "scrollToTop": "Voltar ao topo"
+        "scrollToTop": "Voltar ao topo",
+        "scrollDown": "Rolar para baixo"
       }
     },
     "contactForm": {
