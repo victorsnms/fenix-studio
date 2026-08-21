@@ -95,11 +95,9 @@ const HomeNewsletterSection = () => {
               {status === "loading" ? t("newsletter.sending") : t("newsletter.cta")}
             </NewsletterButton>
           </NewsletterFormWrap>
-          {message && (
-            <NewsletterMessage $type={message.type} role="status" aria-live="polite">
-              {message.text}
-            </NewsletterMessage>
-          )}
+          <NewsletterMessage $type={message?.type} role="status" aria-live="polite">
+            {message?.text || ""}
+          </NewsletterMessage>
         </NewsletterFormColumn>
       </NewsletterInner>
     </NewsletterSection>

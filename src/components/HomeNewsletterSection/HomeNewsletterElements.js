@@ -94,8 +94,12 @@ export const NewsletterFormWrap = styled.div`
   }
 `;
 
+/* Always rendered (even with empty text) and given a reserved min-height so
+   the column's height stays constant whether a message is showing or not —
+   otherwise the form jumps/shifts every time a message appears or clears. */
 export const NewsletterMessage = styled.p`
   margin: 0;
+  min-height: 20px;
   font-family: var(--ds-font-brand);
   font-size: 13px;
   line-height: 1.5;
