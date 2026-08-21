@@ -95,11 +95,47 @@
                   "pm.test('Template exists (200)', () => pm.response.code === 200);",
                   "if (pm.response.code === 200) {",
                   "  const t = pm.response.json();",
-                  "  console.log('Template found:', t.name, '| active:', t.isActive);",
+                  "  console.log('Template found:', t.name, '| active:', t.isActive, '| tag:', JSON.stringify(t.tag));",
                   "  pm.test('Template is active', () => t.isActive === true);",
+                  "  pm.test('Template tag is \"optin\" (required for doubleOptinConfirmation — see BREVO_SETUP_GUIDE.md §3)', () => t.tag === 'optin');",
                   "} else {",
                   "  console.log('TEMPLATE ID PROBLEM:', pm.response.text());",
                   "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Fix: Set template tag to 'optin' (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "accept", "value": "application/json" },
+              { "key": "content-type", "value": "application/json" },
+              { "key": "api-key", "value": "{{brevo_api_key}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag\": \"optin\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "https://api.brevo.com/v3/smtp/templates/{{brevo_template_id}}",
+              "protocol": "https",
+              "host": ["api", "brevo", "com"],
+              "path": ["v3", "smtp", "templates", "{{brevo_template_id}}"]
+            },
+            "description": "Sets the internal 'tag' field to 'optin' on whichever template ID is currently in brevo_template_id. Discovered 2026-08-21: a template can show isActive:true and doiTemplate:true and still be rejected by doubleOptinConfirmation with \"An active DOI template does not exist\" if this tag isn't set — neither the Forms flow nor duplicating a template reliably sets it. Success = 204 (empty body). Re-run 'Get Template by ID' above afterward to confirm tag now reads 'optin'."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Tag update succeeded (204)', () => pm.response.code === 204);",
+                  "if (pm.response.code !== 204) console.log('TAG UPDATE FAILED:', pm.response.code, pm.response.text());",
+                  "else console.log('Tag set to optin on template', pm.variables.get('brevo_template_id'), '— re-run Get Template by ID to confirm.');"
                 ]
               }
             }

@@ -81,6 +81,26 @@ each with its own template ID.
    Brevo to reject the API call.
 9. Repeat steps 1–8 for the other language.
 
+> ⚠️ **Critical, non-obvious step (found the hard way during a client-account migration,
+> 2026-08-21)**: even a template that shows `isActive: true` and `doiTemplate: true` when
+> fetched via the API can still be rejected by `doubleOptinConfirmation` with
+> `400 invalid_parameter — "An active DOI template does not exist"`. The actual field that
+> endpoint checks appears to be the template's internal **`tag`** — a working, originally
+> Forms-flow-generated template has `"tag": "optin"`; a template created by duplicating
+> another template, or re-selected in a Form's confirmation dropdown, can end up with
+> `"tag": ""` (empty) despite looking identical and functioning fine everywhere else in the
+> UI. Neither the Forms flow nor duplication reliably sets this tag on its own — it has to
+> be checked and fixed by hand:
+> 1. Fetch the template via Postman's **Get Template by ID** and check its `"tag"` field.
+> 2. If it's not `"optin"`, open the template in Brevo's editor and set its tag to `optin`
+>    (look for a tag/label field, possibly under advanced/hidden settings — it isn't always
+>    in the main editor view).
+> 3. Re-test the direct `doubleOptinConfirmation` call before trusting the template ID.
+>
+> This is exactly why the migration checklist in §5 says to verify each new template with
+> Postman rather than just checking "Active" status in the dashboard — "Active" alone does
+> not guarantee it'll actually work for this specific API call.
+
 **The Forms are never used on the site.** Our custom-styled input + button (in
 `src/components/HomeNewsletterSection/`) replaces Brevo's embeddable form UI entirely —
 we only went through the Forms flow because it's the only way to generate a valid,
@@ -134,6 +154,10 @@ When the site moves to the client's own Brevo account:
 - [ ] Recreate **both** DOI templates via the Forms flow (§3) — **template IDs are
       account-specific and won't carry over**; you must redo this step twice (PT + EN)
       and get new values for `BREVO_DOI_TEMPLATE_ID_PT` and `BREVO_DOI_TEMPLATE_ID_EN`.
+      **Then check each one's `tag` field is `"optin"` (§3 warning box)** — a template
+      can look completely correct (Active, `doiTemplate: true`) and still fail the actual
+      API call if this internal tag wasn't set, which neither the Forms flow nor
+      duplicating a template reliably does.
 - [ ] `BREVO_DOI_REDIRECT_URL` — reuse the same value unless the production domain is
       also changing. Double-check the `https://` scheme.
 - [ ] Update all six vars (`BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_DOI_TEMPLATE_ID_PT`,
