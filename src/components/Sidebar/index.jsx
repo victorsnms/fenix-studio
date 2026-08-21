@@ -142,7 +142,7 @@ export const Sidebar = ({ isOpen, toggle }) => {
           <SidebarContactGrid>
             <SidebarContactItem>
               <IconPhone size={14} style={{ transform: "scaleX(-1)" }} aria-hidden="true" />
-              contato@fenixstudio.com
+              contato@fenixstudios.com.br
             </SidebarContactItem>
             <SidebarContactItem>
               <IconLocation size={14} aria-hidden="true" />
@@ -150,7 +150,7 @@ export const Sidebar = ({ isOpen, toggle }) => {
             </SidebarContactItem>
             <SidebarContactItem>
               <IconEmail size={14} aria-hidden="true" />
-              contato@fenixstudio.com
+              contato@fenixstudios.com.br
             </SidebarContactItem>
           </SidebarContactGrid>
         </SidebarContact>
