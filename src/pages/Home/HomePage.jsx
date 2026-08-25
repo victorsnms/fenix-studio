@@ -34,15 +34,15 @@ export const HomePage = () => {
           ctaTo="/services"
         />
         {/* About Section */}
-        <FadeInAnimation threshold={0.5}>
+        <FadeInAnimation threshold={0.2}>
           <HomeAboutSection />
         </FadeInAnimation>
         {/* Studio Reel */}
-        <FadeInAnimation threshold={0.5}>
+        <FadeInAnimation threshold={0.2}>
           <HomeReelSection />
         </FadeInAnimation>
         {/* Filmography */}
-        <FadeInAnimation threshold={0.5}>
+        <FadeInAnimation threshold={0.2}>
           <div style={{ maxWidth: "1300px", marginLeft: "auto", marginRight: "auto", marginTop: "100px", display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
             <SectionTopTitle center>{t("homePage.filmographyLabel")}</SectionTopTitle>
             <FilmographyTitle>{t("homePage.filmographyTitle")}</FilmographyTitle>
@@ -50,7 +50,7 @@ export const HomePage = () => {
           <MarqueeInfinite noBackground imageSection="filmImages" showMeta />
         </FadeInAnimation>
         {/* Clients */}
-        <FadeInAnimation threshold={0.5}>
+        <FadeInAnimation threshold={0.2}>
           <div style={{ maxWidth: "1300px", marginLeft: "auto", marginRight: "auto", marginTop: "100px", display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
             <SectionTopTitle center>{t("homePage.clientsLabel")}</SectionTopTitle>
             <FilmographyTitle>{t("homePage.clientsTitle")}</FilmographyTitle>
@@ -58,7 +58,7 @@ export const HomePage = () => {
           <HomeClientsSection />
         </FadeInAnimation>
         {/* Study Section - hidden for now*/}        
-        {/* <FadeInAnimation threshold={0.5}>
+        {/* <FadeInAnimation threshold={0.2}>
           <HomeStudySection />
         </FadeInAnimation> */}
         {/* Newsletter */}

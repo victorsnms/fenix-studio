@@ -9,9 +9,13 @@ import { FadeInAnimationContainer } from "./FadeInAnimationElements";
  * and the element is stuck at opacity 0 permanently. That is what blanked the
  * filmography marquee on mobile: it fit on a desktop screen but not a phone.
  *
- * Capping it keeps reveal animations from ever hiding content outright.
+ * 0.5 isn't safe either — HomeAboutSection (video + text + cards, stacked on
+ * mobile) is tall enough that 50% of it is never simultaneously visible on a
+ * phone screen, hitting the exact same stuck-at-opacity-0 bug. Capping at 0.2
+ * keeps reveal animations from ever hiding content outright, for any
+ * reasonably tall section.
  */
-const MAX_THRESHOLD = 0.5;
+const MAX_THRESHOLD = 0.2;
 
 const FadeInAnimation = ({ children, threshold, transitionDelay, className, customTag="div", ...props }) => {
     const [ref, inView] = useInView({
