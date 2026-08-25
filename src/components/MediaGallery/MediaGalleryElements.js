@@ -3,14 +3,27 @@ import FadeInAnimation from "../FadeInAnimation";
 
 export const MediaGalleryContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 20px auto;
   padding: 0 50px;
   max-width: 1300px;
   gap: 30px;
   justify-items: center;
    @media screen and (min-width: 768px) and (max-width: 1024px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  /* Below 768px, the container's own padding leaves less width available than
+     the 350px (or even 200px) column minimum needs — the grid was overflowing
+     the viewport rather than shrinking. */
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
   }
 `;
 
