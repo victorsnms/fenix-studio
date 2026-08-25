@@ -140,6 +140,7 @@ export const FilterBar = styled.div`
   justify-content: center;
   gap: 30px;
   width: 100%;
+  flex-wrap: wrap; 
 `;
 
 export const FilterDivider = styled.div`
